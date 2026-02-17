@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date of Birth Calculator - Find Your Birth Date from Your Age | CalcMyAge</title>
+  <meta name="description" content="Reverse-calculate your date of birth from a known age. Useful for genealogy research, verifying identity documents, and finding birth dates from census records or headstones.">
+  <link rel="canonical" href="https://calcmyage.org/blog/date-of-birth-calculator/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/blog/date-of-birth-calculator/">
+  <meta property="og:title" content="Date of Birth Calculator - Find Your Birth Date from Your Age | CalcMyAge">
+  <meta property="og:description" content="Reverse-calculate your date of birth from a known age. Useful for genealogy research, verifying identity documents, and finding birth dates from census records or headstones.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Date of Birth Calculator - Find Your Birth Date from Your Age", "description": "Reverse-calculate your date of birth from a known age. Useful for genealogy research, verifying identity documents, and finding birth dates from census records or headstones.", "author": { "@type": "Organization", "name": "CalcMyAge" }, "publisher": { "@type": "Organization", "name": "CalcMyAge", "url": "https://calcmyage.org" }, "datePublished": "2026-01-28", "dateModified": "2026-02-06", "mainEntityOfPage": "https://calcmyage.org/blog/date-of-birth-calculator/" }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my date of birth from my age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract your age in years from the current year. If your birthday has already passed this year, that gives you your birth year. If it has not, subtract one additional year. For example, if you are 35 years old in February 2026 and your birthday is in July, your birth year is 2026 - 35 - 1 = 1990."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find an exact birth date from just an age in years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. An age in completed years gives you a 12-month range for the birth date. To narrow the range, you need additional information such as the age in months or days, or a second record with a different reference date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do census records sometimes show different ages for the same person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Census ages are not always accurate. People sometimes misreported their ages (intentionally or accidentally), census takers estimated ages, household members reported ages for absent family members, and rounding was common. Cross-referencing multiple census records and other documents gives the most reliable estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between MM/DD/YYYY and DD/MM/YYYY?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MM/DD/YYYY places the month first (used in the United States). DD/MM/YYYY places the day first (used in most of the rest of the world). The date \"03/04/1990\" means March 4 in the US format and April 3 in the European format. Always check which format is being used before performing calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do genealogists estimate birth dates from headstones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a headstone reads \"Died October 5, 1887, aged 63 years, 4 months, 18 days,\" subtract 63 years, 4 months, and 18 days from the death date. This gives an approximate birth date of May 17, 1824. The more specific the age information, the more accurate the calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ISO 8601 and why does it matter for dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISO 8601 is an international standard for representing dates and times. It uses the format YYYY-MM-DD (for example, 1990-03-04 for March 4, 1990). This format is unambiguous regardless of the reader's country of origin, sorts chronologically as a string, and is the preferred format for databases, APIs, and international communication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I account for Korean age when calculating DOB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korean age starts at 1 at birth and increases by 1 every January 1, regardless of birthday. A person who is \"30\" in Korean age might be 28 or 29 in international age. Subtract 1-2 years from the Korean age before performing DOB calculations. See our Korean age calculator for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I only know someone's approximate age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a record says \"about 50\" or \"approximately 60,\" the birth year range expands significantly. An \"about 50\" could mean anywhere from 47 to 53 in practice. Calculate the range for each possible age and document the uncertainty. Multiple records with approximate ages can help narrow the estimate when cross-referenced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do calendar changes affect historical DOB calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When countries switched from the Julian to Gregorian calendar, they dropped 10-13 days. Historical dates before the switch may be in either system. To convert a Julian date to Gregorian, add 10 days for dates before 1700, 11 days for 1700-1799, 12 days for 1800-1899, and 13 days for 1900+. Always note which calendar system is being used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a DOB calculator for legal purposes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DOB calculations can support legal cases (immigration, identity verification), but courts typically require corroborating evidence. A calculated DOB based on census records, combined with school records, church records, and testimony, can establish a legal date of birth. Always work with legal professionals for official matters."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://calcmyage.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://calcmyage.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Date of Birth Calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="/">Age Calculator</a>
+          <a href="/age-on-date/">Age on Date</a>
+          <a href="/age-difference/">Age Difference</a>
+          <a href="/days-old/">Days Old</a>
+          <a href="/life-expectancy/">Life Expectancy</a>
+          <a href="/korean-age/">Korean Age</a>
+          <a href="/chronological-age/">Chronological Age</a>
+        </div>
+      </div>
+      <a href="/blog/" class="active">Guides</a>
+      <a href="/about/">About</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+    <div class="nav-mobile-section">Calculators</div>
+    <a href="/" class="sub">Age Calculator</a>
+    <a href="/age-on-date/" class="sub">Age on Date</a>
+    <a href="/age-difference/" class="sub">Age Difference</a>
+    <a href="/days-old/" class="sub">Days Old</a>
+    <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+    <a href="/korean-age/" class="sub">Korean Age</a>
+    <a href="/chronological-age/" class="sub">Chronological Age</a>
+    <div class="nav-mobile-section">More</div>
+    <a href="/blog/" class="active">Guides</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </nav></div></header>
+
+  <main><div class="container" style="max-width: 800px;">
+    <article>
+      <p style="font-size: 0.8125rem; color: var(--gray-500);">February 2026 &bull; 22 min read</p>
+      <h1>Date of Birth Calculator: Find Your Birth Date from Your Age</h1>
+      <p class="intro-text">Sometimes you know someone's age but not their exact date of birth. This happens more often than you might expect, from genealogy research where a census record lists only an age, to verifying identity when a birth certificate is unavailable. A date of birth (DOB) calculator works in reverse: you provide an age and a reference date, and it computes the approximate birth date. This comprehensive guide explains the method, walks through real-world examples, covers date formats worldwide, and addresses the most common situations where this reverse calculation is invaluable. For the standard forward calculation, see our <a href="/blog/age-calculator-guide/">age calculator guide</a>.</p>
+
+      <div class="key-takeaways">
+        <div class="key-takeaways-title">Key Takeaways</div>
+        <ul>
+          <li><strong>A DOB calculator</strong> reverse-calculates a birth date from a known age and a reference date</li>
+          <li><strong>The formula is simple:</strong> Birth Year = Reference Year - Age (adjusted for whether the birthday has passed)</li>
+          <li><strong>Common uses include</strong> genealogy research, identity verification, decoding census records, and reading historical headstones</li>
+          <li><strong>Date formats vary worldwide,</strong> so always confirm whether a date uses MM/DD/YYYY, DD/MM/YYYY, or YYYY-MM-DD</li>
+          <li><strong>Precision depends on the data:</strong> if only the age in years is known, the birth date can only be narrowed to a 1-year range</li>
+          <li>Use our <a href="/">free age calculator</a> to verify birth dates and ages instantly</li>
+        </ul>
+      </div>
+
+      <h2 id="what-is-dob-calculator">What Is a Date of Birth Calculator?</h2>
+      <p>A date of birth calculator is the inverse of a standard age calculator. Instead of answering "<a href="/blog/how-old-am-i/">how old am I?</a>", it answers "when was I born?" given a known age at a specific point in time. The calculation subtracts the age from a reference date to produce an estimated birth date.</p>
+      <p>For example, if a historical record states that a person was 47 years old on June 1, 1870 (the date of a census), then the DOB calculator determines that the person was born between June 2, 1822 and June 1, 1823. The range exists because the record typically states only the age in completed years, not the exact birth date.</p>
+      <p>When more information is available, such as the age in years and months, the estimated range narrows significantly. A record stating "47 years, 3 months" on June 1, 1870 would place the birth date around March 1823, give or take a few weeks.</p>
+
+      <h2 id="how-to-calculate">How to Calculate Date of Birth from Age</h2>
+      <p>The basic formula for estimating a birth year from a known age is:</p>
+      <p style="text-align: center; font-size: 1.25rem; font-weight: 600; padding: 1rem; background: var(--primary-bg); border-radius: var(--radius-md);"><strong>Birth Year = Reference Year - Age</strong></p>
+      <p>However, this simple formula produces a range, not an exact date, because the person could have already had their birthday in the reference year or not yet. Here is the more precise approach:</p>
+
+      <h3>Step 1: Start with the Reference Date</h3>
+      <p>Identify the date on which the age was recorded. This could be a census date, a document filing date, the date on a headstone (date of death), or any other known date.</p>
+
+      <h3>Step 2: Subtract the Years</h3>
+      <p>Subtract the age in years from the reference date's year. For example, if the reference date is June 1, 1870 and the age is 47, then: 1870 - 47 = 1823.</p>
+
+      <h3>Step 3: Determine the Range</h3>
+      <p>The person was born between two dates:</p>
+      <ul>
+        <li><strong>Earliest possible birth date:</strong> The day after the reference date in the previous year (June 2, 1822) -- this is the case if the person turned 47 on the reference date itself</li>
+        <li><strong>Latest possible birth date:</strong> The reference date in the calculated year (June 1, 1823) -- this is the case if the person's birthday is the same as the reference date</li>
+      </ul>
+
+      <h3>Step 4: Narrow with Additional Data</h3>
+      <p>If you know months or days in addition to years, subtract those as well. An age of "47 years, 3 months, 12 days" on June 1, 1870 points to approximately February 19, 1823.</p>
+
+      <h3>Worked Examples</h3>
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>Reference Date</th><th>Known Age</th><th>Estimated Birth Date</th></tr></thead>
+        <tbody>
+          <tr><td>Census record</td><td>June 1, 1870</td><td>47 years</td><td>Jun 1822 - Jun 1823</td></tr>
+          <tr><td>Death certificate</td><td>March 15, 1945</td><td>82 years, 6 months</td><td>Approx. Sep 1862</td></tr>
+          <tr><td>Immigration form</td><td>April 10, 1910</td><td>29 years</td><td>Apr 1880 - Apr 1881</td></tr>
+          <tr><td>Military record</td><td>January 3, 1918</td><td>21 years, 0 months</td><td>Approx. Jan 1897</td></tr>
+          <tr><td>Headstone (age at death)</td><td>November 22, 1963</td><td>46 years, 5 months</td><td>Approx. Jun 1917</td></tr>
+          <tr><td>School enrollment</td><td>September 1, 2020</td><td>5 years</td><td>Sep 2014 - Sep 2015</td></tr>
+          <tr><td>Insurance application</td><td>February 15, 2026</td><td>35 years, 7 months</td><td>Approx. Jul 1990</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="reverse-calculation-precision">Understanding Precision in Reverse Calculations</h2>
+      <p>The precision of your estimated birth date depends entirely on the precision of the age information available. Here is how different levels of detail affect accuracy:</p>
+      <table class="data-table">
+        <thead><tr><th>Information Available</th><th>Precision of Birth Date</th><th>Range Size</th></tr></thead>
+        <tbody>
+          <tr><td>Age in years only</td><td>12-month window</td><td>365 days</td></tr>
+          <tr><td>Age in years and months</td><td>~30-day window</td><td>28-31 days</td></tr>
+          <tr><td>Age in years, months, and days</td><td>Exact date (usually)</td><td>1 day</td></tr>
+          <tr><td>Age in years with "over/under" indication</td><td>~6-month window</td><td>~180 days</td></tr>
+          <tr><td>Rounded age (e.g., "about 50")</td><td>Multiple years possible</td><td>3-5 years</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Precision Visualization</h3>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><div class="chart-bar-label">Years only</div><div class="chart-bar-track"><div class="chart-bar-fill error" style="width:100%">365-day range</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Years + months</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:8%">~30-day range</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Years + months + days</div><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:1%">Exact</div></div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">More detailed age information dramatically improves birth date precision.</p>
+
+      <h2 id="genealogy-use-cases">Genealogy Use Cases</h2>
+      <p>Date of birth calculations are one of the most fundamental tools in genealogy. Historical records rarely provide a person's exact birth date. Instead, you typically find an age at the time of a census, a marriage record, or a death record. Working backward from these ages is how genealogists reconstruct family timelines.</p>
+
+      <h3>Census Records</h3>
+      <p>United States federal censuses have been conducted every 10 years since 1790. Early censuses (1790-1840) recorded only the head of household and the number of people in age brackets. From 1850 onward, each person's name and age were recorded. The census date matters: the 1870 census used June 1 as the reference date, while the 1900 census used June 1 as well but also asked for birth month and year. By knowing the exact census date and the recorded age, you can estimate the birth year.</p>
+      <p>A common pitfall is that ages on census records are not always accurate. People sometimes misreported their ages, census takers sometimes rounded, and literacy levels varied. Cross-referencing ages across multiple censuses helps identify the most likely birth year.</p>
+
+      <h3>US Census Reference Dates</h3>
+      <table class="data-table">
+        <thead><tr><th>Census Year</th><th>Official Reference Date</th><th>Age Information Collected</th></tr></thead>
+        <tbody>
+          <tr><td>1790-1840</td><td>Varied by district</td><td>Age brackets only (head of household)</td></tr>
+          <tr><td>1850</td><td>June 1, 1850</td><td>Age in years</td></tr>
+          <tr><td>1860</td><td>June 1, 1860</td><td>Age in years</td></tr>
+          <tr><td>1870</td><td>June 1, 1870</td><td>Age in years</td></tr>
+          <tr><td>1880</td><td>June 1, 1880</td><td>Age in years; relationship to head</td></tr>
+          <tr><td>1900</td><td>June 1, 1900</td><td>Age + birth month/year</td></tr>
+          <tr><td>1910</td><td>April 15, 1910</td><td>Age in years</td></tr>
+          <tr><td>1920</td><td>January 1, 1920</td><td>Age at last birthday</td></tr>
+          <tr><td>1930</td><td>April 1, 1930</td><td>Age at last birthday</td></tr>
+          <tr><td>1940</td><td>April 1, 1940</td><td>Age at last birthday</td></tr>
+          <tr><td>1950</td><td>April 1, 1950</td><td>Age at last birthday</td></tr>
+        </tbody>
+      </table>
+      <p>For more information on historical census data, visit the <a href="https://www.census.gov/history/" target="_blank" rel="noopener">US Census Bureau History</a> page.</p>
+
+      <h3>Headstones and Cemetery Records</h3>
+      <p>Older headstones sometimes list the age at death rather than the birth date. A headstone reading "Died October 5, 1887, aged 63 years, 4 months, 18 days" gives you enough information to calculate the birth date as approximately May 17, 1824. This level of detail is invaluable when no birth certificate exists.</p>
+
+      <h3>Marriage and Church Records</h3>
+      <p>Marriage records often list the age of each spouse but not their birth dates. Church baptismal records may list the baptism date and the infant's age in days, from which you can calculate the birth date. In some traditions, baptism occurred within a few days of birth, making this a reliable proxy for the birth date.</p>
+
+      <h2 id="celebrity-dob-examples">Celebrity DOB Calculation Examples</h2>
+      <p>To illustrate how DOB calculations work with real data, here are examples using well-known public figures:</p>
+      <table class="data-table">
+        <thead><tr><th>Celebrity</th><th>Known Age at Event</th><th>Event Date</th><th>Calculated DOB</th><th>Actual DOB</th></tr></thead>
+        <tbody>
+          <tr><td>Abraham Lincoln</td><td>56 years at death</td><td>April 15, 1865</td><td>Apr 1808 - Apr 1809</td><td>Feb 12, 1809</td></tr>
+          <tr><td>Queen Victoria</td><td>81 years at death</td><td>January 22, 1901</td><td>Jan 1819 - Jan 1820</td><td>May 24, 1819</td></tr>
+          <tr><td>Albert Einstein</td><td>76 years at death</td><td>April 18, 1955</td><td>Apr 1878 - Apr 1879</td><td>Mar 14, 1879</td></tr>
+          <tr><td>Marilyn Monroe</td><td>36 years at death</td><td>August 4, 1962</td><td>Aug 1925 - Aug 1926</td><td>Jun 1, 1926</td></tr>
+          <tr><td>John F. Kennedy</td><td>46 years at death</td><td>November 22, 1963</td><td>Nov 1916 - Nov 1917</td><td>May 29, 1917</td></tr>
+        </tbody>
+      </table>
+      <p>Notice that in each case, knowing only the age at death gives a 12-month range that includes the actual birth date. More precise age information (years, months, days) would narrow the calculation to the exact date.</p>
+
+      <h2 id="dob-verification">Verifying Date of Birth</h2>
+      <p>DOB verification is essential in many modern contexts beyond genealogy. According to the <a href="https://www.ssa.gov/" target="_blank" rel="noopener">Social Security Administration</a> and identity verification experts, here are the most common reasons someone needs to verify a date of birth:</p>
+
+      <h3>Identity Verification</h3>
+      <p>Banks, government agencies, and healthcare providers routinely ask for your date of birth as a security question. If there is a discrepancy between the DOB on different documents (for example, a passport says January 5 but a driver's license says January 15), it can trigger identity verification problems. A DOB calculator helps you confirm which date is consistent with other known facts about your age.</p>
+
+      <h3>Age Verification for Services</h3>
+      <p>Online services, alcohol purchases, and age-restricted activities require proof of age. If a document is damaged or unclear, calculating the DOB from other known information (such as school enrollment records that list grade and year) can help reconstruct the correct date. For more on this topic, see our <a href="/blog/legal-ages-guide/">legal ages guide</a>.</p>
+
+      <h3>Immigration and Legal Processes</h3>
+      <p>Immigrants who arrive without official birth certificates sometimes need to establish a legal date of birth. Courts may accept evidence from school records, religious records, or testimony about age at the time of specific events. A DOB calculator helps legal professionals build a consistent case.</p>
+
+      <h3>Common Identity Document Discrepancies</h3>
+      <table class="data-table">
+        <thead><tr><th>Document Type</th><th>Common DOB Issues</th><th>Resolution Approach</th></tr></thead>
+        <tbody>
+          <tr><td>Birth certificate</td><td>Delayed registration; clerical errors</td><td>Cross-reference with hospital records</td></tr>
+          <tr><td>Passport</td><td>Transcription errors; different calendar systems</td><td>Compare to original birth certificate</td></tr>
+          <tr><td>Driver's license</td><td>Self-reported; typos during entry</td><td>Request correction with supporting documents</td></tr>
+          <tr><td>Social Security records</td><td>Initial registration errors</td><td>Contact SSA with proof of correct DOB</td></tr>
+          <tr><td>School records</td><td>Reported by parents; may be rounded</td><td>Use as supporting evidence only</td></tr>
+          <tr><td>Immigration documents</td><td>Translation issues; assumed dates</td><td>Legal affidavit may be needed</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="dob-formats">DOB Formats Around the World</h2>
+      <p>One of the most common sources of confusion with dates of birth is the format used to write them. Different countries use different conventions, and a date like "03/04/1990" could mean March 4 or April 3 depending on where you are. According to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">International Organization for Standardization (ISO)</a>:</p>
+      <table class="data-table">
+        <thead><tr><th>Format</th><th>Example</th><th>Used In</th></tr></thead>
+        <tbody>
+          <tr><td>MM/DD/YYYY</td><td>03/04/1990 (March 4)</td><td>United States</td></tr>
+          <tr><td>DD/MM/YYYY</td><td>03/04/1990 (April 3)</td><td>United Kingdom, Europe, Australia, most of the world</td></tr>
+          <tr><td>YYYY-MM-DD</td><td>1990-03-04 (March 4)</td><td>ISO 8601 international standard, East Asia, Sweden, Hungary</td></tr>
+          <tr><td>YYYY/MM/DD</td><td>1990/03/04 (March 4)</td><td>Japan, China, Korea</td></tr>
+          <tr><td>DD.MM.YYYY</td><td>03.04.1990 (April 3)</td><td>Germany, Russia, many European countries</td></tr>
+          <tr><td>DD-MM-YYYY</td><td>03-04-1990 (April 3)</td><td>India, many parts of Africa</td></tr>
+        </tbody>
+      </table>
+      <p>The ISO 8601 format (YYYY-MM-DD) is unambiguous and is the recommended format for international communication, databases, and technical systems. When working with dates of birth across borders, always clarify the format being used.</p>
+
+      <h3>Date Format Usage by Region (Visual)</h3>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><div class="chart-bar-label">DD/MM/YYYY</div><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:70%">~70% of countries</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">MM/DD/YYYY</div><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:10%">~10% (mainly US)</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">YYYY-MM-DD</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:15%">~15% (ISO standard)</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Other formats</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:5%">~5%</div></div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">The United States is one of the few countries using MM/DD/YYYY as the primary format.</p>
+
+      <h3>Date Format by Country (Detailed)</h3>
+      <table class="data-table">
+        <thead><tr><th>Country</th><th>Official Format</th><th>Example (March 4, 1990)</th><th>Separator</th></tr></thead>
+        <tbody>
+          <tr><td>United States</td><td>MM/DD/YYYY</td><td>03/04/1990</td><td>Slash</td></tr>
+          <tr><td>United Kingdom</td><td>DD/MM/YYYY</td><td>04/03/1990</td><td>Slash</td></tr>
+          <tr><td>Germany</td><td>DD.MM.YYYY</td><td>04.03.1990</td><td>Period</td></tr>
+          <tr><td>France</td><td>DD/MM/YYYY</td><td>04/03/1990</td><td>Slash</td></tr>
+          <tr><td>Japan</td><td>YYYY/MM/DD</td><td>1990/03/04</td><td>Slash</td></tr>
+          <tr><td>China</td><td>YYYY-MM-DD</td><td>1990-03-04</td><td>Hyphen</td></tr>
+          <tr><td>South Korea</td><td>YYYY.MM.DD</td><td>1990.03.04</td><td>Period</td></tr>
+          <tr><td>India</td><td>DD-MM-YYYY</td><td>04-03-1990</td><td>Hyphen</td></tr>
+          <tr><td>Australia</td><td>DD/MM/YYYY</td><td>04/03/1990</td><td>Slash</td></tr>
+          <tr><td>Canada</td><td>YYYY-MM-DD (official)</td><td>1990-03-04</td><td>Hyphen</td></tr>
+          <tr><td>Brazil</td><td>DD/MM/YYYY</td><td>04/03/1990</td><td>Slash</td></tr>
+          <tr><td>Russia</td><td>DD.MM.YYYY</td><td>04.03.1990</td><td>Period</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="historical-dob-research">Historical DOB Research</h2>
+      <p>Determining the birth dates of historical figures is a fascinating application of DOB calculation. Before standardized birth registration (which did not become widespread in the Western world until the 19th century), birth dates were often recorded informally, inaccurately, or not at all. According to <a href="https://www.history.com/" target="_blank" rel="noopener">History.com</a>:</p>
+
+      <h3>Birth Registration History by Country</h3>
+      <table class="data-table">
+        <thead><tr><th>Country</th><th>Civil Registration Began</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>England & Wales</td><td>1837</td><td>Compulsory from start</td></tr>
+          <tr><td>Scotland</td><td>1855</td><td>Separate system from England</td></tr>
+          <tr><td>Ireland</td><td>1864</td><td>Unified system for all of Ireland</td></tr>
+          <tr><td>France</td><td>1792</td><td>During French Revolution</td></tr>
+          <tr><td>Germany</td><td>1876</td><td>After unification; varied by state before</td></tr>
+          <tr><td>United States</td><td>1900-1933</td><td>Varied by state; some earlier</td></tr>
+          <tr><td>Canada</td><td>1869-1920</td><td>Province by province</td></tr>
+          <tr><td>Australia</td><td>1856-1920</td><td>Colony/state by colony/state</td></tr>
+          <tr><td>Japan</td><td>1872</td><td>Meiji era modernization</td></tr>
+          <tr><td>China</td><td>1949</td><td>People's Republic standardization</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Famous Historical Figures with Estimated DOBs</h3>
+      <p>The birth dates of many historical figures are estimates based on DOB calculations from contemporary records:</p>
+      <ul>
+        <li><strong>William Shakespeare:</strong> Exact birth date unknown; traditionally cited as April 23, 1564, based on baptism record of April 26, 1564 (assuming 3 days between birth and baptism)</li>
+        <li><strong>Christopher Columbus:</strong> Birth year estimated between 1450-1451 based on his age at death and contemporary descriptions</li>
+        <li><strong>Genghis Khan:</strong> Birth year debated between 1155-1167 based on conflicting historical sources</li>
+        <li><strong>Joan of Arc:</strong> Born "about 1412" based on her testimony that she was "about 19" in 1431</li>
+        <li><strong>Confucius:</strong> Traditional date of September 28, 551 BCE, but actual year disputed (between 552-549 BCE)</li>
+      </ul>
+
+      <h3>Calendar Changes and DOB Confusion</h3>
+      <p>The switch from the Julian calendar to the Gregorian calendar created complications for historical DOB research. When Britain adopted the Gregorian calendar in 1752, 11 days were dropped. A person born on September 2, 1752 under the Julian calendar woke up on September 14, 1752 the next day.</p>
+      <table class="data-table">
+        <thead><tr><th>Country/Region</th><th>Year Adopted Gregorian</th><th>Days Dropped</th></tr></thead>
+        <tbody>
+          <tr><td>Catholic countries (Spain, Portugal, Italy)</td><td>1582</td><td>10 days</td></tr>
+          <tr><td>France</td><td>1582</td><td>10 days</td></tr>
+          <tr><td>Protestant Germany</td><td>1700</td><td>10 days</td></tr>
+          <tr><td>Great Britain & colonies</td><td>1752</td><td>11 days</td></tr>
+          <tr><td>Sweden</td><td>1753</td><td>11 days</td></tr>
+          <tr><td>Japan</td><td>1873</td><td>12 days</td></tr>
+          <tr><td>Russia</td><td>1918</td><td>13 days</td></tr>
+          <tr><td>Greece</td><td>1923</td><td>13 days</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="cultural-age-systems">Cultural Variations in Age Calculation</h2>
+      <p>Different cultures count age differently, which affects DOB calculations. When working with records from East Asian countries, you may need to account for:</p>
+      <table class="data-table">
+        <thead><tr><th>Age System</th><th>How It Works</th><th>Impact on DOB Calculation</th></tr></thead>
+        <tbody>
+          <tr><td>Western (International)</td><td>Start at 0, add 1 on birthday</td><td>Standard calculation</td></tr>
+          <tr><td><a href="/blog/korean-age-calculator/">Korean Age</a></td><td>Start at 1, add 1 on January 1</td><td>Subtract 1-2 years from recorded age</td></tr>
+          <tr><td>Traditional Chinese</td><td>Start at 1, add 1 at Chinese New Year</td><td>Depends on lunar calendar date</td></tr>
+          <tr><td><a href="/blog/lunar-age-calculator/">Lunar Age</a></td><td>Based on lunar calendar</td><td>Convert to Gregorian calendar first</td></tr>
+        </tbody>
+      </table>
+      <p>For example, a Korean document listing someone as "30 years old" in January 2026 might correspond to someone born in 1996 (international age 29-30) rather than 1995 (international age 30-31). Always verify which age system is being used before performing DOB calculations.</p>
+
+      <h2 id="tips-accurate-calculations">Tips for Accurate DOB Calculations</h2>
+      <ul>
+        <li><strong>Cross-reference multiple sources.</strong> Ages on census records, marriage records, and death records may differ. Using all available data points produces a more reliable estimate.</li>
+        <li><strong>Account for rounding.</strong> Many historical records rounded ages to the nearest 5 or 10 years, especially for older individuals. An age listed as "60" might mean anywhere from 57 to 63.</li>
+        <li><strong>Check the reference date.</strong> The census date, document date, or event date is critical. Getting it wrong by even a year changes the calculated birth year.</li>
+        <li><strong>Consider cultural age counting.</strong> In East Asian cultures, traditional age counting starts at 1 at birth. A record using <a href="/blog/korean-age-calculator/">Korean age</a> will produce a different birth year calculation than one using international age.</li>
+        <li><strong>Verify the date format.</strong> Always confirm whether the date uses MM/DD/YYYY or DD/MM/YYYY before performing calculations. A single-digit transposition error can shift the result by months.</li>
+        <li><strong>Document your sources.</strong> Keep track of where each piece of information came from, so you can evaluate conflicting data later.</li>
+      </ul>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate my date of birth from my age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">Subtract your age in years from the current year. If your birthday has already passed this year, that gives you your birth year. If it has not, subtract one additional year. For example, if you are 35 years old in February 2026 and your birthday is in July, your birth year is 2026 - 35 - 1 = 1990.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I find an exact birth date from just an age in years?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">No. An age in completed years gives you a 12-month range for the birth date. To narrow the range, you need additional information such as the age in months or days, or a second record with a different reference date.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do census records sometimes show different ages for the same person?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">Census ages are not always accurate. People sometimes misreported their ages (intentionally or accidentally), census takers estimated ages, household members reported ages for absent family members, and rounding was common. Cross-referencing multiple census records and other documents gives the most reliable estimate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between MM/DD/YYYY and DD/MM/YYYY?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">MM/DD/YYYY places the month first (used in the United States). DD/MM/YYYY places the day first (used in most of the rest of the world). The date "03/04/1990" means March 4 in the US format and April 3 in the European format. Always check which format is being used before performing calculations.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do genealogists estimate birth dates from headstones?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">If a headstone reads "Died October 5, 1887, aged 63 years, 4 months, 18 days," subtract 63 years, 4 months, and 18 days from the death date. This gives an approximate birth date of May 17, 1824. The more specific the age information, the more accurate the calculation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is ISO 8601 and why does it matter for dates?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">ISO 8601 is an international standard for representing dates and times. It uses the format YYYY-MM-DD (for example, 1990-03-04 for March 4, 1990). This format is unambiguous regardless of the reader's country of origin, sorts chronologically as a string, and is the preferred format for databases, APIs, and international communication.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I account for Korean age when calculating DOB?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">Korean age starts at 1 at birth and increases by 1 every January 1, regardless of birthday. A person who is "30" in Korean age might be 28 or 29 in international age. Subtract 1-2 years from the Korean age before performing DOB calculations. See our <a href="/blog/korean-age-calculator/">Korean age calculator</a> for details.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I only know someone's approximate age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">If a record says "about 50" or "approximately 60," the birth year range expands significantly. An "about 50" could mean anywhere from 47 to 53 in practice. Calculate the range for each possible age and document the uncertainty. Multiple records with approximate ages can help narrow the estimate when cross-referenced.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do calendar changes affect historical DOB calculations?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">When countries switched from the Julian to Gregorian calendar, they dropped 10-13 days. Historical dates before the switch may be in either system. To convert a Julian date to Gregorian, add 10 days for dates before 1700, 11 days for 1700-1799, 12 days for 1800-1899, and 13 days for 1900+. Always note which calendar system is being used.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I use a DOB calculator for legal purposes?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer" style="display:none; padding: 1rem; font-size: 0.9375rem; color: var(--gray-700);">DOB calculations can support legal cases (immigration, identity verification), but courts typically require corroborating evidence. A calculated DOB based on census records, combined with school records, church records, and testimony, can establish a legal date of birth. Always work with legal professionals for official matters.</div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin: 2rem 0;"><a href="/" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none; box-shadow: 0 4px 14px 0 rgba(168, 85, 247, 0.4);">Calculate My Date of Birth &rarr;</a></p>
+
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/blog/age-calculator-guide/" class="related-card"><div class="related-card-title">Age Calculator Guide</div><p class="related-card-desc">Complete guide to every type of age calculation</p></a>
+        <a href="/blog/birth-year-calculator/" class="related-card"><div class="related-card-title">Birth Year Calculator</div><p class="related-card-desc">Calculate your birth year from your current age</p></a>
+        <a href="/blog/how-old-am-i/" class="related-card"><div class="related-card-title">How Old Am I?</div><p class="related-card-desc">Find your exact age right now in years, months, and days</p></a>
+        <a href="/blog/chronological-age-calculator/" class="related-card"><div class="related-card-title">Chronological Age Calculator</div><p class="related-card-desc">Calculate precise chronological age in Y:M format</p></a>
+        <a href="/blog/korean-age-calculator/" class="related-card"><div class="related-card-title">Korean Age Calculator</div><p class="related-card-desc">Convert between Korean age and international age</p></a>
+        <a href="/blog/age-difference-calculator/" class="related-card"><div class="related-card-title">Age Difference Calculator</div><p class="related-card-desc">Calculate the exact age gap between two people</p></a>
+      </div>
+    </article>
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/#panel-diff">Age Difference</a></li><li><a href="/#panel-days">Days Old</a></li><li><a href="/#panel-korean">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const mobileNav = document.querySelector('.nav-mobile');
+      if (toggle && mobileNav) { toggle.addEventListener('click', function() { mobileNav.classList.toggle('active'); }); }
+      document.querySelectorAll('.faq-question').forEach(function(btn) { btn.addEventListener('click', function() { this.closest('.faq-item').classList.toggle('open'); }); });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator - How Old Am I?</title>
+  <meta name="description" content="Free age calculator. Find out exactly how old you are in years, months, days, hours. Calculate age difference, Korean age, life expectancy, and more.">
+  <link rel="canonical" href="https://calcmyage.org/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/">
+  <meta property="og:title" content="Age Calculator - How Old Am I? Calculate Your Exact Age">
+  <meta property="og:description" content="Free age calculator. Find out exactly how old you are in years, months, days, hours. Calculate age difference, Korean age, life expectancy, and more.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Age Calculator",
+        "url": "https://calcmyage.org/",
+        "description": "Free age calculator - find out exactly how old you are",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://calcmyage.org/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Age Calculator",
+        "description": "Calculate your exact age in years, months, days, hours, and minutes",
+        "url": "https://calcmyage.org/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": ["Age Calculator", "Age on Date", "Age Difference", "Age in Days", "Life Expectancy", "Korean Age", "Chronological Age"]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Age Calculators",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Age Calculator", "url": "https://calcmyage.org/"},
+          {"@type": "ListItem", "position": 2, "name": "Age on Date Calculator", "url": "https://calcmyage.org/age-on-date/"},
+          {"@type": "ListItem", "position": 3, "name": "Age Difference Calculator", "url": "https://calcmyage.org/age-difference/"},
+          {"@type": "ListItem", "position": 4, "name": "Days Old Calculator", "url": "https://calcmyage.org/days-old/"},
+          {"@type": "ListItem", "position": 5, "name": "Life Expectancy Calculator", "url": "https://calcmyage.org/life-expectancy/"},
+          {"@type": "ListItem", "position": 6, "name": "Korean Age Calculator", "url": "https://calcmyage.org/korean-age/"},
+          {"@type": "ListItem", "position": 7, "name": "Chronological Age Calculator", "url": "https://calcmyage.org/chronological-age/"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my exact age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your date of birth in our calculator above. We calculate the exact years, months, and days between your birthdate and today's date. Our algorithm accounts for varying month lengths (28-31 days) and leap years (years divisible by 4, except century years not divisible by 400). The result shows your precise age in multiple units: years, months, weeks, days, hours, and minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Korean age and why is it different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korean age (한국 나이) is a traditional East Asian age system where you're counted as 1 year old at birth (valuing time in the womb) and everyone adds 1 year on January 1st, regardless of their actual birthday. This means a baby born on December 31st turns \"2\" the very next day! Your Korean age is typically 1-2 years higher than your international age. Important: South Korea officially adopted international age for all legal and administrative purposes in June 2023, though Korean age is still used culturally. Use our Korean Age Calculator to find yours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many days old am I?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use our Days Old Calculator to find out exactly how many days you've been alive. Enter your birthdate and we'll calculate the total days, hours, minutes, and seconds since you were born. We also show when you'll reach milestone days like 10,000 days (about 27.4 years) or 20,000 days (about 54.8 years). Many people now celebrate these \"day birthdays\" as alternative milestones!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is chronological age and when is it used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chronological age is your exact age expressed in years and months, written as Y:M (e.g., 7:4 means 7 years and 4 months). It's the precise measurement used by psychologists, educators, and clinicians for developmental assessments. Common uses include Pearson assessments (WISC-V, WAIS-IV), IQ testing, reading level assessments, and special education evaluations. The chronological age must be calculated from the child's birthdate to the exact test date. Use our Chronological Age Calculator for accurate Y:M format results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the life expectancy calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Life Expectancy Calculator uses WHO global health statistics for country-specific life expectancy averages. These are statistical averages for populations, not individual predictions. Actual lifespan varies significantly based on genetics, lifestyle (diet, exercise, smoking), healthcare access, socioeconomic factors, and environmental conditions. The calculator provides general perspective based on where you live and your gender, but should not be considered a medical prediction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the \"half your age plus 7\" rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The \"half your age plus 7\" rule is a social guideline suggesting the youngest person you should date is half your age plus 7 years. For example, if you're 30, the minimum \"acceptable\" age would be (30÷2)+7 = 22. Conversely, the oldest you should date is calculated as (your age - 7) × 2 = 46. This rule appears to have originated in late 19th century France and became popular in English-speaking countries in the early 20th century. It's purely a social convention, not a scientific or legal rule. Use our Age Difference Calculator to explore age gaps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I turn 10,000 days old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10,000 days equals approximately 27 years, 4 months, and 26 days (accounting for leap years). This has become an increasingly popular milestone birthday, especially since social media made tracking such dates easier. Use our Days Old Calculator to find your exact 10,000-day birthday. Other popular day milestones include 5,000 days (13.7 years), 15,000 days (41.1 years), and 20,000 days (54.8 years). See our Age in Days guide for more information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do leap years affect age calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Leap years affect age calculations in several ways. When counting days lived, each leap year adds an extra day (February 29), making the average year 365.25 days. For people born on February 29 (\"leaplings\"), their actual birthday only occurs every 4 years—about 5 million people worldwide have this birthday. In non-leap years, leaplings typically celebrate on February 28 or March 1. Our calculator automatically handles all leap year scenarios correctly. Learn more in our Leap Year Birthday guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is biological age vs. chronological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chronological age is simply how many years you've been alive—the number our calculator shows. Biological age (also called physiological age) measures how old your body actually is based on various biomarkers. You can be chronologically 50 but biologically 40 (or 60) depending on factors like genetics, lifestyle, diet, exercise, and environmental exposure. Biological age is measured through tests examining DNA methylation, telomere length, and organ function. NIH research shows biological age is a better predictor of health outcomes than chronological age. Learn more in our Biological Age vs. Chronological Age guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate age for a passport application?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Passport applications typically require your age on a specific date (either application date or travel date). Use our Age on Date Calculator to find your exact age on any date. Many countries have age-based rules: children under 16 often need shorter-validity passports, and applicants over 62 may be eligible for reduced fees. For US passports, the State Department has specific requirements based on age at time of application."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/" class="active">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub active">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Age Calculator</h1>
+    <p class="intro-text">Find out exactly how old you are. Calculate your age in years, months, days, hours, and minutes from your date of birth. Our free age calculator uses the international age system and accounts for leap years, varying month lengths, and time zones. Over <strong>8 billion people</strong> on Earth have unique ages—find yours instantly.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Your age is calculated</strong> from your date of birth to today (or any date you choose)</li>
+        <li><strong>International age</strong> counts from 0 at birth, turning older on each birthday—used worldwide for legal purposes</li>
+        <li><strong>Korean age</strong> counts as 1 at birth, adding 1 every January 1st (South Korea switched to international age in June 2023)</li>
+        <li><strong>1 year = 365.25 days</strong> on average, accounting for leap years that occur every 4 years (with exceptions)</li>
+        <li><strong>Chronological age (Y:M format)</strong> is used by psychologists and educators for developmental assessments</li>
+        <li><strong>Life expectancy</strong> at birth is 73.4 years globally (<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank" rel="noopener">WHO, 2024</a>)</li>
+      </ul>
+    </div>
+    
+    <div class="calculator-card">
+      <!-- BASIC AGE CALCULATOR -->
+      <div id="panel-basic" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" id="dob-basic" class="form-input dob-input">
+          </div>
+        </div>
+        
+        <button class="calculate-btn" id="calc-basic-btn">🎂 Calculate My Age</button>
+        
+        <div class="results-section" id="basic-results">
+          <div class="age-result-card">
+            <div class="age-value" id="basic-age-years">25</div>
+            <div class="age-label">Years Old</div>
+            <div class="age-sublabel" id="basic-age-full">25 years, 3 months, 15 days</div>
+          </div>
+          
+          <div class="results-grid results-grid-4">
+            <div class="result-item"><div class="result-item-label">Total Months</div><div class="result-item-value" id="basic-months">—</div></div>
+            <div class="result-item"><div class="result-item-label">Total Weeks</div><div class="result-item-value" id="basic-weeks">—</div></div>
+            <div class="result-item"><div class="result-item-label">Total Days</div><div class="result-item-value highlight" id="basic-days">—</div></div>
+            <div class="result-item"><div class="result-item-label">Total Hours</div><div class="result-item-value" id="basic-hours">—</div></div>
+          </div>
+          
+          <div class="countdown-card">
+            <div class="countdown-title">🎉 Next Birthday In</div>
+            <div class="countdown-value"><span id="basic-next-bday">—</span> days</div>
+            <div style="font-size:0.875rem;opacity:0.9;margin-top:0.25rem;">You'll be turning <span id="basic-turning">—</span></div>
+          </div>
+          
+          <div class="results-grid results-grid-4">
+            <div class="result-item"><div class="result-item-label">Zodiac Sign</div><div class="result-item-value" id="basic-zodiac">—</div></div>
+            <div class="result-item"><div class="result-item-label">Chinese Zodiac</div><div class="result-item-value" id="basic-chinese">—</div></div>
+            <div class="result-item"><div class="result-item-label">Generation</div><div class="result-item-value" id="basic-generation">—</div></div>
+            <div class="result-item"><div class="result-item-label">Born On</div><div class="result-item-value" id="basic-born-day">—</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our age calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>College freshman</td><td>Born: Sep 15, 2006</td><td>18 years, 5 months, 2 days</td><td>Age verification for enrollment</td></tr>
+            <tr><td>New parent</td><td>Born: Nov 23, 2024</td><td>0 years, 2 months, 25 days</td><td>Tracking baby milestones</td></tr>
+            <tr><td>Retirement planning</td><td>Born: Mar 8, 1960</td><td>64 years, 11 months, 9 days</td><td>Social Security eligibility</td></tr>
+            <tr><td>Driver's license</td><td>Born: Jun 30, 2009</td><td>15 years, 7 months, 18 days</td><td>Learner's permit eligibility</td></tr>
+            <tr><td>Leap year birthday</td><td>Born: Feb 29, 2000</td><td>25 years (exact on Feb 28/Mar 1)</td><td>Handling leap year births</td></tr>
+            <tr><td>Centennial milestone</td><td>Born: Jan 1, 1926</td><td>100 years, 1 month, 16 days</td><td>Planning a 100th birthday</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Other Calculators Section -->
+    <section class="content-section" style="margin-top: 2rem;">
+      <h2>More Age Calculators</h2>
+      <p>Explore our specialized age calculators for different needs. Each calculator is designed for specific use cases, from <a href="/age-on-date/">passport applications</a> to <a href="/chronological-age/">educational assessments</a>:</p>
+      <div class="related-grid">
+        <a href="/age-on-date/" class="related-card"><div class="related-card-title">Age on Date</div><p class="related-card-desc">Calculate your age on any past or future date—perfect for passport renewals, visa applications, and event planning.</p></a>
+        <a href="/age-difference/" class="related-card"><div class="related-card-title">Age Difference</div><p class="related-card-desc">Find the exact age gap between two people in years, months, and days. Includes the "half your age plus 7" rule.</p></a>
+        <a href="/days-old/" class="related-card"><div class="related-card-title">Days Old</div><p class="related-card-desc">See how many days, hours, minutes, and seconds you've been alive. Find your next milestone birthday.</p></a>
+        <a href="/life-expectancy/" class="related-card"><div class="related-card-title">Life Expectancy</div><p class="related-card-desc">Estimate your statistical life expectancy based on WHO global data by country and gender.</p></a>
+        <a href="/korean-age/" class="related-card"><div class="related-card-title">Korean Age</div><p class="related-card-desc">Calculate your age using the traditional Korean age system (1 at birth, +1 on January 1st).</p></a>
+        <a href="/chronological-age/" class="related-card"><div class="related-card-title">Chronological Age</div><p class="related-card-desc">Get your age in Years:Months format (Y:M) for Pearson assessments, IQ tests, and educational evaluations.</p></a>
+      </div>
+    </section>
+
+    <!-- How Age Is Calculated -->
+    <section class="content-section">
+      <h2>How Age Is Calculated: Methods Worldwide</h2>
+      <p>Age calculation varies across cultures and legal systems. While most of the world uses the <strong>international age system</strong> (counting from 0 at birth), several East Asian countries traditionally used different methods. Understanding these differences is important for international travel, legal documents, and cultural awareness.</p>
+
+      <h3>International/Western Age System</h3>
+      <p>The most common age-counting system worldwide. You start at age 0 at birth and turn 1 year old on your first birthday. Your age increases by exactly one year on each subsequent birthday. This system is used for all legal purposes in nearly every country, including identification documents, voting eligibility, and legal age thresholds.</p>
+      <p>The international age system is defined by <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601</a>, the international standard for date and time representation. When calculating exact age, we account for:</p>
+      <ul>
+        <li><strong>Varying month lengths:</strong> January has 31 days, February has 28 (or 29), April has 30, etc.</li>
+        <li><strong>Leap years:</strong> Every 4 years (with exceptions for century years not divisible by 400)</li>
+        <li><strong>Time zones:</strong> Your exact age depends on your local timezone at birth</li>
+      </ul>
+
+      <h3>Korean Age System (한국 나이)</h3>
+      <p>Traditional Korean age counting considers you 1 year old at birth (counting time in the womb) and adds 1 year on every January 1st, regardless of your actual birthday. This means:</p>
+      <ul>
+        <li>A baby born on December 31st is 1 year old at birth</li>
+        <li>The very next day (January 1st), that baby turns 2 in Korean age</li>
+        <li>Your Korean age is always 1-2 years higher than your international age</li>
+      </ul>
+      <p><strong>Important:</strong> South Korea officially adopted international age for all legal and administrative purposes in <a href="https://en.wikipedia.org/wiki/East_Asian_age_reckoning#South_Korea" target="_blank" rel="noopener">June 2023</a>. However, Korean age is still commonly used in everyday conversation and cultural contexts. Learn more in our <a href="/blog/korean-age-calculator/">Korean Age Calculator guide</a>.</p>
+
+      <h3>Chinese Lunar Age (虚岁)</h3>
+      <p>Similar to Korean age, the Chinese lunar age system (xū suì) counts 1 at birth. However, age increases at <strong>Chinese New Year</strong> (Lunar New Year) rather than January 1st. Since Chinese New Year falls between January 21 and February 20, the timing differs slightly from Korean age. This system is still used in traditional Chinese medicine, fortune telling, and the famous <a href="/blog/lunar-age-calculator/">Chinese gender prediction chart</a>.</p>
+
+      <h3>Chronological Age (for Assessments)</h3>
+      <p>Psychologists, educators, and healthcare professionals use chronological age expressed in a specific format: <strong>Years:Months (Y:M)</strong>. For example, a child who is 7 years and 4 months old has a chronological age of 7:4. This precise measurement is essential for:</p>
+      <ul>
+        <li><a href="/chronological-age/">Pearson assessments</a> (WISC, WPPSI, WAIS)</li>
+        <li>IQ and developmental testing</li>
+        <li>Special education evaluations</li>
+        <li>Pediatric growth chart comparisons (<a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC Growth Charts</a>)</li>
+      </ul>
+    </section>
+
+    <!-- Age Systems Comparison Table -->
+    <section class="content-section">
+      <h2>Age Systems Comparison</h2>
+      <p>This table shows how the same person would have different ages depending on which system is used:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Age System</th><th>Starting Age</th><th>When Age Increases</th><th>Where Used</th><th>Example (born July 15, 2000)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>International</strong></td><td>0 at birth</td><td>On each birthday</td><td>Worldwide (legal)</td><td>24 years old (in 2024)</td></tr>
+            <tr><td><strong>Korean (traditional)</strong></td><td>1 at birth</td><td>Every January 1st</td><td>South Korea (cultural)</td><td>26 years old (in 2024)</td></tr>
+            <tr><td><strong>Chinese Lunar</strong></td><td>1 at birth</td><td>Lunar New Year</td><td>China, Taiwan (cultural)</td><td>25-26 years old</td></tr>
+            <tr><td><strong>Chronological (Y:M)</strong></td><td>0:0 at birth</td><td>Monthly</td><td>Education, Psychology</td><td>24:5 (if May 2024)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Global Life Expectancy Chart -->
+    <section class="content-section">
+      <h2>Global Life Expectancy by Region</h2>
+      <p>Life expectancy at birth varies significantly by region. According to <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates" target="_blank" rel="noopener">World Health Organization (WHO)</a> data, here's how average life expectancy compares across regions:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><span class="chart-bar-label">Japan</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:94%">84.3 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Western Europe</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:91%">81.8 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">North America</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:87%">78.4 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Latin America</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:84%">75.4 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">World Average</span><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:82%">73.4 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">South Asia</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:78%">70.2 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Sub-Saharan Africa</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:68%">61.2 years</div></div></div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;">Source: WHO Global Health Observatory, 2024 estimates. Use our <a href="/life-expectancy/">Life Expectancy Calculator</a> for country-specific data.</p>
+    </section>
+
+    <!-- Age Milestones in Days -->
+    <section class="content-section">
+      <h2>Age Milestones in Days</h2>
+      <p>Many people celebrate milestone birthdays based on days lived rather than years. Here are the most popular day-based milestones, calculated using <a href="/days-old/">our Days Old Calculator</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Days</th><th>Equivalent Age</th><th>Milestone Significance</th><th>Notable Celebrations</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1,000</strong></td><td>2 years, 8 months, 26 days</td><td>First major milestone</td><td>"1000 days" baby celebrations in Japan</td></tr>
+            <tr><td><strong>5,000</strong></td><td>13 years, 8 months, 15 days</td><td>Teenager threshold</td><td>Popular among teens tracking their age</td></tr>
+            <tr><td><strong>10,000</strong></td><td>27 years, 4 months, 26 days</td><td>Most celebrated day milestone</td><td>10K day parties, social media celebrations</td></tr>
+            <tr><td><strong>15,000</strong></td><td>41 years, 1 month, 6 days</td><td>Mid-life milestone</td><td>Life reflection celebrations</td></tr>
+            <tr><td><strong>20,000</strong></td><td>54 years, 9 months, 17 days</td><td>20K club achievement</td><td>Pre-retirement milestone</td></tr>
+            <tr><td><strong>25,000</strong></td><td>68 years, 5 months, 28 days</td><td>Quarter of 100,000</td><td>Retirement era celebration</td></tr>
+            <tr><td><strong>30,000</strong></td><td>82 years, 2 months, 8 days</td><td>30K achievement</td><td>Longevity milestone</td></tr>
+            <tr><td><strong>36,500</strong></td><td>100 years</td><td>Century in days</td><td>Centenarian celebration</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Learn more about day milestones in our <a href="/blog/age-in-days-calculator/">Age in Days Calculator guide</a>.</p>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="content-section">
+      <h2>Fascinating Age Facts</h2>
+      <p>Age and time present some surprising statistics and cultural quirks:</p>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">🎂</div>
+          <div class="fun-fact-content">
+            <h4>10,000 Days Old</h4>
+            <p>You turn 10,000 days old at about 27 years and 5 months. This milestone has become increasingly popular to celebrate, especially among millennials.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">💫</div>
+          <div class="fun-fact-content">
+            <h4>1 Billion Seconds</h4>
+            <p>You turn 1 billion seconds old at exactly 31 years, 251 days, 13 hours, 34 minutes, and 54 seconds. That's roughly 31 years and 8 months.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">🌍</div>
+          <div class="fun-fact-content">
+            <h4>World's Oldest Person</h4>
+            <p>The verified oldest person ever was <a href="https://www.guinnessworldrecords.com/world-records/oldest-person" target="_blank" rel="noopener">Jeanne Calment</a> of France, who lived 122 years and 164 days (1875-1997).</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">📅</div>
+          <div class="fun-fact-content">
+            <h4>Leap Year Babies</h4>
+            <p>Only about <a href="https://www.timeanddate.com/date/leapyear.html" target="_blank" rel="noopener">5 million people</a> worldwide were born on February 29. They experience their actual birthday only once every 4 years! Read our <a href="/blog/leap-year-birthday/">Leap Year Birthday guide</a>.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">👶</div>
+          <div class="fun-fact-content">
+            <h4>Most Common Birthday</h4>
+            <p>September 9th is statistically the most common birthday in the US, followed by September 19th. The least common (excluding Feb 29) is December 25th.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">🧓</div>
+          <div class="fun-fact-content">
+            <h4>Centenarians Rising</h4>
+            <p>There are over <a href="https://www.un.org/en/global-issues/ageing" target="_blank" rel="noopener">600,000 centenarians</a> (people aged 100+) alive today. By 2050, this number is projected to reach 3.7 million.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal Ages Table -->
+    <section class="content-section">
+      <h2>Legal Age Thresholds by Country</h2>
+      <p>Age determines eligibility for many activities worldwide. Here are common legal age thresholds in major countries, according to <a href="https://www.cia.gov/the-world-factbook/" target="_blank" rel="noopener">CIA World Factbook</a> and national government sources:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country</th><th>Voting Age</th><th>Driving Age</th><th>Drinking Age</th><th>Age of Majority</th></tr></thead>
+          <tbody>
+            <tr><td>🇺🇸 United States</td><td>18</td><td>16 (varies by state)</td><td>21</td><td>18</td></tr>
+            <tr><td>🇬🇧 United Kingdom</td><td>18</td><td>17</td><td>18</td><td>18</td></tr>
+            <tr><td>🇨🇦 Canada</td><td>18</td><td>16</td><td>18-19</td><td>18-19</td></tr>
+            <tr><td>🇦🇺 Australia</td><td>18</td><td>17</td><td>18</td><td>18</td></tr>
+            <tr><td>🇩🇪 Germany</td><td>18</td><td>18 (17 with supervision)</td><td>16 (beer/wine), 18 (spirits)</td><td>18</td></tr>
+            <tr><td>🇯🇵 Japan</td><td>18</td><td>18</td><td>20</td><td>18</td></tr>
+            <tr><td>🇰🇷 South Korea</td><td>18</td><td>18</td><td>19</td><td>19</td></tr>
+            <tr><td>🇧🇷 Brazil</td><td>16 (optional), 18 (mandatory)</td><td>18</td><td>18</td><td>18</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For comprehensive information, see our guides on <a href="/blog/legal-ages-guide/">Legal Ages by Country</a>, <a href="/blog/driving-age-calculator/">Driving Ages</a>, and <a href="/blog/voting-age-guide/">Voting Ages</a>.</p>
+    </section>
+
+    <!-- World Population by Age -->
+    <section class="content-section">
+      <h2>World Population by Age Group</h2>
+      <p>According to <a href="https://population.un.org/wpp/" target="_blank" rel="noopener">United Nations Population Division</a> estimates for 2024:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><span class="chart-bar-label">0-14 years</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:65%">25.4% (2.03 billion)</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">15-24 years</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:40%">15.5% (1.24 billion)</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">25-54 years</span><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:100%">40.5% (3.24 billion)</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">55-64 years</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:23%">9.1% (728 million)</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">65+ years</span><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:25%">9.5% (761 million)</div></div></div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-500); margin-top: 0.5rem;">Total world population: ~8.0 billion (2024). The 65+ population is the fastest-growing age group globally.</p>
+    </section>
+
+    <!-- Generations Table -->
+    <section class="content-section">
+      <h2>Generations by Birth Year</h2>
+      <p>Knowing your birth year helps identify your generation. Generational definitions vary slightly by source, but here are the commonly accepted ranges according to <a href="https://www.pewresearch.org/topic/generations-age/" target="_blank" rel="noopener">Pew Research Center</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Generation</th><th>Birth Years</th><th>Age in 2024</th><th>Key Characteristics</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Silent Generation</strong></td><td>1928-1945</td><td>79-96</td><td>Great Depression, WWII childhood</td></tr>
+            <tr><td><strong>Baby Boomers</strong></td><td>1946-1964</td><td>60-78</td><td>Post-war boom, civil rights era</td></tr>
+            <tr><td><strong>Generation X</strong></td><td>1965-1980</td><td>44-59</td><td>Latchkey kids, MTV generation</td></tr>
+            <tr><td><strong>Millennials (Gen Y)</strong></td><td>1981-1996</td><td>28-43</td><td>Digital natives, 9/11, Great Recession</td></tr>
+            <tr><td><strong>Generation Z</strong></td><td>1997-2012</td><td>12-27</td><td>Smartphones, social media, COVID</td></tr>
+            <tr><td><strong>Generation Alpha</strong></td><td>2013-2025</td><td>0-11</td><td>AI, tablet natives, pandemic babies</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Use our <a href="/blog/generation-calculator/">Generation Calculator</a> to find your exact generation based on your birth year.</p>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate my exact age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter your date of birth in our calculator above. We calculate the exact years, months, and days between your birthdate and today's date. Our algorithm accounts for varying month lengths (28-31 days) and leap years (years divisible by 4, except century years not divisible by 400). The result shows your precise age in multiple units: years, months, weeks, days, hours, and minutes.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is Korean age and why is it different?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Korean age (한국 나이)</strong> is a traditional East Asian age system where you're counted as 1 year old at birth (valuing time in the womb) and everyone adds 1 year on January 1st, regardless of their actual birthday. This means a baby born on December 31st turns "2" the very next day! Your Korean age is typically 1-2 years higher than your international age. <strong>Important:</strong> South Korea officially adopted international age for all legal and administrative purposes in <a href="https://en.wikipedia.org/wiki/East_Asian_age_reckoning" target="_blank" rel="noopener">June 2023</a>, though Korean age is still used culturally. Use our <a href="/korean-age/">Korean Age Calculator</a> to find yours.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How many days old am I?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Use our <a href="/days-old/">Days Old Calculator</a> to find out exactly how many days you've been alive. Enter your birthdate and we'll calculate the total days, hours, minutes, and seconds since you were born. We also show when you'll reach milestone days like 10,000 days (about 27.4 years) or 20,000 days (about 54.8 years). Many people now celebrate these "day birthdays" as alternative milestones!</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is chronological age and when is it used?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Chronological age</strong> is your exact age expressed in years and months, written as Y:M (e.g., 7:4 means 7 years and 4 months). It's the precise measurement used by psychologists, educators, and clinicians for developmental assessments. Common uses include <a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson assessments</a> (WISC-V, WAIS-IV), IQ testing, reading level assessments, and special education evaluations. The chronological age must be calculated from the child's birthdate to the exact test date. Use our <a href="/chronological-age/">Chronological Age Calculator</a> for accurate Y:M format results.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How accurate is the life expectancy calculator?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Our <a href="/life-expectancy/">Life Expectancy Calculator</a> uses <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates" target="_blank" rel="noopener">WHO global health statistics</a> for country-specific life expectancy averages. These are statistical averages for populations, not individual predictions. Actual lifespan varies significantly based on genetics, lifestyle (diet, exercise, smoking), healthcare access, socioeconomic factors, and environmental conditions. The calculator provides general perspective based on where you live and your gender, but should not be considered a medical prediction.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's the "half your age plus 7" rule?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The "half your age plus 7" rule is a social guideline suggesting the youngest person you should date is half your age plus 7 years. For example, if you're 30, the minimum "acceptable" age would be (30÷2)+7 = 22. Conversely, the oldest you should date is calculated as (your age - 7) × 2 = 46. This rule appears to have originated in <a href="https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships" target="_blank" rel="noopener">late 19th century France</a> and became popular in English-speaking countries in the early 20th century. It's purely a social convention, not a scientific or legal rule. Use our <a href="/age-difference/">Age Difference Calculator</a> to explore age gaps.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">When will I turn 10,000 days old?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>10,000 days equals approximately <strong>27 years, 4 months, and 26 days</strong> (accounting for leap years). This has become an increasingly popular milestone birthday, especially since social media made tracking such dates easier. Use our <a href="/days-old/">Days Old Calculator</a> to find your exact 10,000-day birthday. Other popular day milestones include 5,000 days (13.7 years), 15,000 days (41.1 years), and 20,000 days (54.8 years). See our <a href="/blog/age-in-days-calculator/">Age in Days guide</a> for more information.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do leap years affect age calculation?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes! Leap years affect age calculations in several ways. When counting days lived, each leap year adds an extra day (February 29), making the average year 365.25 days. For people born on February 29 ("leaplings"), their actual birthday only occurs every 4 years—about <a href="https://www.timeanddate.com/date/leapyear.html" target="_blank" rel="noopener">5 million people worldwide</a> have this birthday. In non-leap years, leaplings typically celebrate on February 28 or March 1. Our calculator automatically handles all leap year scenarios correctly. Learn more in our <a href="/blog/leap-year-birthday/">Leap Year Birthday guide</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is biological age vs. chronological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Chronological age</strong> is simply how many years you've been alive—the number our calculator shows. <strong>Biological age</strong> (also called physiological age) measures how old your body actually is based on various biomarkers. You can be chronologically 50 but biologically 40 (or 60) depending on factors like genetics, lifestyle, diet, exercise, and environmental exposure. Biological age is measured through tests examining DNA methylation, telomere length, and organ function. <a href="https://www.nih.gov/news-events/news-releases/biological-age-predicts-risk-diseases-death-better-chronological-age" target="_blank" rel="noopener">NIH research</a> shows biological age is a better predictor of health outcomes than chronological age. Learn more in our <a href="/blog/biological-age-vs-chronological/">Biological Age vs. Chronological Age guide</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate age for a passport application?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Passport applications typically require your age on a specific date (either application date or travel date). Use our <a href="/age-on-date/">Age on Date Calculator</a> to find your exact age on any date. Many countries have age-based rules: children under 16 often need shorter-validity passports, and applicants over 62 may be eligible for reduced fees. For US passports, the <a href="https://travel.state.gov/content/travel/en/passports.html" target="_blank" rel="noopener">State Department</a> has specific requirements based on age at time of application.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zodiac Signs Section -->
+    <section class="content-section">
+      <h2>Zodiac Signs by Birth Date</h2>
+      <p>Your birth date determines your Western zodiac sign. Here are all 12 signs with their date ranges:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Zodiac Sign</th><th>Symbol</th><th>Date Range</th><th>Element</th></tr></thead>
+          <tbody>
+            <tr><td>Aries</td><td>♈</td><td>March 21 - April 19</td><td>Fire</td></tr>
+            <tr><td>Taurus</td><td>♉</td><td>April 20 - May 20</td><td>Earth</td></tr>
+            <tr><td>Gemini</td><td>♊</td><td>May 21 - June 20</td><td>Air</td></tr>
+            <tr><td>Cancer</td><td>♋</td><td>June 21 - July 22</td><td>Water</td></tr>
+            <tr><td>Leo</td><td>♌</td><td>July 23 - August 22</td><td>Fire</td></tr>
+            <tr><td>Virgo</td><td>♍</td><td>August 23 - September 22</td><td>Earth</td></tr>
+            <tr><td>Libra</td><td>♎</td><td>September 23 - October 22</td><td>Air</td></tr>
+            <tr><td>Scorpio</td><td>♏</td><td>October 23 - November 21</td><td>Water</td></tr>
+            <tr><td>Sagittarius</td><td>♐</td><td>November 22 - December 21</td><td>Fire</td></tr>
+            <tr><td>Capricorn</td><td>♑</td><td>December 22 - January 19</td><td>Earth</td></tr>
+            <tr><td>Aquarius</td><td>♒</td><td>January 20 - February 18</td><td>Air</td></tr>
+            <tr><td>Pisces</td><td>♓</td><td>February 19 - March 20</td><td>Water</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Our calculator automatically shows your zodiac sign and Chinese zodiac animal based on your birthdate. Learn more in our <a href="/blog/zodiac-sign-calculator/">Zodiac Sign Calculator guide</a>.</p>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="content-section">
+      <h2>Comprehensive Age Guides</h2>
+      <p>Explore our in-depth guides on age calculation, life expectancy, legal ages, and more. Each guide includes data tables, charts, FAQs, and authoritative sources:</p>
+      <div class="blog-grid">
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Guide • 550K monthly searches</p><h3><a href="/blog/age-calculator-guide/">Complete Age Calculator Guide</a></h3><p>Everything about calculating age—methods, formulas, cultural differences, and step-by-step instructions.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">How Old • 9.9K monthly searches</p><h3><a href="/blog/how-old-am-i/">How Old Am I?</a></h3><p>Find your exact age in years, months, days, hours, and minutes with detailed explanations.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Life Expectancy • 40.5K monthly searches</p><h3><a href="/blog/life-expectancy-calculator/">Life Expectancy Calculator</a></h3><p>Estimate your statistical life expectancy by country, gender, and lifestyle factors using WHO data.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Korean Age • 2.9K monthly searches</p><h3><a href="/blog/korean-age-calculator/">Korean Age Calculator</a></h3><p>Understand the traditional Korean age system and South Korea's 2023 switch to international age.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Chronological Age • 40.5K monthly searches</p><h3><a href="/blog/chronological-age-calculator/">Chronological Age Calculator</a></h3><p>Calculate Y:M format chronological age for Pearson assessments, IQ tests, and educational evaluations.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Age Difference</p><h3><a href="/blog/age-difference-calculator/">Age Difference Calculator</a></h3><p>Calculate exact age gaps and explore the "half your age plus 7" dating rule with examples.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Days Old</p><h3><a href="/blog/age-in-days-calculator/">Age in Days Calculator</a></h3><p>Find out how many days you've lived and when you'll hit milestones like 10,000 or 20,000 days.</p></div></article>
+        <article class="blog-card"><div class="blog-card-content"><p class="blog-card-meta">Birthdays</p><h3><a href="/blog/birthday-calculator/">Birthday Calculator</a></h3><p>Countdown to your next birthday, find what day you were born on, and explore birthday traditions worldwide.</p></div></article>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem;"><a href="/blog/" class="btn-secondary">View All 33 Guides →</a></p>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="margin: 2.5rem 0; text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Your Age Now</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Enter your birthdate above to discover your exact age in years, months, days, hours, and minutes—plus your zodiac sign, generation, and next birthday countdown.</p>
+      <a href="#panel-basic" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">↑ Use the Calculator</a>
+    </section>
+    
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference/">Age Difference</a></li><li><a href="/days-old/">Days Old</a></li><li><a href="/korean-age/">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

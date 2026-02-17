@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunar Age Calculator - Calculate Your Chinese Lunar Age</title>
+  <meta name="description" content="Free lunar age calculator. Find your Chinese lunar age based on the traditional lunar calendar. Learn how lunar age differs from Western age and its cultural significance.">
+  <link rel="canonical" href="https://calcmyage.org/blog/lunar-age-calculator/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/blog/lunar-age-calculator/">
+  <meta property="og:title" content="Lunar Age Calculator - Calculate Your Chinese Lunar Age">
+  <meta property="og:description" content="Free lunar age calculator. Find your Chinese lunar age based on the traditional lunar calendar. Learn how lunar age differs from Western age and its cultural significance.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Lunar Age Calculator - Calculate Your Chinese Lunar Age",
+    "description": "Free lunar age calculator. Find your Chinese lunar age based on the traditional lunar calendar.",
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-02-06",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Age Calculator",
+      "url": "https://calcmyage.org"
+    },
+    "mainEntityOfPage": "https://calcmyage.org/blog/lunar-age-calculator/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is lunar age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lunar age is a traditional East Asian age-counting system where you are 1 year old at birth (counting time in the womb) and gain a year at each Lunar New Year, rather than on your birthday. It results in an age that is 1-2 years higher than your Western age. The system originated in ancient China and spread to Korea, Vietnam, Japan, and other East Asian cultures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is lunar age different from Korean age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both start at 1 at birth, but lunar age increases at Lunar New Year (which shifts between January 21 and February 20), while Korean age increases on January 1 of the Gregorian calendar. The difference between the two systems is usually a matter of weeks. South Korea officially switched to international age in June 2023, but Korean age persists in everyday social contexts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do Chinese people count age differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The system reflects Confucian and cultural values. Counting from 1 at birth honors the time in the womb as part of life. Aging at New Year creates communal bonds since everyone ages together. It also simplified record-keeping in ancient times when individual birth dates were less precisely tracked. The system developed over 4,000 years ago during the Shang Dynasty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my lunar age for the Chinese Gender Chart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take your Western age at the time of conception and add 1 (if you've passed the Lunar New Year that year) or 2 (if you haven't). For accuracy, convert both your birth date and conception date to the Chinese lunar calendar. Our calculator can help determine your lunar age on any specific date. Remember to also convert the conception month to the lunar calendar month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Chinese Gender Prediction Chart accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No scientific evidence supports the Chinese Gender Prediction Chart. Studies suggest it performs at roughly chance level (50%). The chart is a cultural tradition and should be used for entertainment purposes only, not as a substitute for medical ultrasound or genetic testing for determining fetal sex. The NIH confirms that sex is determined by chromosomes, not calendar dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a baby be 2 years old on their first day of life?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in the lunar age system. A baby born the day before Lunar New Year starts at age 1 (at birth) and turns 2 the very next day (at Lunar New Year). This is one of the most dramatic examples of the difference between lunar and Western age counting. For example, a baby born on February 16, 2026 would be lunar age 1 at birth, then lunar age 2 on February 17, 2026 (Lunar New Year), despite being only one day old by Western counting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does China still use lunar age officially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. China officially uses Western age (周岁, zhousui) for all legal, medical, and administrative purposes. However, lunar age (虚岁, xusui) remains widely used in cultural and social contexts, particularly during Chinese New Year celebrations, traditional medicine, fortune telling, and family gatherings. Over 1.4 billion people in mainland China are familiar with both systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Metonic cycle and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Metonic cycle is a 19-year period after which the lunar phases repeat on approximately the same dates. The Chinese calendar uses this cycle to determine when to insert leap months (7 times in 19 years), ensuring the calendar stays aligned with both lunar phases and solar seasons. This is what keeps Chinese New Year consistently in late January to mid-February rather than drifting through the year like Islamic holidays do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert my birthday to the lunar calendar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use online converters like timeanddate.com's Chinese calendar tool to convert any Gregorian date to its lunar calendar equivalent. Enter your birth date, and the tool will show you the corresponding lunar month, day, and year. This conversion is essential for accurate lunar age calculation and for using the Chinese gender prediction chart correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to lunar age in a leap month year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leap months in the Chinese calendar add a 13th month to certain years (roughly every 2-3 years). This affects the timing of months within the year but does not change how lunar age is calculated. Your lunar age still increases at Lunar New Year, regardless of whether that year has a leap month. However, if you were born in a leap month, you technically have a lunar birthday that only occurs in certain years - similar to being born on February 29 in the Western calendar."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://calcmyage.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://calcmyage.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lunar Age Calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container" style="max-width: 800px;">
+    <article>
+      <h1>Lunar Age Calculator: Calculate Your Chinese Lunar Age</h1>
+      <p class="intro-text">Lunar age is an age-counting system used in traditional Chinese culture and other East Asian societies. Unlike Western age, which counts from zero at birth, lunar age counts you as 1 year old at birth and adds a year at each Lunar New Year. This comprehensive guide explains how lunar age works, provides step-by-step calculation methods, explores its 4,000-year history, covers regional variations across Asia, and details its cultural significance in everything from pregnancy charts to ancestral rituals. Use our <a href="/#panel-korean">free calculator</a> to find your lunar age instantly.</p>
+
+      <div class="key-takeaways">
+        <div class="key-takeaways-title">Key Takeaways</div>
+        <ul>
+          <li><strong>Lunar age</strong> counts 1 at birth and adds 1 at each Lunar New Year (not on your birthday)</li>
+          <li><strong>You can be 1-2 years older</strong> in lunar age compared to Western/international age</li>
+          <li><strong>Lunar New Year</strong> falls between January 21 and February 20 each year</li>
+          <li><strong>Chinese gender prediction</strong> charts use lunar age and lunar month of conception</li>
+          <li><strong>Over 1.5 billion people</strong> in China, Vietnam, Korea, and diaspora communities still use lunar age</li>
+          <li>Use our <a href="/">age calculator</a> to see both your international and lunar age</li>
+        </ul>
+      </div>
+
+      <nav style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+        <strong>Table of Contents</strong>
+        <ol style="margin: 0.75rem 0 0 1.25rem; line-height: 2;">
+          <li><a href="#what-is-lunar-age">What Is Lunar Age?</a></li>
+          <li><a href="#history-origins">History and Origins of Lunar Age</a></li>
+          <li><a href="#step-by-step">Step-by-Step Calculation Methods</a></li>
+          <li><a href="#comparison-table">Lunar Age vs. Western Age Comparison</a></li>
+          <li><a href="#regional-variations">Regional Variations Across Asia</a></li>
+          <li><a href="#lunar-calendar">How the Lunar Calendar Works</a></li>
+          <li><a href="#cultural-significance">Cultural Significance and Uses</a></li>
+          <li><a href="#celebrity-examples">Celebrity Lunar Age Examples</a></li>
+          <li><a href="#gender-prediction">The Chinese Gender Prediction Chart</a></li>
+          <li><a href="#tcm">Lunar Age in Traditional Chinese Medicine</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-is-lunar-age">What Is Lunar Age?</h2>
+      <p>Lunar age (also called nominal age, virtual age, or in Chinese: xu sui, &#x865A;&#x5C81;) is an East Asian age-counting method based on the traditional Chinese lunisolar calendar. The system operates on two fundamental principles that differ markedly from Western age counting:</p>
+      <ol>
+        <li><strong>You are 1 at birth.</strong> Time spent in the womb is counted as the first year of life. At the moment of birth, a baby is already considered to be 1 year old (sometimes described as "1 sui" - 1 &#x5C81;). This reflects the Confucian value of honoring the prenatal period as part of a person's existence.</li>
+        <li><strong>Age increases at Lunar New Year.</strong> Everyone adds 1 year to their age on the first day of the Lunar New Year (Chinese New Year), not on their individual birthday. This creates a communal aging experience where everyone "ages" together on the same day.</li>
+      </ol>
+      <p>The result is that your lunar age is always 1-2 years higher than your Western age. The exact difference depends on whether your birthday falls before or after the Lunar New Year in a given year.</p>
+
+      <h3>Lunar Age Formula</h3>
+      <p style="text-align: center; font-size: 1.125rem; padding: 1rem; background: var(--primary-bg); border-radius: var(--radius-md);"><strong>Lunar Age = Current Year - Birth Year + 1</strong> (using lunar calendar years)</p>
+      <p>For a simplified calculation using the Gregorian calendar: if today's date is before the Lunar New Year, use last year's Lunar New Year as the reference. If it's after the Lunar New Year, use this year's. For precise calculations that account for the exact dates, use our <a href="/#panel-korean">age calculator's Korean/Lunar tab</a>.</p>
+
+      <h3>Understanding the +1 and +2 Difference</h3>
+      <p>The difference between lunar and Western age can be either +1 or +2 years, depending on timing:</p>
+      <ul>
+        <li><strong>+1 year difference:</strong> Occurs when your birthday falls between January 1 and the Lunar New Year date of the current year. You've already had your Western birthday, but the lunar "age-up" hasn't happened yet.</li>
+        <li><strong>+2 years difference:</strong> Occurs for most of the year. The lunar "age-up" has happened (at Lunar New Year), but your Western birthday hasn't arrived yet, creating a two-year gap.</li>
+      </ul>
+
+      <h2 id="history-origins">History and Origins of Lunar Age</h2>
+      <p>The lunar age system has roots stretching back over 4,000 years to ancient China. Understanding its history illuminates why this seemingly complex system developed and persisted.</p>
+
+      <h3>Ancient Chinese Origins (2000+ BCE)</h3>
+      <p>The earliest forms of the Chinese calendar date to the Shang Dynasty (1600-1046 BCE), though astronomical observations began even earlier. The lunisolar calendar was developed to track both lunar phases (important for religious rituals and festivals) and solar seasons (critical for agriculture). According to historical records documented by <a href="https://www.history.com/topics/ancient-china/ancient-china" target="_blank" rel="noopener">History.com</a>, Chinese astronomers created one of the world's most sophisticated ancient calendar systems.</p>
+      <p>The practice of counting age from 1 at birth likely emerged from several cultural factors:</p>
+      <ul>
+        <li><strong>Reverence for prenatal life:</strong> Confucian philosophy valued the time spent in the mother's womb as the beginning of existence. The nine months of pregnancy was rounded up to one year.</li>
+        <li><strong>Practical record-keeping:</strong> In ancient times without precise birth records, tracking individual birthdays was difficult. Having everyone age together at New Year simplified administration.</li>
+        <li><strong>Communal identity:</strong> The system reinforced social bonds by creating shared age-cohorts (people born in the same lunar year) who experienced milestones together.</li>
+      </ul>
+
+      <h3>Spread Across East Asia</h3>
+      <p>As Chinese culture influenced neighboring civilizations, the lunar age system spread throughout East Asia:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Region</th><th>Period of Adoption</th><th>Local Name</th><th>Current Status</th></tr></thead>
+          <tbody>
+            <tr><td>China</td><td>Ancient (native)</td><td>Xu sui (&#x865A;&#x5C81;)</td><td>Cultural use; official is Western age</td></tr>
+            <tr><td>Korea</td><td>~300 CE</td><td>Se (&#xC138;) / Korean age</td><td>Officially abolished June 2023</td></tr>
+            <tr><td>Vietnam</td><td>~100 CE</td><td>Tu&#x1ED5;i m&#x1EE5;</td><td>Still widely used in cultural contexts</td></tr>
+            <tr><td>Japan</td><td>~600 CE</td><td>Kazoedoshi (&#x6570;&#x3048;&#x5E74;)</td><td>Rarely used; mostly for Shinto rituals</td></tr>
+            <tr><td>Mongolia</td><td>~1200 CE</td><td>Similar system</td><td>Some traditional use</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Modern Transitions</h3>
+      <p>Throughout the 20th century, most East Asian countries officially adopted the Western (Gregorian) calendar and international age system for legal and administrative purposes. However, lunar age has proven remarkably resilient in cultural contexts. The most recent major change came in June 2023 when South Korea officially switched to international age for all legal purposes, though Korean age remains common in everyday conversation.</p>
+
+      <h2 id="step-by-step">Step-by-Step Calculation Methods</h2>
+      <p>There are several approaches to calculating lunar age, ranging from quick estimates to precise calendar-based methods.</p>
+
+      <h3>Method 1: Quick Estimate (Most Common)</h3>
+      <p>This method works for everyday purposes and is accurate within the year:</p>
+      <ol>
+        <li>Take your current <strong>Western age</strong></li>
+        <li>Add <strong>1</strong> (for starting at 1 at birth)</li>
+        <li>Check if today is <strong>after</strong> Lunar New Year but <strong>before</strong> your birthday - if so, add another <strong>1</strong></li>
+      </ol>
+      <div style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 1.5rem 0;">
+        <p style="margin: 0;"><strong>Example:</strong> Sarah was born on August 15, 1995. Today is February 6, 2026.</p>
+        <ul style="margin: 0.75rem 0 0 0;">
+          <li>Western age: 30 (her birthday hasn't happened yet in 2026)</li>
+          <li>Add 1: 30 + 1 = 31</li>
+          <li>Lunar New Year 2026 is February 17 (hasn't happened yet)</li>
+          <li>Current lunar age: <strong>31</strong> (will become 32 after February 17)</li>
+        </ul>
+      </div>
+
+      <h3>Method 2: Year Subtraction Formula</h3>
+      <p>This formula-based approach is used in many online calculators:</p>
+      <div style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 1.5rem 0; text-align: center;">
+        <p style="margin: 0; font-size: 1.125rem;"><strong>Lunar Age = Current Year - Birth Year + 1</strong></p>
+        <p style="margin: 0.75rem 0 0 0; font-size: 0.9375rem; color: var(--gray-600);">Adjust by -1 if before Lunar New Year and before your birthday falls within the lunar year</p>
+      </div>
+
+      <h3>Method 3: Precise Lunar Calendar Conversion</h3>
+      <p>For exact calculations (needed for Chinese gender prediction charts), you must convert dates to the lunar calendar:</p>
+      <ol>
+        <li><strong>Convert your birth date</strong> from Gregorian to the Chinese lunar calendar (available on <a href="https://www.timeanddate.com/calendar/about-chinese.html" target="_blank" rel="noopener">timeanddate.com</a>)</li>
+        <li><strong>Identify the lunar year</strong> of your birth</li>
+        <li><strong>Count the lunar New Years</strong> that have passed since your birth</li>
+        <li><strong>Add 1</strong> for your starting age</li>
+      </ol>
+
+      <h3>Worked Example: Detailed Calculation</h3>
+      <div style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 1.5rem 0;">
+        <p><strong>Person:</strong> Born December 28, 1999</p>
+        <p><strong>Calculate for:</strong> February 6, 2026</p>
+        <ol style="margin: 0.75rem 0 0 0;">
+          <li>December 28, 1999 in the lunar calendar falls in lunar year 4697 (Year of the Rabbit, ending February 4, 2000)</li>
+          <li>Today (February 6, 2026) is in lunar year 4723 (Year of the Snake, before February 17 Lunar New Year)</li>
+          <li>Wait - Lunar New Year 2026 is February 17, so we're still in lunar year 4722 (Year of the Snake)</li>
+          <li>Lunar years passed: 4722 - 4697 = 25</li>
+          <li>Add starting age: 25 + 1 = <strong>26 years old</strong> (lunar age)</li>
+          <li>Western age: 26 (birthday December 28, 2025 already passed)</li>
+          <li>Difference: 26 - 26 = <strong>0</strong>... but after February 17, lunar age becomes 27 while Western age stays 26</li>
+        </ol>
+      </div>
+
+      <h2 id="comparison-table">Lunar Age vs. Western Age Comparison</h2>
+      <p>The difference between lunar and Western age varies throughout the year. Here's a comprehensive comparison for people born on various dates:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Birth Date</th><th>Western Age (Feb 2026)</th><th>Lunar Age (Feb 2026)</th><th>Difference</th></tr></thead>
+          <tbody>
+            <tr><td>January 5, 1990</td><td>36</td><td>37</td><td>+1</td></tr>
+            <tr><td>March 15, 1990</td><td>35</td><td>37</td><td>+2</td></tr>
+            <tr><td>July 20, 1995</td><td>30</td><td>32</td><td>+2</td></tr>
+            <tr><td>October 1, 2000</td><td>25</td><td>27</td><td>+2</td></tr>
+            <tr><td>December 28, 2000</td><td>25</td><td>27</td><td>+2</td></tr>
+            <tr><td>February 10, 2005</td><td>20</td><td>22</td><td>+2</td></tr>
+            <tr><td>November 3, 2010</td><td>15</td><td>17</td><td>+2</td></tr>
+            <tr><td>January 30, 2015</td><td>11</td><td>12</td><td>+1</td></tr>
+            <tr><td>September 22, 2020</td><td>5</td><td>7</td><td>+2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>As the table shows, the difference is typically +2 years for most of the year. It drops to +1 for people whose birthdays fall between January 1 and the Lunar New Year date in a given year.</p>
+
+      <h3>Visual Comparison: Age Differences by System</h3>
+      <p>This chart shows how the same person (born June 15, 1995) has different ages depending on the counting system, as of February 2026:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><span class="chart-bar-label">International Age</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:77%">30 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Lunar Age (Chinese)</span><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:82%">32 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Korean Age (trad.)</span><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:82%">32 years</div></div></div>
+      </div>
+
+      <p>For someone born December 30, 1995 (just before Lunar New Year 1996):</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><span class="chart-bar-label">International Age</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width:77%">30 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Lunar Age (Chinese)</span><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:82%">32 years</div></div></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Korean Age (trad.)</span><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:82%">32 years</div></div></div>
+      </div>
+
+      <h2 id="regional-variations">Regional Variations Across Asia</h2>
+      <p>While the basic concept of starting at 1 and aging at New Year is shared across East Asia, important regional differences exist.</p>
+
+      <h3>China (Xu Sui System)</h3>
+      <p>In mainland China, lunar age (xu sui, &#x865A;&#x5C81;) is distinguished from Western age (zhou sui, &#x5468;&#x5C81;). The term "xu sui" literally means "virtual years" or "nominal years." While China officially uses Western age for legal documents, healthcare, and government records, xu sui remains important for:</p>
+      <ul>
+        <li>Traditional medicine consultations</li>
+        <li>Fortune telling and astrology</li>
+        <li>Family celebrations and ancestral rituals</li>
+        <li>Chinese gender prediction charts</li>
+        <li>Informal social contexts, especially among older generations</li>
+      </ul>
+
+      <h3>South Korea (Until June 2023)</h3>
+      <p>Korea's traditional age system (Korean age, &#xD55C;&#xAD6D; &#xB098;&#xC774;) operated similarly to Chinese lunar age, but with one key difference: age increased on January 1 of the Gregorian calendar, not at Lunar New Year. This made calculation simpler but created the same 1-2 year gap with international age.</p>
+      <p>In June 2023, South Korea officially adopted international age for all legal and official purposes, making it one of the last major countries to standardize. However, Korean age persists in everyday conversation, social hierarchies, and cultural contexts. Learn more in our <a href="/blog/korean-age-calculator/">Korean Age Calculator</a> guide.</p>
+
+      <h3>Vietnam (Tu&#x1ED5;i M&#x1EE5; System)</h3>
+      <p>Vietnamese traditional age counting (tu&#x1ED5;i m&#x1EE5;, meaning "counted age" or "nominal age") follows the Chinese lunar calendar closely. Age increases at T&#x1EBF;t (Vietnamese Lunar New Year), which coincides with Chinese New Year. Vietnamese people commonly know both their tu&#x1ED5;i m&#x1EE5; (lunar age) and tu&#x1ED5;i d&#x1B0;&#x1A1;ng (Western age).</p>
+
+      <h3>Japan (Kazoedoshi System)</h3>
+      <p>Japan's traditional age system (kazoedoshi, &#x6570;&#x3048;&#x5E74;) was officially replaced with Western age in 1950, making Japan the earliest major East Asian country to fully transition. Today, kazoedoshi is used almost exclusively in Shinto shrine rituals and certain traditional ceremonies. The term literally means "counted years."</p>
+
+      <h3>Comparison Chart: Regional Age Systems</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>System</th><th>Start Age</th><th>When Age Increases</th><th>Used In</th><th>Official Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>International (Western)</strong></td><td>0 at birth</td><td>On each birthday</td><td>Most of the world</td><td>Official everywhere</td></tr>
+            <tr><td><strong>Lunar Age (Chinese)</strong></td><td>1 at birth</td><td>At Lunar New Year</td><td>China, Taiwan, diaspora</td><td>Cultural use only</td></tr>
+            <tr><td><strong>Korean Age (trad.)</strong></td><td>1 at birth</td><td>On January 1</td><td>South Korea</td><td>Abolished June 2023</td></tr>
+            <tr><td><strong>Vietnamese Age</strong></td><td>1 at birth</td><td>At T&#x1EBF;t (Lunar NY)</td><td>Vietnam</td><td>Cultural use only</td></tr>
+            <tr><td><strong>Japanese (Kazoedoshi)</strong></td><td>1 at birth</td><td>At New Year</td><td>Japan (Shinto only)</td><td>Abolished 1950</td></tr>
+            <tr><td><strong>Counting Age</strong></td><td>1 at birth</td><td>On each birthday</td><td>Some contexts</td><td>Rarely used</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="lunar-calendar">How the Lunar Calendar Works</h2>
+      <p>Understanding lunar age requires understanding the lunisolar calendar that underpins it. The Chinese calendar is not purely lunar (like the Islamic calendar) but is a <strong>lunisolar calendar</strong> that incorporates both lunar phases and the solar year.</p>
+
+      <h3>Key Features of the Chinese Lunisolar Calendar</h3>
+      <ul>
+        <li><strong>Months follow the Moon:</strong> Each month begins on the new moon and lasts 29 or 30 days. A lunar month (synodic month) is approximately 29.53 days.</li>
+        <li><strong>12 months per year normally:</strong> A regular lunar year has 12 months, totaling 354 or 355 days - about 11 days shorter than the solar year.</li>
+        <li><strong>Leap months:</strong> To stay aligned with the seasons, a 13th month (leap month or intercalary month, &#x95F0;&#x6708;) is added roughly every 2-3 years. This keeps festivals like Chinese New Year in late January to mid-February.</li>
+        <li><strong>Year begins at Lunar New Year:</strong> The first day of the first lunar month, which falls between January 21 and February 20 on the Gregorian calendar.</li>
+      </ul>
+
+      <h3>The Metonic Cycle</h3>
+      <p>The Chinese calendar uses the Metonic cycle - a 19-year period during which there are 235 lunar months, almost exactly equal to 19 solar years. This means that after 19 years, the moon phases repeat on approximately the same dates. The calendar inserts 7 leap months during each 19-year cycle to maintain seasonal alignment. This astronomical precision, documented by <a href="https://www.nationalgeographic.com/culture/article/chinese-zodiac" target="_blank" rel="noopener">National Geographic</a>, makes the Chinese calendar one of the most sophisticated traditional timekeeping systems ever developed.</p>
+
+      <h3>Lunar New Year Dates 2020-2040</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Year</th><th>Lunar New Year Date</th><th>Zodiac Animal</th><th>Element</th></tr></thead>
+          <tbody>
+            <tr><td>2020</td><td>January 25</td><td>Rat</td><td>Metal</td></tr>
+            <tr><td>2021</td><td>February 12</td><td>Ox</td><td>Metal</td></tr>
+            <tr><td>2022</td><td>February 1</td><td>Tiger</td><td>Water</td></tr>
+            <tr><td>2023</td><td>January 22</td><td>Rabbit</td><td>Water</td></tr>
+            <tr><td>2024</td><td>February 10</td><td>Dragon</td><td>Wood</td></tr>
+            <tr><td>2025</td><td>January 29</td><td>Snake</td><td>Wood</td></tr>
+            <tr><td>2026</td><td>February 17</td><td>Horse</td><td>Fire</td></tr>
+            <tr><td>2027</td><td>February 6</td><td>Goat</td><td>Fire</td></tr>
+            <tr><td>2028</td><td>January 26</td><td>Monkey</td><td>Earth</td></tr>
+            <tr><td>2029</td><td>February 13</td><td>Rooster</td><td>Earth</td></tr>
+            <tr><td>2030</td><td>February 3</td><td>Dog</td><td>Metal</td></tr>
+            <tr><td>2031</td><td>January 23</td><td>Pig</td><td>Metal</td></tr>
+            <tr><td>2032</td><td>February 11</td><td>Rat</td><td>Water</td></tr>
+            <tr><td>2033</td><td>January 31</td><td>Ox</td><td>Water</td></tr>
+            <tr><td>2034</td><td>February 19</td><td>Tiger</td><td>Wood</td></tr>
+            <tr><td>2035</td><td>February 8</td><td>Rabbit</td><td>Wood</td></tr>
+            <tr><td>2036</td><td>January 28</td><td>Dragon</td><td>Fire</td></tr>
+            <tr><td>2037</td><td>February 15</td><td>Snake</td><td>Fire</td></tr>
+            <tr><td>2038</td><td>February 4</td><td>Horse</td><td>Earth</td></tr>
+            <tr><td>2039</td><td>January 24</td><td>Goat</td><td>Earth</td></tr>
+            <tr><td>2040</td><td>February 12</td><td>Monkey</td><td>Metal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The date of Lunar New Year always falls between January 21 and February 20 on the Gregorian calendar. For a comprehensive calendar reference, see <a href="https://www.timeanddate.com/holidays/common/chinese-new-year" target="_blank" rel="noopener">timeanddate.com's Chinese New Year page</a>.</p>
+
+      <h3>Lunar New Year Date Distribution</h3>
+      <p>This chart shows how Lunar New Year dates cluster across the January 21 - February 20 window:</p>
+      <div class="chart-vertical">
+        <div class="chart-v-col"><div class="chart-v-val">3</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">Jan 21-25</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">4</div><div class="chart-v-bar" style="height:40%"></div><div class="chart-v-label">Jan 26-31</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">8</div><div class="chart-v-bar accent" style="height:80%"></div><div class="chart-v-label">Feb 1-10</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">5</div><div class="chart-v-bar" style="height:50%"></div><div class="chart-v-label">Feb 11-20</div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">Distribution of Lunar New Year dates 2020-2040 (20 years)</p>
+
+      <h2 id="cultural-significance">Cultural Significance and Uses</h2>
+      <p>Lunar age remains culturally important in several areas of Chinese life, even though China officially uses Western age (&#x5468;&#x5C81;, zhousui) for most legal and administrative purposes.</p>
+
+      <h3>Where Lunar Age Is Still Used Today</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Context</th><th>How Lunar Age Is Used</th><th>Importance Level</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Chinese New Year greetings</strong></td><td>People mention their lunar age during family gatherings</td><td>High</td></tr>
+            <tr><td><strong>Fortune telling &amp; astrology</strong></td><td>Chinese astrologers use lunar age for predictions</td><td>High</td></tr>
+            <tr><td><strong>Gender prediction charts</strong></td><td>Mother's lunar age required for the Chinese Birth Chart</td><td>Very High</td></tr>
+            <tr><td><strong>Traditional medicine</strong></td><td>Some TCM practitioners reference lunar age cycles</td><td>Medium</td></tr>
+            <tr><td><strong>Ancestral rituals</strong></td><td>Determines seniority and ritual roles</td><td>High</td></tr>
+            <tr><td><strong>Wedding planning</strong></td><td>Compatibility analysis uses zodiac signs linked to birth year</td><td>Medium-High</td></tr>
+            <tr><td><strong>Funeral traditions</strong></td><td>Deceased's age is reported in lunar years on the memorial</td><td>High</td></tr>
+            <tr><td><strong>Baby's first year celebrations</strong></td><td>First "Zhua Zhou" ceremony timed by lunar calendar</td><td>High</td></tr>
+            <tr><td><strong>Birthday celebrations (traditional)</strong></td><td>Some families still celebrate lunar birthday</td><td>Medium</td></tr>
+            <tr><td><strong>Business decisions</strong></td><td>Auspicious dates calculated using lunar calendar</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ancestral Worship and Rituals</h3>
+      <p>During important Chinese festivals like Qingming (Tomb Sweeping Day) and the Ghost Festival, lunar age determines seniority and proper ritual behavior. The oldest family member (by lunar age) typically leads ceremonies, and seating arrangements at formal dinners follow lunar age order. This creates a clear social hierarchy that extends even to cousins and extended family.</p>
+
+      <h3>Marriage Compatibility</h3>
+      <p>Traditional Chinese matchmaking considers the lunar ages and zodiac signs of both partners. Certain age combinations are considered auspicious or inauspicious based on:</p>
+      <ul>
+        <li><strong>Zodiac compatibility:</strong> Some animal signs are believed to harmonize (Dragon and Rat) while others clash (Tiger and Monkey)</li>
+        <li><strong>Age gap analysis:</strong> Certain age differences are considered more fortunate than others</li>
+        <li><strong>Five elements theory:</strong> Each year is associated with an element (Wood, Fire, Earth, Metal, Water) that interacts with partners' elements</li>
+      </ul>
+      <p>While modern Chinese families increasingly ignore these traditions, awareness of them remains widespread, and some families still consult fortune tellers who use lunar age calculations to assess compatibility.</p>
+
+      <h2 id="celebrity-examples">Celebrity Lunar Age Examples</h2>
+      <p>Understanding lunar age becomes clearer with real-world examples. Here are five celebrities with their lunar ages calculated for February 2026:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Celebrity</th><th>Birth Date</th><th>Western Age (Feb 2026)</th><th>Lunar Age (Feb 2026)</th><th>Zodiac Animal</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Jackie Chan</strong></td><td>April 7, 1954</td><td>71</td><td>73</td><td>Horse</td></tr>
+            <tr><td><strong>Fan Bingbing</strong></td><td>September 16, 1981</td><td>44</td><td>46</td><td>Rooster</td></tr>
+            <tr><td><strong>Yao Ming</strong></td><td>September 12, 1980</td><td>45</td><td>47</td><td>Monkey</td></tr>
+            <tr><td><strong>BTS's Jimin</strong></td><td>October 13, 1995</td><td>30</td><td>32</td><td>Pig</td></tr>
+            <tr><td><strong>Liu Yifei</strong></td><td>August 25, 1987</td><td>38</td><td>40</td><td>Rabbit</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Jackie Chan's Lunar Age Journey</h3>
+      <p>Hong Kong martial arts legend Jackie Chan (birth name: Chan Kong-sang) was born on April 7, 1954, in Hong Kong. In the traditional Chinese view:</p>
+      <ul>
+        <li>At birth in 1954, his lunar age was <strong>1</strong></li>
+        <li>At Lunar New Year 1955, his lunar age became <strong>2</strong> (though he was only 9 months old by Western counting)</li>
+        <li>On April 7, 1955 (his first Western birthday), his lunar age was still <strong>2</strong></li>
+        <li>By February 2026, he has experienced 72 Lunar New Years since birth, making his lunar age <strong>73</strong></li>
+      </ul>
+      <p>This illustrates how someone born early in the year (before their first Lunar New Year) can be nearly two years "older" in lunar age terms.</p>
+
+      <h3>BTS's Jimin: Korean Age Context</h3>
+      <p>K-pop star Jimin of BTS was born on October 13, 1995. Before South Korea's 2023 age system change:</p>
+      <ul>
+        <li>His Korean age (January 1 aging) was 32 in 2026</li>
+        <li>His Chinese lunar age is also 32 (Lunar New Year 2026 falls on February 17)</li>
+        <li>His international/Western age is 30</li>
+      </ul>
+      <p>This demonstrates how Korean age and Chinese lunar age typically give the same result, though they increment on different dates (January 1 vs. Lunar New Year).</p>
+
+      <h2 id="gender-prediction">The Chinese Gender Prediction Chart</h2>
+      <p>One of the most well-known uses of lunar age is the <strong>Chinese Gender Prediction Chart</strong> (also called the Chinese Birth Chart or Chinese Gender Calendar). This traditional chart claims to predict the gender of an unborn child based on the mother's lunar age at conception and the lunar month of conception.</p>
+
+      <h3>Origins and History</h3>
+      <p>According to legend, this chart was discovered in a royal tomb near Beijing over 700 years ago, dating back to the Qing dynasty. Some accounts claim it was found in the Forbidden City; others say it was unearthed from an ancient tomb. The <a href="https://www.guinnessworldrecords.com/" target="_blank" rel="noopener">Guinness World Records</a> does not verify these origin claims, and the actual history remains uncertain.</p>
+
+      <h3>How to Use the Chart</h3>
+      <p>The chart works by cross-referencing two variables:</p>
+      <ol>
+        <li><strong>The mother's lunar age</strong> at the time of conception (rows)</li>
+        <li><strong>The lunar month</strong> of conception (columns)</li>
+      </ol>
+      <p>The intersection predicts whether the baby will be a boy or a girl. For example, a mother who is 25 in lunar age and conceives in lunar month 3 would look at row 25, column 3 to find the prediction.</p>
+
+      <h3>Common Mistakes to Avoid</h3>
+      <ul>
+        <li><strong>Using Western age instead of lunar age:</strong> A woman who is 28 in Western age might be 29 or 30 in lunar age</li>
+        <li><strong>Using Gregorian months instead of lunar months:</strong> Lunar months don't align with January, February, etc.</li>
+        <li><strong>Not accounting for Lunar New Year timing:</strong> If conception occurred before Lunar New Year, the mother's lunar age would be different</li>
+      </ul>
+
+      <h3>Scientific Accuracy</h3>
+      <p>Multiple studies have tested the Chinese Gender Prediction Chart against actual birth records:</p>
+      <ul>
+        <li>A 1999 study found approximately 50% accuracy - no better than chance</li>
+        <li>A 2010 study in the <em>American Journal of Obstetrics and Gynecology</em> found no predictive value</li>
+        <li>Research from the <a href="https://www.nih.gov/" target="_blank" rel="noopener">National Institutes of Health (NIH)</a> confirms that fetal sex is determined by chromosomes at conception, not by calendar dates</li>
+      </ul>
+      <p>Despite its lack of scientific support, the chart remains enormously popular, consulted millions of times each year through pregnancy apps and websites worldwide.</p>
+
+      <h2 id="tcm">Lunar Age in Traditional Chinese Medicine (TCM)</h2>
+      <p>Traditional Chinese Medicine has used lunar age as a framework for understanding health and the body's natural cycles for thousands of years. The foundational text of TCM, the <em>Huangdi Neijing</em> (Yellow Emperor's Classic of Internal Medicine), describes life in terms of distinct developmental phases.</p>
+
+      <h3>Women's 7-Year Cycles (Using Lunar Age)</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Lunar Age</th><th>Cycle</th><th>TCM Description</th></tr></thead>
+          <tbody>
+            <tr><td>7</td><td>1st cycle</td><td>Kidney qi flourishes; permanent teeth come in, hair grows longer</td></tr>
+            <tr><td>14</td><td>2nd cycle</td><td>Ren meridian flows; menstruation begins, fertility commences</td></tr>
+            <tr><td>21</td><td>3rd cycle</td><td>Kidney qi is balanced; wisdom teeth appear, body reaches full height</td></tr>
+            <tr><td>28</td><td>4th cycle</td><td>Peak vitality; muscles and bones are strongest, hair is thickest</td></tr>
+            <tr><td>35</td><td>5th cycle</td><td>Yangming meridian declines; face begins to show age, hair may thin</td></tr>
+            <tr><td>42</td><td>6th cycle</td><td>Three yang meridians decline; face ages further, hair grays</td></tr>
+            <tr><td>49</td><td>7th cycle</td><td>Ren meridian depleted; menopause occurs, fertility ends</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Men's 8-Year Cycles (Using Lunar Age)</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Lunar Age</th><th>Cycle</th><th>TCM Description</th></tr></thead>
+          <tbody>
+            <tr><td>8</td><td>1st cycle</td><td>Kidney qi abundant; hair develops, permanent teeth emerge</td></tr>
+            <tr><td>16</td><td>2nd cycle</td><td>Kidney qi overflows; fertility begins, body fills out</td></tr>
+            <tr><td>24</td><td>3rd cycle</td><td>Kidney qi balanced; muscles and sinews strong, wisdom teeth</td></tr>
+            <tr><td>32</td><td>4th cycle</td><td>Peak condition; body is at its strongest and most resilient</td></tr>
+            <tr><td>40</td><td>5th cycle</td><td>Kidney qi begins to wane; hair loosens, teeth dry</td></tr>
+            <tr><td>48</td><td>6th cycle</td><td>Yang qi declines above; face weathers, hair grays at temples</td></tr>
+            <tr><td>56</td><td>7th cycle</td><td>Liver qi declines; sinews stiffen, reproductive energy diminishes</td></tr>
+            <tr><td>64</td><td>8th cycle</td><td>Teeth and hair decline; kidney essence depleted</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>TCM practitioners who follow these traditional frameworks use lunar age rather than Western age to identify which cycle a patient is in. This influences treatment approaches including herbal prescriptions, acupuncture point selection, and dietary recommendations. While modern Western medicine does not validate these specific cycles, many TCM practitioners worldwide continue to reference them, and the <a href="https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine" target="_blank" rel="noopener">World Health Organization</a> recognizes TCM as a legitimate traditional medicine system.</p>
+
+      <h2>The Science Behind Lunar Calendars</h2>
+      <p>The lunar calendar is based on observable astronomical phenomena. A lunar month (synodic month) is the time between two consecutive new moons: approximately 29.53059 days. This is why lunar months alternate between 29 and 30 days.</p>
+      <p>A purely lunar year of 12 months is only 354.37 days, about 10.88 days shorter than the solar year (365.25 days). Without correction, the calendar would drift through the seasons over time. The Chinese lunisolar calendar solves this by adding a leap month approximately every 2.7 years (7 leap months in every 19-year cycle, known as the Metonic cycle).</p>
+      <p>This astronomical precision means the Chinese calendar has accurately tracked both lunar phases and solar seasons for thousands of years, making it one of the most sophisticated traditional calendar systems ever developed. For more on lunar calendar astronomy, see <a href="https://www.timeanddate.com/calendar/about-chinese.html" target="_blank" rel="noopener">timeanddate.com's Chinese calendar guide</a>.</p>
+
+      <h2>How Our Calculator Works</h2>
+      <p>Our <a href="/">free age calculator</a> shows both your international age and your lunar/Korean age. The <a href="/#panel-korean">Korean Age tab</a> provides a close approximation of lunar age, since both systems share the same fundamental principles (counting 1 at birth, aging at New Year). For precise lunar age calculations that account for the exact Lunar New Year dates, the calculator processes the specific lunar calendar for your birth year.</p>
+      <p>You can also use our other age-related tools:</p>
+      <ul>
+        <li><a href="/#panel-basic">Basic Age Calculator</a> - Your exact age in years, months, and days</li>
+        <li><a href="/#panel-days">Age in Days Calculator</a> - How many days you've been alive</li>
+        <li><a href="/#panel-diff">Age Difference Calculator</a> - Compare ages between two people</li>
+      </ul>
+
+      <h2>Explore Related Age Systems</h2>
+      <p>Learn more about how different cultures count age with these guides:</p>
+      <ul>
+        <li><a href="/blog/korean-age-calculator/">Korean Age Calculator</a> - The Korean age system and South Korea's 2023 switch to international age</li>
+        <li><a href="/blog/chronological-age-explained/">Chronological Age Explained</a> - Understanding the Western age system in depth</li>
+        <li><a href="/blog/age-calculator-guide/">Complete Age Calculator Guide</a> - Comprehensive overview of all age calculation methods</li>
+        <li><a href="/blog/how-old-am-i/">How Old Am I?</a> - Calculate your exact age in multiple units</li>
+        <li><a href="/blog/age-in-days-calculator/">Age in Days Calculator</a> - Find your exact age in days</li>
+        <li><a href="/blog/life-expectancy-calculator/">Life Expectancy Calculator</a> - Estimate your remaining years based on statistics</li>
+        <li><a href="/blog/age-difference-calculator/">Age Difference Calculator</a> - Compare ages between any two people</li>
+        <li><a href="/blog/birth-year-calculator/">Birth Year Calculator</a> - Find your birth year and generation</li>
+      </ul>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What is lunar age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Lunar age is a traditional East Asian age-counting system where you are 1 year old at birth (counting time in the womb) and gain a year at each Lunar New Year, rather than on your birthday. It results in an age that is 1-2 years higher than your Western age. The system originated in ancient China and spread to Korea, Vietnam, Japan, and other East Asian cultures.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is lunar age different from Korean age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Both start at 1 at birth, but lunar age increases at Lunar New Year (which shifts between January 21 and February 20), while Korean age increases on January 1 of the Gregorian calendar. The difference between the two systems is usually a matter of weeks. South Korea officially switched to international age in June 2023, but Korean age persists in everyday social contexts.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do Chinese people count age differently?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The system reflects Confucian and cultural values. Counting from 1 at birth honors the time in the womb as part of life. Aging at New Year creates communal bonds since everyone ages together. It also simplified record-keeping in ancient times when individual birth dates were less precisely tracked. The system developed over 4,000 years ago during the Shang Dynasty.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate my lunar age for the Chinese Gender Chart?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Take your Western age at the time of conception and add 1 (if you've passed the Lunar New Year that year) or 2 (if you haven't). For accuracy, convert both your birth date and conception date to the Chinese lunar calendar. Our <a href="/#panel-korean">calculator</a> can help determine your lunar age on any specific date. Remember to also convert the conception month to the lunar calendar month.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is the Chinese Gender Prediction Chart accurate?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>No scientific evidence supports the Chinese Gender Prediction Chart. Studies suggest it performs at roughly chance level (50%). The chart is a cultural tradition and should be used for entertainment purposes only, not as a substitute for medical ultrasound or genetic testing for determining fetal sex. The <a href="https://www.nih.gov/" target="_blank" rel="noopener">NIH</a> confirms that sex is determined by chromosomes, not calendar dates.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can a baby be 2 years old on their first day of life?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes, in the lunar age system. A baby born the day before Lunar New Year starts at age 1 (at birth) and turns 2 the very next day (at Lunar New Year). This is one of the most dramatic examples of the difference between lunar and Western age counting. For example, a baby born on February 16, 2026 would be lunar age 1 at birth, then lunar age 2 on February 17, 2026 (Lunar New Year), despite being only one day old by Western counting.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does China still use lunar age officially?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>No. China officially uses Western age (&#x5468;&#x5C81;, zhousui) for all legal, medical, and administrative purposes. However, lunar age (&#x865A;&#x5C81;, xusui) remains widely used in cultural and social contexts, particularly during Chinese New Year celebrations, traditional medicine, fortune telling, and family gatherings. Over 1.4 billion people in mainland China are familiar with both systems.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the Metonic cycle and why does it matter?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The Metonic cycle is a 19-year period after which the lunar phases repeat on approximately the same dates. The Chinese calendar uses this cycle to determine when to insert leap months (7 times in 19 years), ensuring the calendar stays aligned with both lunar phases and solar seasons. This is what keeps Chinese New Year consistently in late January to mid-February rather than drifting through the year like Islamic holidays do.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I convert my birthday to the lunar calendar?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>You can use online converters like <a href="https://www.timeanddate.com/calendar/about-chinese.html" target="_blank" rel="noopener">timeanddate.com's Chinese calendar tool</a> to convert any Gregorian date to its lunar calendar equivalent. Enter your birth date, and the tool will show you the corresponding lunar month, day, and year. This conversion is essential for accurate lunar age calculation and for using the Chinese gender prediction chart correctly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What happens to lunar age in a leap month year?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Leap months in the Chinese calendar add a 13th month to certain years (roughly every 2-3 years). This affects the timing of months within the year but does not change how lunar age is calculated. Your lunar age still increases at Lunar New Year, regardless of whether that year has a leap month. However, if you were born in a leap month, you technically have a lunar birthday that only occurs in certain years - similar to being born on February 29 in the Western calendar.</p></div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin: 2rem 0;"><a href="/#panel-korean" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none; font-size: 1.125rem;">Calculate Your Lunar Age &rarr;</a></p>
+
+      <div class="related-grid">
+        <a href="/blog/korean-age-calculator/" class="related-card"><div class="related-card-title">Korean Age Calculator</div><p class="related-card-desc">Calculate your age in the Korean age system</p></a>
+        <a href="/blog/age-calculator-guide/" class="related-card"><div class="related-card-title">Complete Age Calculator Guide</div><p class="related-card-desc">Everything about calculating age with different methods</p></a>
+        <a href="/blog/birth-year-calculator/" class="related-card"><div class="related-card-title">Birth Year Calculator</div><p class="related-card-desc">Find your birth year and generation from your age</p></a>
+        <a href="/blog/how-old-am-i/" class="related-card"><div class="related-card-title">How Old Am I?</div><p class="related-card-desc">Calculate your exact age in years, months, and days</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones Guide</div><p class="related-card-desc">Important age milestones across different cultures</p></a>
+        <a href="/blog/chronological-age-explained/" class="related-card"><div class="related-card-title">Chronological Age Explained</div><p class="related-card-desc">Understanding Western age calculation in depth</p></a>
+      </div>
+    </article>
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/#panel-diff">Age Difference</a></li><li><a href="/#panel-days">Days Old</a></li><li><a href="/#panel-korean">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+
+  <script>
+  document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-mobile').classList.toggle('active')});
+  document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){const item=this.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});if(!isOpen){item.classList.add('open')}})});
+  </script>
+</body>
+</html>

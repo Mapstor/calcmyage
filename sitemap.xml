@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main pages -->
+  <url><loc>https://calcmyage.org/</loc><lastmod>2026-02-05</lastmod><priority>1.0</priority></url>
+  <url><loc>https://calcmyage.org/about/</loc><lastmod>2026-01-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/contact/</loc><lastmod>2026-01-28</lastmod><priority>0.5</priority></url>
+  <url><loc>https://calcmyage.org/privacy/</loc><lastmod>2026-01-28</lastmod><priority>0.3</priority></url>
+  <url><loc>https://calcmyage.org/terms/</loc><lastmod>2026-01-28</lastmod><priority>0.3</priority></url>
+
+  <!-- Calculator Pages -->
+  <url><loc>https://calcmyage.org/age-on-date/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/age-difference/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/days-old/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/life-expectancy/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/korean-age/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/chronological-age/</loc><lastmod>2026-02-08</lastmod><priority>0.9</priority></url>
+
+  <!-- Blog index -->
+  <url><loc>https://calcmyage.org/blog/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+
+  <!-- Getting Started -->
+  <url><loc>https://calcmyage.org/blog/age-calculator-guide/</loc><lastmod>2026-02-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/blog/how-old-am-i/</loc><lastmod>2026-02-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/blog/life-expectancy-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/blog/chronological-age-explained/</loc><lastmod>2026-02-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://calcmyage.org/blog/chronological-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-difference-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+
+  <!-- Time Units -->
+  <url><loc>https://calcmyage.org/blog/age-in-days-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-in-weeks-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-in-months-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-in-hours-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-in-minutes-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-in-seconds-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+
+  <!-- Birthday Guides -->
+  <url><loc>https://calcmyage.org/blog/birthday-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/birth-year-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/date-of-birth-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-on-date-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+
+  <!-- Special Birthdays -->
+  <url><loc>https://calcmyage.org/blog/golden-birthday-explained/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/pearl-birthday-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/half-birthday-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/leap-year-birthday/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+
+  <!-- Legal & Life Stages -->
+  <url><loc>https://calcmyage.org/blog/legal-ages-guide/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/driving-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/voting-age-guide/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/retirement-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-verification-guide/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-for-school/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+
+  <!-- Age Science & Culture -->
+  <url><loc>https://calcmyage.org/blog/biological-age-vs-chronological/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/age-milestones/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/generation-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/zodiac-sign-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+
+  <!-- Asian Age Systems -->
+  <url><loc>https://calcmyage.org/blog/korean-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://calcmyage.org/blog/chinese-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://calcmyage.org/blog/lunar-age-calculator/</loc><lastmod>2026-02-05</lastmod><priority>0.8</priority></url>
+</urlset>

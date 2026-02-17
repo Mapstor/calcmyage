@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age on Date Calculator - How Old Was I on a Specific Date? | CalcMyAge</title>
+  <meta name="description" content="Calculate your exact age on any past or future date. Find out how old you were on a specific date for passport applications, insurance forms, wedding age, and more.">
+  <link rel="canonical" href="https://calcmyage.org/blog/age-on-date-calculator/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/blog/age-on-date-calculator/">
+  <meta property="og:title" content="Age on Date Calculator - How Old Was I on a Specific Date? | CalcMyAge">
+  <meta property="og:description" content="Calculate your exact age on any past or future date. Find out how old you were on a specific date for passport applications, insurance forms, wedding age, and more.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Age on Date Calculator - How Old Was I on a Specific Date?", "description": "Calculate your exact age on any past or future date. Find out how old you were on a specific date for passport applications, insurance forms, wedding age, and more.", "author": { "@type": "Organization", "name": "CalcMyAge" }, "publisher": { "@type": "Organization", "name": "CalcMyAge", "url": "https://calcmyage.org" }, "datePublished": "2026-01-28", "dateModified": "2026-02-06", "mainEntityOfPage": "https://calcmyage.org/blog/age-on-date-calculator/" }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my age on a specific date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your date of birth and the target date into our age on date calculator. The tool subtracts your birth date from the target date and returns your age in years, months, and days. You can also do it manually by calculating the year difference, then adjusting for months and days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do passport applications ask for age on a specific date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Passport fees, validity periods, and minor vs. adult classification are determined by your age at the time of application. A child who turns 16 between application and issuance may be charged a different fee or receive a different validity period depending on their age on the application date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my age on a future date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator works for both past and future dates. Simply enter a future date as the target date. This is useful for planning purposes, such as checking whether you will meet an age requirement by a specific deadline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I was born on February 29?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you were born on February 29 and the target year is not a leap year, most legal systems treat your birthday as either February 28 or March 1. Our calculator handles this automatically, ensuring your age is computed correctly regardless of leap year status. See our leap year birthday guide for more details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is age on date different from chronological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chronological age is your age today, measured from your birth date to the current moment. Age on date is your age at a specific point in time, which could be in the past or future. Chronological age is a subset of the age on date concept where the target date is always today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do insurance companies use age on date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most life insurance companies calculate premiums based on your age when the policy becomes effective, not when you apply. Some use \"age last birthday\" (your age at your most recent birthday) while others use \"nearest age\" (rounding to the nearest birthday). Either way, an age on date calculation is necessary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is an online age on date calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Online calculators like ours are extremely accurate because they use well-tested algorithms that account for leap years, varying month lengths, and calendar conventions. The only source of error is incorrect input data. Double-check your dates to ensure accurate results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between age on date and age difference calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An age on date calculator finds how old one person is on a specific date. An age difference calculator finds the time difference between two people's ages. You can use an age on date calculator to find both people's ages on the same date, then compute the difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my age on a date before I was born?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, no. An age before birth would be a negative number, which does not have practical meaning. However, some cultures count time in the womb, which is why you may be 1-2 years \"older\" in systems like Korean age or Chinese age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate age on date in Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Excel, you can use the DATEDIF function: =DATEDIF(birth_date, target_date, \"Y\") for years, \"M\" for total months, or \"D\" for total days. For a complete years, months, days breakdown, you need three DATEDIF formulas with \"Y\", \"YM\", and \"MD\" parameters combined."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://calcmyage.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://calcmyage.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Age on Date Calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container" style="max-width: 800px;">
+    <article>
+      <p style="font-size: 0.8125rem; color: var(--gray-500);">February 2026 &bull; 22 min read</p>
+      <h1>Age on Date Calculator: How Old Was I on a Specific Date?</h1>
+      <p class="intro-text">Have you ever needed to know your exact age on a particular date? Whether you are filling out a passport application, verifying your age for an insurance policy, or simply curious about how old you were when a historic event occurred, an age on date calculator gives you precise results in years, months, and days. This guide walks you through how the calculation works, the most common scenarios where you will need it, and worked examples you can follow along with. For a broader overview of age calculation tools, see our <a href="/blog/age-calculator-guide/">complete age calculator guide</a>.</p>
+
+      <div class="key-takeaways">
+        <div class="key-takeaways-title">Key Takeaways</div>
+        <ul>
+          <li><strong>An age on date calculator</strong> tells you exactly how old you were (or will be) on any specific past or future date</li>
+          <li><strong>Common uses include</strong> passport and visa applications, insurance forms, wedding records, legal documents, and historical curiosity</li>
+          <li><strong>The calculation</strong> works by subtracting your birth date from the target date, accounting for varying month lengths and leap years</li>
+          <li><strong>Precision matters</strong> because many official forms require your age at the exact time of application or event</li>
+          <li><strong>Our free tool</strong> computes the result instantly with no manual math needed</li>
+          <li>Try our <a href="/#panel-date">age on date calculator</a> to check your age on any date right now</li>
+        </ul>
+      </div>
+
+      <h2>What Is an Age on Date Calculator?</h2>
+      <p>An age on date calculator is a tool that computes your exact age on a specific calendar date, rather than simply telling you how old you are today. You provide two inputs: your date of birth and the target date you want to check. The calculator returns your age in years, months, and days as of that target date.</p>
+      <p>This differs from a standard <a href="/blog/how-old-am-i/">age calculator</a> in one important way. A regular age calculator always uses today as the reference point. An age on date calculator lets you pick any date, whether it is in the past, present, or future. This flexibility makes it invaluable for official paperwork, historical research, and personal milestones.</p>
+      <p>For example, if you were born on March 15, 1988, and you need to know how old you were on January 1, 2010, the calculator would tell you that you were 21 years, 9 months, and 17 days old on that date. Doing this manually requires careful attention to month lengths and leap years, which is exactly why a calculator tool is so useful.</p>
+
+      <h2>The History of Age Calculation Methods</h2>
+      <p>The practice of tracking age on specific dates has ancient origins, though the methods have evolved dramatically over millennia. Understanding this history helps explain why different cultures and legal systems sometimes use different approaches to age calculation today.</p>
+
+      <h3>Ancient Civilizations and Age Reckoning</h3>
+      <p>In ancient Mesopotamia (circa 3000 BCE), scribes kept detailed records of births for taxation and military service purposes. The Babylonians used a lunisolar calendar, making age calculations significantly more complex than in our modern Gregorian system. According to historical records preserved at the <a href="https://www.britishmuseum.org/" target="_blank" rel="noopener">British Museum</a>, Babylonian administrators maintained birth registries that tracked ages for property inheritance and legal purposes.</p>
+      <p>Ancient Rome introduced the concept of the "dies natalis" (birthday) as a civic and religious occasion. Romans tracked age from birth for legal purposes, including the minimum age for marriage (12 for girls, 14 for boys) and military service (17 for the legions). The Roman calendar reform under Julius Caesar in 45 BCE established the Julian calendar, which remained the primary Western calendar for over 1,600 years and forms the basis of our modern date calculations.</p>
+      <p>In contrast, many East Asian cultures, including China, Korea, and Japan, developed the "counting age" system where a person is considered 1 year old at birth and gains a year at each new year rather than on their individual birthday. This system, explored in our <a href="/blog/korean-age-calculator/">Korean age calculator</a> and <a href="/blog/chinese-age-calculator/">Chinese age calculator</a> guides, can result in someone being "2 years old" when they are only days old by Western reckoning.</p>
+
+      <h3>The Gregorian Calendar and Modern Age Calculation</h3>
+      <p>The Gregorian calendar, introduced by Pope Gregory XIII in 1582, refined the Julian calendar by implementing more precise leap year rules. This calendar is now used worldwide for civil purposes and is the standard for international age calculations. The Gregorian reform corrected calendar drift by skipping 10 days (October 4, 1582 was followed by October 15, 1582 in adopting countries) and establishing that century years are leap years only if divisible by 400.</p>
+      <p>For historical age calculations involving dates before the Gregorian adoption in your country of interest, you may need to account for the calendar difference. England and its colonies, for example, did not adopt the Gregorian calendar until 1752, when 11 days were skipped (September 2 was followed by September 14). This is why historical figures like George Washington have two possible birth dates listed.</p>
+
+      <h2>Common Use Cases</h2>
+      <p>There are many real-world situations where knowing your age on a specific date is not just convenient but required. Here are the most common scenarios.</p>
+
+      <h3>Passport and Visa Applications</h3>
+      <p>Many countries require you to state your age at the time of application, not your current age. If you are applying months in advance for a passport that you will receive later, the relevant age is your age on the date you submit the form. Some visa categories have strict age cutoffs. For instance, certain working holiday visas require applicants to be under 31 at the time of application. Knowing your exact age on the application date can determine your eligibility.</p>
+      <p>According to the <a href="https://travel.state.gov/" target="_blank" rel="noopener">U.S. Department of State</a>, passport validity periods and fees depend on whether the applicant is under or over 16 at the time of application. Similar age-based distinctions exist in nearly every country's passport system.</p>
+
+      <h3>Insurance and Financial Forms</h3>
+      <p>Life insurance premiums are calculated based on your age at the time the policy starts. A birthday that falls between application and policy activation can change your rate bracket. Health insurance enrollment periods may also reference your age on specific dates. Term life policies often use "nearest age" or "age last birthday" rules, and each method can produce a different age depending on the date.</p>
+      <p>The <a href="https://www.ssa.gov/" target="_blank" rel="noopener">Social Security Administration</a> uses precise age calculations to determine eligibility for benefits. Your full retirement age depends on your birth year, and benefits can begin as early as age 62, but the exact month you turn 62 determines when you can first claim.</p>
+
+      <h3>Wedding Age</h3>
+      <p>Many couples want to know exactly how old they were on their wedding day. This is a popular keepsake detail for anniversary celebrations. It is also legally relevant in some jurisdictions where minimum marriage age requirements must be verified against the date of the ceremony, not the date of the application.</p>
+
+      <h3>Job Applications and Background Checks</h3>
+      <p>Certain positions have age requirements. Law enforcement agencies, military branches, and commercial airline pilots all have minimum and maximum age thresholds. These are often measured as your age on the date of hire or the date you begin training, not the date you apply. Calculating your age on these future dates in advance can save you from applying for positions you will not qualify for.</p>
+
+      <h3>Historical Events and Personal Milestones</h3>
+      <p>People are naturally curious about how old they were during important events. How old were you on September 11, 2001? How old were you when your first child was born? How old will you be when you reach your 10,000th day alive? These questions all require age on date calculations. You can also explore your <a href="/blog/chronological-age-explained/">chronological age</a> to understand exact age measurements used in professional settings, or calculate your <a href="/blog/age-in-days-calculator/">age in days</a> for even more precision.</p>
+
+      <h2>How to Calculate Your Age on Any Date</h2>
+      <p>The calculation follows a straightforward process, but the details matter because months have different lengths and leap years add a day to February. Here is the step-by-step method.</p>
+
+      <h3>Step 1: Identify Your Birth Date and Target Date</h3>
+      <p>Write down both dates in the same format. For this guide, we will use the format Month/Day/Year. For example:</p>
+      <ul>
+        <li>Birth date: July 4, 1990</li>
+        <li>Target date: September 11, 2001</li>
+      </ul>
+
+      <h3>Step 2: Calculate the Year Difference</h3>
+      <p>Subtract the birth year from the target year: 2001 - 1990 = 11. This gives you a preliminary age in years, but you need to verify whether the birthday has already occurred in the target year.</p>
+
+      <h3>Step 3: Check If the Birthday Has Passed</h3>
+      <p>Compare the month and day of the birth date to the target date. July 4 comes before September 11 in the calendar year, so the birthday has already passed by the target date. The year count of 11 stands.</p>
+      <p>If the birthday had not yet occurred (for example, if the target date were March 15, 2001), you would subtract 1 from the year count, giving you 10 years.</p>
+
+      <h3>Step 4: Calculate Remaining Months</h3>
+      <p>Count the complete months from the last birthday to the target date. From July 4 to September 4 is exactly 2 months. Since the target date is September 11, which is past September 4, we have 2 complete months plus some remaining days.</p>
+
+      <h3>Step 5: Calculate Remaining Days</h3>
+      <p>From September 4 to September 11 is 7 days.</p>
+
+      <h3>Final Result</h3>
+      <p>On September 11, 2001, a person born on July 4, 1990 was <strong>11 years, 2 months, and 7 days old</strong>.</p>
+
+      <h2>Age Calculation Complexity: Month Length Variations</h2>
+      <p>One of the trickiest aspects of age on date calculations involves the varying lengths of months. This is not merely an academic concern; it affects real-world calculations regularly.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Month</th><th>Days</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>January</td><td>31</td><td>Standard</td></tr>
+            <tr><td>February</td><td>28 or 29</td><td>29 in leap years</td></tr>
+            <tr><td>March</td><td>31</td><td>Standard</td></tr>
+            <tr><td>April</td><td>30</td><td>Standard</td></tr>
+            <tr><td>May</td><td>31</td><td>Standard</td></tr>
+            <tr><td>June</td><td>30</td><td>Standard</td></tr>
+            <tr><td>July</td><td>31</td><td>Standard</td></tr>
+            <tr><td>August</td><td>31</td><td>Standard</td></tr>
+            <tr><td>September</td><td>30</td><td>Standard</td></tr>
+            <tr><td>October</td><td>31</td><td>Standard</td></tr>
+            <tr><td>November</td><td>30</td><td>Standard</td></tr>
+            <tr><td>December</td><td>31</td><td>Standard</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Consider someone born on January 31. What is their age on March 1? From January 31 to February 28 (or 29) is considered one month in most calculation systems, and from February 28/29 to March 1 is 1 day. But what about someone born on March 31 calculating their age on April 30? This "end of month" problem has led to different conventions in different legal and insurance contexts.</p>
+
+      <h2>Age on Date Examples</h2>
+      <p>The following table shows the age of a person born on July 4, 1990 on various notable dates. All calculations are done using the method described above.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Target Date</th><th>Event</th><th>Age (Years)</th><th>Age (Months)</th><th>Age (Days)</th></tr></thead>
+          <tbody>
+            <tr><td>Sep 11, 2001</td><td>September 11 attacks</td><td>11</td><td>2</td><td>7</td></tr>
+            <tr><td>Jan 20, 2009</td><td>Obama inauguration</td><td>18</td><td>6</td><td>16</td></tr>
+            <tr><td>Jan 20, 2017</td><td>Trump inauguration</td><td>26</td><td>6</td><td>16</td></tr>
+            <tr><td>Mar 11, 2020</td><td>WHO declares COVID pandemic</td><td>29</td><td>8</td><td>7</td></tr>
+            <tr><td>Jul 20, 2024</td><td>Paris Olympics opening</td><td>34</td><td>0</td><td>16</td></tr>
+            <tr><td>Jan 1, 2030</td><td>Start of new decade</td><td>39</td><td>5</td><td>28</td></tr>
+            <tr><td>Jul 4, 2040</td><td>50th birthday</td><td>50</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Notice how the months and days columns reflect the precise elapsed time since the last birthday. When the target date falls after July 4, the year count reflects the full years. When it falls before July 4, the year count would be one less than the simple year subtraction. You can also check how many total <a href="/blog/age-difference-calculator/">days separate two dates</a> if you need an absolute count.</p>
+
+      <h2>Celebrity Ages on Historic Dates</h2>
+      <p>To illustrate how age on date calculations work with real examples, here are some famous people and their ages on notable historic dates.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Celebrity</th><th>Birth Date</th><th>Historic Event</th><th>Event Date</th><th>Age on That Date</th></tr></thead>
+          <tbody>
+            <tr><td>Taylor Swift</td><td>Dec 13, 1989</td><td>Released first album</td><td>Oct 24, 2006</td><td>16 years, 10 months, 11 days</td></tr>
+            <tr><td>LeBron James</td><td>Dec 30, 1984</td><td>NBA Draft night</td><td>Jun 26, 2003</td><td>18 years, 5 months, 27 days</td></tr>
+            <tr><td>Beyonce</td><td>Sep 4, 1981</td><td>Super Bowl halftime</td><td>Feb 3, 2013</td><td>31 years, 4 months, 30 days</td></tr>
+            <tr><td>Elon Musk</td><td>Jun 28, 1971</td><td>Founded SpaceX</td><td>May 6, 2002</td><td>30 years, 10 months, 8 days</td></tr>
+            <tr><td>Oprah Winfrey</td><td>Jan 29, 1954</td><td>First Oprah Show</td><td>Sep 8, 1986</td><td>32 years, 7 months, 10 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>These examples demonstrate how age on date calculations can reveal interesting facts. Taylor Swift was not yet 17 when her debut album launched her career. LeBron James was just 18 when he was selected first overall in the NBA Draft, making him one of the youngest players ever drafted directly from high school. For more on significant ages in people's lives, see our guide on <a href="/blog/age-milestones/">age milestones</a>.</p>
+
+      <h2>Age Distribution at Major Life Events</h2>
+      <p>The following chart shows the typical age ranges when Americans experience major life events, based on data from the <a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau</a> and <a href="https://www.pewresearch.org/" target="_blank" rel="noopener">Pew Research Center</a>.</p>
+
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><div class="chart-bar-label">First job (part-time)</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:32%">14-18</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">High school graduation</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:36%">17-19</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">College graduation</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:44%">21-24</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">First marriage</div><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:58%">27-32</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">First child</div><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:62%">28-33</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">First home purchase</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:66%">30-35</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Peak earning years</div><div class="chart-bar-track"><div class="chart-bar-fill success" style="width:90%">45-55</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Retirement</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:100%">62-67</div></div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">Typical age ranges for major American life events (2024 data). Bar width represents the age range.</p>
+
+      <h2>Passport and Visa Applications</h2>
+      <p>Age on date calculations are especially important for international travel documents. Here is why.</p>
+
+      <h3>Why Your Age on the Application Date Matters</h3>
+      <p>Passport fees and validity periods often depend on whether the applicant is a minor (under 16 in the United States) or an adult. A US passport for a minor is valid for 5 years, while an adult passport is valid for 10 years. If your child turns 16 between the time you plan to apply and the actual application date, the fee and validity period change. Knowing the child's exact age on the application date prevents paying the wrong fee or receiving an unexpected validity period.</p>
+
+      <h3>Visa Age Cutoffs</h3>
+      <p>Many countries offer working holiday visas with strict age limits. Australia, New Zealand, Canada, and several European countries offer these programs, typically requiring applicants to be between 18 and 30 (or 35 in some cases) at the time of application. If you are approaching the upper limit, calculating your age on the planned application date tells you whether you still qualify.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Visa Program</th><th>Country</th><th>Age Requirement</th><th>Measured On</th></tr></thead>
+          <tbody>
+            <tr><td>Working Holiday (subclass 417)</td><td>Australia</td><td>18-30</td><td>Date of application</td></tr>
+            <tr><td>Working Holiday Scheme</td><td>New Zealand</td><td>18-30</td><td>Date of application</td></tr>
+            <tr><td>International Experience Canada</td><td>Canada</td><td>18-35</td><td>Date of invitation</td></tr>
+            <tr><td>Youth Mobility Scheme</td><td>United Kingdom</td><td>18-30</td><td>Date of application</td></tr>
+            <tr><td>Working Holiday (J-1)</td><td>United States</td><td>18-30</td><td>Program start date</td></tr>
+            <tr><td>Working Holiday</td><td>Japan</td><td>18-30</td><td>Date of application</td></tr>
+            <tr><td>Working Holiday</td><td>South Korea</td><td>18-30</td><td>Date of application</td></tr>
+            <tr><td>Working Holiday</td><td>Ireland</td><td>18-30</td><td>Date of application</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Country-by-Country Age Verification Rules</h2>
+      <p>Different countries have different legal conventions for how age is calculated and verified. This matters for international applications, legal documents, and cross-border transactions.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country</th><th>Age Calculation Method</th><th>When You "Turn" an Age</th><th>Official Calendar</th></tr></thead>
+          <tbody>
+            <tr><td>United States</td><td>International (Western)</td><td>On your birthday</td><td>Gregorian</td></tr>
+            <tr><td>United Kingdom</td><td>International (Western)</td><td>First moment of your birthday</td><td>Gregorian</td></tr>
+            <tr><td>Germany</td><td>International (Western)</td><td>On your birthday</td><td>Gregorian</td></tr>
+            <tr><td>Japan</td><td>International (since 1950)</td><td>On your birthday</td><td>Gregorian + Imperial</td></tr>
+            <tr><td>South Korea</td><td>International (since 2023)</td><td>On your birthday</td><td>Gregorian</td></tr>
+            <tr><td>China</td><td>International (official)</td><td>On your birthday</td><td>Gregorian (official)</td></tr>
+            <tr><td>India</td><td>International (Western)</td><td>On your birthday</td><td>Gregorian</td></tr>
+            <tr><td>Saudi Arabia</td><td>International / Hijri</td><td>Varies by context</td><td>Hijri + Gregorian</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Some countries maintain parallel calendar systems. Saudi Arabia uses the Hijri (Islamic) calendar for religious purposes but the Gregorian calendar for most official business. Israel uses both the Hebrew calendar and Gregorian calendar. For more on how different cultures count age, see our guides on <a href="/blog/korean-age-calculator/">Korean age</a> and <a href="/blog/lunar-age-calculator/">lunar age calculations</a>.</p>
+
+      <h2>Wedding Age Calculator</h2>
+      <p>One of the most popular reasons people search for an age on date calculator is to find out exactly how old they were (or will be) on their wedding day. This information appears on marriage certificates in many jurisdictions and is often a cherished detail for anniversary celebrations.</p>
+
+      <h3>How to Calculate Your Wedding Age</h3>
+      <p>The process is identical to the general age on date calculation. Enter your date of birth and your wedding date (or planned wedding date). The result is your exact age on that day. If both partners do the calculation, you can also find the exact <a href="/blog/age-difference-calculator/">age difference</a> between spouses on the wedding day.</p>
+
+      <h3>Minimum Marriage Age Requirements</h3>
+      <p>Legal minimum marriage ages vary by jurisdiction. In the United States, most states set the minimum at 18, though some allow marriage at 16 or 17 with parental consent. These age requirements are assessed on the date of the marriage ceremony, not the date the marriage license is issued. If you are close to the threshold, an age on date calculation ensures compliance.</p>
+
+      <h3>Average Wedding Ages by Country</h3>
+      <p>According to data from the <a href="https://www.un.org/" target="_blank" rel="noopener">United Nations</a> and various national statistical agencies, the median age at first marriage varies significantly around the world.</p>
+
+      <div class="chart-compare">
+        <div class="chart-compare-legend"><span class="legend-male">Men</span><span class="legend-female">Women</span></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Sweden</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:78%">36.4</div><div class="chart-compare-bar female" style="width:72%">33.8</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">United States</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:65%">30.2</div><div class="chart-compare-bar female" style="width:61%">28.4</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">United Kingdom</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:68%">31.8</div><div class="chart-compare-bar female" style="width:63%">29.5</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Japan</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:67%">31.1</div><div class="chart-compare-bar female" style="width:62%">29.2</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">China</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:58%">27.1</div><div class="chart-compare-bar female" style="width:54%">25.4</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">India</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:52%">24.5</div><div class="chart-compare-bar female" style="width:45%">21.2</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Nigeria</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:56%">26.2</div><div class="chart-compare-bar female" style="width:42%">19.6</div></div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">Median age at first marriage by country (2023-2024 data).</p>
+
+      <p>According to census data, the median age at first marriage in the United States has been rising steadily. In 2023, it was approximately 30.2 for men and 28.4 for women. Knowing your exact age on your wedding date lets you see how you compare to national averages.</p>
+
+      <h2>Life Events and Age Calculations</h2>
+      <p>The following table shows common life events and the typical ages at which they occur. You can use our calculator to find your exact age on the date of any event in your own life.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Life Event</th><th>Typical Age Range</th><th>Why Age Matters</th></tr></thead>
+          <tbody>
+            <tr><td>Starting kindergarten</td><td>5-6</td><td>School enrollment cutoff dates</td></tr>
+            <tr><td>Getting a driver's license</td><td>16-18</td><td>State minimum age laws</td></tr>
+            <tr><td>Voting for the first time</td><td>18</td><td>Must be 18 on or before Election Day</td></tr>
+            <tr><td>Legal drinking age (US)</td><td>21</td><td>Must be 21 on the date of purchase</td></tr>
+            <tr><td>First full-time job</td><td>22-25</td><td>Some programs have age requirements</td></tr>
+            <tr><td>Getting married</td><td>27-32</td><td>Minimum age laws; certificate records</td></tr>
+            <tr><td>Having a first child</td><td>28-33</td><td>Medical considerations; parental age records</td></tr>
+            <tr><td>Buying a first home</td><td>30-35</td><td>Mortgage applications may reference age</td></tr>
+            <tr><td>Children starting school</td><td>30-40</td><td>Age at enrollment of your child</td></tr>
+            <tr><td>Retirement</td><td>62-67</td><td>Social Security eligibility dates</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For a comprehensive look at age-related milestones, see our guide on <a href="/blog/age-milestones/">age milestones</a>.</p>
+
+      <h2>Age Verification for Legal Purposes</h2>
+      <p>Various legal ages apply to different activities and rights. The precision of an age on date calculation becomes critical when you are close to these thresholds.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Activity/Right</th><th>US Age</th><th>UK Age</th><th>Germany Age</th><th>Japan Age</th><th>Australia Age</th></tr></thead>
+          <tbody>
+            <tr><td>Drive a car</td><td>16</td><td>17</td><td>18</td><td>18</td><td>16-17</td></tr>
+            <tr><td>Vote</td><td>18</td><td>18</td><td>18</td><td>18</td><td>18</td></tr>
+            <tr><td>Drink alcohol</td><td>21</td><td>18</td><td>16/18</td><td>20</td><td>18</td></tr>
+            <tr><td>Marry (no consent)</td><td>18</td><td>18</td><td>18</td><td>18</td><td>18</td></tr>
+            <tr><td>Rent a car</td><td>21-25</td><td>21-25</td><td>21-25</td><td>18-21</td><td>21</td></tr>
+            <tr><td>Run for legislature</td><td>25</td><td>18</td><td>18</td><td>25</td><td>18</td></tr>
+            <tr><td>Run for president/PM</td><td>35</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+            <tr><td>Social Security (early)</td><td>62</td><td>66-67</td><td>63</td><td>60</td><td>67</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>For a complete breakdown of legal ages by activity, see our <a href="/blog/legal-ages-guide/">legal ages guide</a>.</p>
+
+      <h2>Leap Year Considerations</h2>
+      <p>Leap years add a layer of complexity to age on date calculations. February 29 occurs every 4 years (with exceptions for century years not divisible by 400). If you were born on February 29, your "official" birthday only occurs in leap years. In non-leap years, different jurisdictions treat your birthday as either February 28 or March 1.</p>
+      <p>An age on date calculator handles this automatically. If the target date is February 28 in a non-leap year and your birthday is February 29, the calculator determines whether you have completed a full year based on the rules of the calendar. This is particularly important for legal age verification, where being "one day off" can matter. Read more about the nuances in our <a href="/blog/leap-year-birthday/">leap year birthday guide</a>.</p>
+
+      <h3>Leap Year Distribution Over Time</h3>
+      <p>The following chart shows leap year patterns, which affect age calculations for anyone born on February 29 or near month boundaries.</p>
+
+      <div class="chart-vertical">
+        <div class="chart-v-col"><div class="chart-v-val">L</div><div class="chart-v-bar accent" style="height:100%"></div><div class="chart-v-label">2020</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2021</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2022</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2023</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">L</div><div class="chart-v-bar accent" style="height:100%"></div><div class="chart-v-label">2024</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2025</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2026</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2027</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">L</div><div class="chart-v-bar accent" style="height:100%"></div><div class="chart-v-label">2028</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2029</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2030</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">-</div><div class="chart-v-bar" style="height:30%"></div><div class="chart-v-label">2031</div></div>
+        <div class="chart-v-col"><div class="chart-v-val">L</div><div class="chart-v-bar accent" style="height:100%"></div><div class="chart-v-label">2032</div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">L = Leap Year (366 days with February 29). Based on data from <a href="https://www.timeanddate.com/" target="_blank" rel="noopener">timeanddate.com</a>.</p>
+
+      <h2>How Our Age on Date Calculator Works</h2>
+      <p>Our free online tool uses the same step-by-step logic described above, but performs all the math instantly. Here is what it does behind the scenes:</p>
+      <ol>
+        <li><strong>Parses both dates</strong> into year, month, and day components</li>
+        <li><strong>Computes the difference</strong> in years by comparing the birth date and target date</li>
+        <li><strong>Adjusts for incomplete years</strong> by checking whether the birthday has occurred in the target year</li>
+        <li><strong>Calculates remaining months</strong> from the last birthday to the target date</li>
+        <li><strong>Calculates remaining days</strong> using the correct number of days in each intervening month</li>
+        <li><strong>Handles edge cases</strong> like leap years, month-end boundaries, and dates where the day of the month exceeds the days in the previous month</li>
+      </ol>
+      <p>The result is displayed as years, months, and days, giving you the same precision you would get from a careful manual calculation but without any of the effort.</p>
+
+      <h2>Age on Date for Medical and Health Contexts</h2>
+      <p>Medical professionals often need precise age calculations for screening schedules, medication dosing, and health assessments.</p>
+
+      <h3>Developmental Screening Ages</h3>
+      <p>According to the <a href="https://www.cdc.gov/" target="_blank" rel="noopener">Centers for Disease Control and Prevention (CDC)</a>, developmental screenings for children occur at specific ages:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Age</th><th>Screening Type</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>9 months</td><td>Developmental screening</td><td>Motor skills, communication</td></tr>
+            <tr><td>18 months</td><td>Developmental + Autism</td><td>Language, social, behavior</td></tr>
+            <tr><td>24 months</td><td>Developmental + Autism</td><td>Comprehensive evaluation</td></tr>
+            <tr><td>30 months</td><td>Developmental screening</td><td>School readiness indicators</td></tr>
+            <tr><td>4-5 years</td><td>School readiness</td><td>Cognitive and social skills</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>For these screenings, the child's exact age on the date of the appointment matters. A child who is 17 months and 29 days old is not yet 18 months for screening purposes. This is where an age on date calculator becomes medically relevant.</p>
+
+      <h3>Adult Health Screening Ages</h3>
+      <p>The <a href="https://www.who.int/" target="_blank" rel="noopener">World Health Organization (WHO)</a> and national health agencies recommend various screenings based on age:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Screening</th><th>Starting Age</th><th>Frequency</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Cholesterol check</td><td>20</td><td>Every 4-6 years</td><td>More frequent if risk factors present</td></tr>
+            <tr><td>Blood pressure</td><td>18</td><td>Annually</td><td>Per doctor visit</td></tr>
+            <tr><td>Mammogram</td><td>40-50</td><td>Every 1-2 years</td><td>Guidelines vary by organization</td></tr>
+            <tr><td>Colonoscopy</td><td>45</td><td>Every 10 years</td><td>Changed from 50 in 2021</td></tr>
+            <tr><td>Prostate screening</td><td>50</td><td>Discuss with doctor</td><td>Earlier if family history</td></tr>
+            <tr><td>Bone density scan</td><td>65 (women)</td><td>Every 2 years</td><td>70 for men</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Insurance Age Calculations</h2>
+      <p>Insurance companies use several different methods to determine your "age" for premium calculations. Understanding these methods helps you time your applications strategically.</p>
+
+      <h3>Age Last Birthday (ALB)</h3>
+      <p>Your age is the number of complete years since your birth. A person who is 34 years and 11 months old is considered 34 for premium purposes. This is the most common method and generally benefits applicants who apply just before their birthday.</p>
+
+      <h3>Age Nearest Birthday (ANB)</h3>
+      <p>Your age is rounded to the nearest whole year. If you are more than 6 months past your last birthday, you are considered the next age up. A 34-year-old who is 7 months past their birthday is considered 35 for premium purposes.</p>
+
+      <h3>Actual Age</h3>
+      <p>Some insurers use your precise age in years and months, adjusting premiums accordingly. This is less common but provides the most accurate pricing.</p>
+
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><div class="chart-bar-label">Age Last Birthday (ALB)</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:65%">Most Common</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Age Nearest Birthday (ANB)</div><div class="chart-bar-track"><div class="chart-bar-fill accent" style="width:30%">Common</div></div></div>
+        <div class="chart-bar-item"><div class="chart-bar-label">Actual Age (Months)</div><div class="chart-bar-track"><div class="chart-bar-fill" style="width:5%">Rare</div></div></div>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--gray-500); text-align: center;">Relative usage of different age calculation methods by insurance companies.</p>
+
+      <h2>Tips for Accurate Results</h2>
+      <p>When using an age on date calculator, keep these tips in mind for the most accurate results:</p>
+      <ul>
+        <li><strong>Double-check your birth date entry.</strong> Even a one-day error changes the result. Make sure you enter the correct month, day, and year.</li>
+        <li><strong>Use the correct target date.</strong> For official documents, the relevant date is usually the date of application, the date of the event, or the start date of a policy. Confirm which date your form requires.</li>
+        <li><strong>Time zones do not affect the calculation.</strong> Age on date calculations are based on calendar dates, not precise moments in time. Whether you were born at 11:55 PM or 12:05 AM does not change the calendar date of your birth.</li>
+        <li><strong>Consider the "age last birthday" convention.</strong> Most legal and insurance contexts use "age last birthday," meaning the age you turned on your most recent birthday. A few insurance companies use "nearest age," which rounds to the nearest birthday. Confirm which convention applies to your situation.</li>
+        <li><strong>Account for different calendar systems.</strong> If you need to calculate age using a non-Gregorian calendar (lunar, Islamic, Hebrew), our standard calculator uses Gregorian dates. See our <a href="/blog/lunar-age-calculator/">lunar age calculator</a> for alternative systems.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate my age on a specific date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter your date of birth and the target date into our <a href="/#panel-date">age on date calculator</a>. The tool subtracts your birth date from the target date and returns your age in years, months, and days. You can also do it manually by calculating the year difference, then adjusting for months and days.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do passport applications ask for age on a specific date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Passport fees, validity periods, and minor vs. adult classification are determined by your age at the time of application. A child who turns 16 between application and issuance may be charged a different fee or receive a different validity period depending on their age on the application date.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I calculate my age on a future date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes. The calculator works for both past and future dates. Simply enter a future date as the target date. This is useful for planning purposes, such as checking whether you will meet an age requirement by a specific deadline.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if I was born on February 29?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>If you were born on February 29 and the target year is not a leap year, most legal systems treat your birthday as either February 28 or March 1. Our calculator handles this automatically, ensuring your age is computed correctly regardless of leap year status. See our <a href="/blog/leap-year-birthday/">leap year birthday guide</a> for more details.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is age on date different from chronological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Chronological age is your age today, measured from your birth date to the current moment. Age on date is your age at a specific point in time, which could be in the past or future. <a href="/blog/chronological-age-explained/">Chronological age</a> is a subset of the age on date concept where the target date is always today.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do insurance companies use age on date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes. Most life insurance companies calculate premiums based on your age when the policy becomes effective, not when you apply. Some use "age last birthday" (your age at your most recent birthday) while others use "nearest age" (rounding to the nearest birthday). Either way, an age on date calculation is necessary.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How accurate is an online age on date calculator?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Online calculators like ours are extremely accurate because they use well-tested algorithms that account for leap years, varying month lengths, and calendar conventions. The only source of error is incorrect input data. Double-check your dates to ensure accurate results.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between age on date and age difference calculators?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>An age on date calculator finds how old one person is on a specific date. An <a href="/blog/age-difference-calculator/">age difference calculator</a> finds the time difference between two people's ages. You can use an age on date calculator to find both people's ages on the same date, then compute the difference.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I calculate my age on a date before I was born?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Technically, no. An age before birth would be a negative number, which does not have practical meaning. However, some cultures count time in the womb, which is why you may be 1-2 years "older" in systems like <a href="/blog/korean-age-calculator/">Korean age</a> or <a href="/blog/chinese-age-calculator/">Chinese age</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate age on date in Excel?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>In Excel, you can use the DATEDIF function: =DATEDIF(birth_date, target_date, "Y") for years, "M" for total months, or "D" for total days. For a complete years, months, days breakdown, you need three DATEDIF formulas with "Y", "YM", and "MD" parameters combined.</p></div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin: 2rem 0;"><a href="/#panel-date" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none; box-shadow: 0 4px 14px 0 rgba(168, 85, 247, 0.4);">Calculate My Age on Any Date &rarr;</a></p>
+
+      <h2>External Resources</h2>
+      <p>For more information on age verification and calculation, these authoritative resources may be helpful:</p>
+      <ul>
+        <li><a href="https://www.ssa.gov/benefits/retirement/planner/agereduction.html" target="_blank" rel="noopener">Social Security Administration - Retirement Age Calculator</a></li>
+        <li><a href="https://travel.state.gov/content/travel/en/passports/how-apply/fees.html" target="_blank" rel="noopener">U.S. Department of State - Passport Fees by Age</a></li>
+        <li><a href="https://www.timeanddate.com/date/duration.html" target="_blank" rel="noopener">TimeAndDate.com - Date Duration Calculator</a></li>
+        <li><a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC - Growth Charts for Age Calculations</a></li>
+        <li><a href="https://www.nih.gov/" target="_blank" rel="noopener">National Institutes of Health - Age-Related Health Information</a></li>
+      </ul>
+
+      <div class="related-grid">
+        <a href="/blog/how-old-am-i/" class="related-card"><div class="related-card-title">How Old Am I?</div><p class="related-card-desc">Find your exact age right now in years, months, and days</p></a>
+        <a href="/blog/age-calculator-guide/" class="related-card"><div class="related-card-title">Age Calculator Guide</div><p class="related-card-desc">Complete guide to every type of age calculation</p></a>
+        <a href="/blog/birthday-calculator/" class="related-card"><div class="related-card-title">Birthday Calculator</div><p class="related-card-desc">Find out the day of the week you were born and your next birthday</p></a>
+        <a href="/blog/birth-year-calculator/" class="related-card"><div class="related-card-title">Birth Year Calculator</div><p class="related-card-desc">Calculate your birth year from your current age</p></a>
+      </div>
+    </article>
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/#panel-diff">Age Difference</a></li><li><a href="/#panel-days">Days Old</a></li><li><a href="/#panel-korean">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const mobileNav = document.querySelector('.nav-mobile');
+      if (toggle && mobileNav) { toggle.addEventListener('click', function() { mobileNav.classList.toggle('active'); }); }
+      document.querySelectorAll('.faq-question').forEach(function(btn) { btn.addEventListener('click', function() { this.closest('.faq-item').classList.toggle('open'); }); });
+    });
+  </script>
+</body>
+</html>

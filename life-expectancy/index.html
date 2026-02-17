@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Expectancy Calculator - Estimate Your Lifespan</title>
+  <meta name="description" content="Free life expectancy calculator. Estimate your lifespan based on age and sex. See years remaining, weeks left, and percentage of life lived with our visual progress bar.">
+  <link rel="canonical" href="https://calcmyage.org/life-expectancy/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/life-expectancy/">
+  <meta property="og:title" content="Life Expectancy Calculator - Estimate Your Lifespan">
+  <meta property="og:description" content="Free life expectancy calculator. Estimate your lifespan based on age and sex. See years remaining, weeks left, and percentage of life lived.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Life Expectancy Calculator",
+    "description": "Estimate your life expectancy based on age and sex. See years remaining, weeks left, and percentage of life lived.",
+    "url": "https://calcmyage.org/life-expectancy/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Life Expectancy Estimation", "Years Remaining", "Weeks Remaining", "Life Progress Visualization"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this life expectancy calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator provides a general estimate based on global averages. Actual life expectancy depends on many factors including your country, lifestyle, genetics, and health conditions. For more precise estimates, consult actuarial life tables from the Social Security Administration or your country's statistics office."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do women live longer than men?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Women outlive men by 4-5 years on average due to several factors per WHO research: biological advantages (estrogen protects heart health, two X chromosomes provide backup genes), behavioral differences (men have higher rates of smoking, drinking, and risky behavior), and healthcare patterns (women seek medical care more frequently). Russia has the widest gap at 9.8 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which country has the highest life expectancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Japan consistently ranks highest with a life expectancy of 84.3 years, followed by Switzerland (84.0), Singapore (84.0), and South Korea (83.6). The five Blue Zones (Okinawa, Sardinia, Nicoya, Ikaria, Loma Linda) have exceptionally high concentrations of centenarians."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I increase my life expectancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! According to the CDC, you can add years to your life by: not smoking (adds 10+ years), regular exercise (adds 3-7 years), healthy diet (adds 2-4 years), moderate alcohol (vs heavy drinking), maintaining healthy weight, and strong social connections (adds 7+ years)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between life expectancy and lifespan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Life expectancy is the average number of years people are expected to live based on current mortality rates. Maximum lifespan is the longest any individual can live - for humans, this is around 120-125 years. The oldest verified person was Jeanne Calment at 122 years and 164 days per Guinness World Records."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How has life expectancy changed over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per Our World in Data, life expectancy has more than doubled since 1900. In 1900, global life expectancy was about 31 years. By 1950, it reached 46 years. Today, it's around 73 years. This increase is mainly due to reduced infant mortality, antibiotics, vaccines, better sanitation, and improved healthcare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Blue Zones and why do people live longer there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blue Zones are five regions with the highest centenarian populations: Okinawa (Japan), Sardinia (Italy), Nicoya Peninsula (Costa Rica), Ikaria (Greece), and Loma Linda (California). Common factors include plant-based diets, daily physical activity, strong social ties, and sense of purpose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is US life expectancy lower than other developed countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The US ranks 46th globally at 77.5 years despite high healthcare spending. Contributing factors include: high obesity rates (42%), opioid epidemic deaths, gun violence, lack of universal healthcare, high uninsured rates, and car accident fatalities. COVID-19 reduced US life expectancy by 2.7 years (2019-2021), more than most developed nations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Healthy Life Expectancy (HALE)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Healthy Life Expectancy (HALE) measures the number of years a person can expect to live in \"full health\" - without disability or disease. Global HALE is 63.7 years vs 73.4 years total life expectancy, meaning people spend about 10 years in poor health on average."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did COVID-19 impact life expectancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "COVID-19 caused the largest single-year decline in global life expectancy since World War II. Global life expectancy dropped from 72.8 years (2019) to 71.4 years (2021) - a 1.8-year decline. The US experienced a 2.7-year drop, while some Asian countries (Japan, South Korea) saw minimal impact due to effective public health measures."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/" class="active">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub active">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Life Expectancy Calculator</h1>
+    <p class="intro-text">Estimate your life expectancy based on your age and sex. According to <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank" rel="noopener">WHO Global Health Observatory data</a>, global life expectancy at birth reached 73.4 years in 2023. See how many years and weeks you may have remaining, and visualize what percentage of your life you've already lived.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Global average:</strong> 73.4 years (2023) - up from 66.8 years in 2000 (<a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a>)</li>
+        <li><strong>Gender gap:</strong> Women live 5 years longer than men globally (76.0 vs 71.0 years)</li>
+        <li><strong>Top countries:</strong> Japan (84.3), Switzerland (84.0), Singapore (84.0 years)</li>
+        <li><strong>Blue Zones:</strong> 5 regions with highest centenarian populations (<a href="https://www.bluezones.com/" target="_blank" rel="noopener">Blue Zones</a>)</li>
+        <li><strong>Lifestyle impact:</strong> Not smoking adds 10+ years; exercise adds 3-7 years (<a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC</a>)</li>
+        <li><strong>Historical growth:</strong> Life expectancy doubled since 1900 (from ~31 to 73 years)</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="life"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span>Life Expectancy</span></button>
+      </div>
+
+      <!-- LIFE EXPECTANCY -->
+      <div id="panel-life" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" id="dob-life" class="form-input dob-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sex</label>
+              <select id="life-sex" class="form-select">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-life-btn">Estimate Life Expectancy</button>
+
+        <div class="results-section" id="life-results">
+          <div class="results-grid results-grid-4">
+            <div class="result-item"><div class="result-item-label">Life Expectancy</div><div class="result-item-value highlight" id="life-expectancy">--</div></div>
+            <div class="result-item"><div class="result-item-label">Years Remaining</div><div class="result-item-value" id="life-years-remaining">--</div></div>
+            <div class="result-item"><div class="result-item-label">Weeks Remaining</div><div class="result-item-value" id="life-weeks-remaining">--</div></div>
+            <div class="result-item"><div class="result-item-label">Life Lived</div><div class="result-item-value" id="life-percent">--</div></div>
+          </div>
+          <div style="background:var(--gray-100);border-radius:var(--radius-full);height:24px;margin-top:1rem;overflow:hidden;">
+            <div id="life-progress" style="height:100%;background:linear-gradient(90deg,var(--primary-light),var(--primary));width:0%;transition:width 0.5s;"></div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--gray-500);margin-top:1rem;text-align:center;">Based on global averages. Actual life expectancy varies by country, lifestyle, and health factors.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our life expectancy calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Young adult male</td><td>Born: 2000 | Male</td><td>Life expectancy: 76.3 years, ~50 years remaining</td><td>Long-term financial planning</td></tr>
+            <tr><td>Middle-aged female</td><td>Born: 1975 | Female</td><td>Life expectancy: 81.2 years, ~30 years remaining</td><td>Retirement savings calculation</td></tr>
+            <tr><td>Senior planning</td><td>Born: 1950 | Male</td><td>Life expectancy: 76.3 years, 62% life lived</td><td>Estate planning timeline</td></tr>
+            <tr><td>Newborn projection</td><td>Born: 2025 | Female</td><td>Life expectancy: 81.2 years, 4,200+ weeks ahead</td><td>New parent perspective</td></tr>
+            <tr><td>Centenarian goal</td><td>Born: 1940 | Female</td><td>Life expectancy: 81.2 years (exceeded!)</td><td>Beating the statistical odds</td></tr>
+            <tr><td>Insurance assessment</td><td>Born: 1985 | Male</td><td>Life expectancy: 76.3 years, ~35 years remaining</td><td>Life insurance premium estimate</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Factors Affecting Life Expectancy -->
+    <section class="content-section">
+      <h2>Factors That Affect Life Expectancy</h2>
+      <p>Life expectancy is influenced by numerous factors, some within your control and others determined by genetics and environment. According to the <a href="https://www.cdc.gov/nchs/fastats/life-expectancy.htm" target="_blank" rel="noopener">CDC National Center for Health Statistics</a>, lifestyle choices account for up to 50% of longevity outcomes.</p>
+
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">fitness</div>
+          <div class="fun-fact-content">
+            <h4>Physical Activity (+3-7 years)</h4>
+            <p>Regular exercise can add 3-7 years to your life. The <a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" target="_blank" rel="noopener">WHO recommends</a> 150-300 minutes of moderate aerobic activity weekly. Even 15 minutes of daily walking reduces mortality risk by 22%.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">nutrition</div>
+          <div class="fun-fact-content">
+            <h4>Diet & Nutrition (+2-4 years)</h4>
+            <p>The Mediterranean diet is associated with 20-25% lower all-cause mortality. Plant-based diets, adequate fiber (25-30g/day), and limiting processed foods all contribute to longevity. Blue Zone populations eat primarily plant-based.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">health</div>
+          <div class="fun-fact-content">
+            <h4>Smoking & Alcohol (-10 years)</h4>
+            <p>Smoking reduces life expectancy by 10+ years according to the <a href="https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/tobacco_related_mortality/index.htm" target="_blank" rel="noopener">CDC</a>. Quitting at 40 regains 9 years. Heavy alcohol use (4+ drinks/day) reduces lifespan by 20 years.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">dna</div>
+          <div class="fun-fact-content">
+            <h4>Genetics (25% of variation)</h4>
+            <p>Family history accounts for about 25% of lifespan variation. If your parents lived to 90+, you have 10-20% higher odds of doing the same. Certain gene variants (APOE, FOXO3) are linked to longevity.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">social</div>
+          <div class="fun-fact-content">
+            <h4>Social Connections (+7 years)</h4>
+            <p>Strong social ties add 7+ years to life. Loneliness increases mortality risk by 26% per <a href="https://www.apa.org/news/press/releases/2017/08/lonely-die" target="_blank" rel="noopener">American Psychological Association</a>. Marriage, friendships, and community involvement all contribute.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">location</div>
+          <div class="fun-fact-content">
+            <h4>Geography & Healthcare</h4>
+            <p>Where you live matters. Japan's universal healthcare and diet contribute to 84.3-year life expectancy. The US lags at 77.5 years despite high healthcare spending, partly due to obesity and opioid crises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Life Expectancy Chart -->
+    <section class="content-section">
+      <h2>Life Expectancy by Country (Visual)</h2>
+      <p>This chart shows how life expectancy varies dramatically across different countries. Data from <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/life-expectancy-at-birth-(years)" target="_blank" rel="noopener">WHO 2023 data</a>:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Japan</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+          <div class="chart-bar-value">84.3 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Switzerland</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 99%;"></div></div>
+          <div class="chart-bar-value">84.0 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Singapore</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 99%;"></div></div>
+          <div class="chart-bar-value">84.0 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Australia</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 98%;"></div></div>
+          <div class="chart-bar-value">83.5 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Spain</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 98%;"></div></div>
+          <div class="chart-bar-value">83.3 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">United Kingdom</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 95%;"></div></div>
+          <div class="chart-bar-value">81.3 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">China</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 91%;"></div></div>
+          <div class="chart-bar-value">78.2 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">United States</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 90%;"></div></div>
+          <div class="chart-bar-value">77.5 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">World Average</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 85%;"></div></div>
+          <div class="chart-bar-value">73.4 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">India</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 82%;"></div></div>
+          <div class="chart-bar-value">70.8 years</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Nigeria</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 63%;"></div></div>
+          <div class="chart-bar-value">54.7 years</td>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;">Japanese citizens live nearly 30 years longer on average than citizens of Nigeria - a gap that reflects healthcare access, nutrition, and socioeconomic factors.</p>
+    </section>
+
+    <!-- Country Comparison Table -->
+    <section class="content-section">
+      <h2>Life Expectancy by Country - Detailed Data (2023)</h2>
+      <p>Complete breakdown by sex, including healthy life expectancy (HALE) - years lived in good health without disability:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country</th><th>Overall</th><th>Male</th><th>Female</th><th>HALE</th><th>Gender Gap</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Japan</strong></td><td>84.3 years</td><td>81.5 years</td><td>87.1 years</td><td>74.1 years</td><td>5.6 years</td></tr>
+            <tr><td><strong>Switzerland</strong></td><td>84.0 years</td><td>82.2 years</td><td>85.7 years</td><td>73.2 years</td><td>3.5 years</td></tr>
+            <tr><td><strong>Singapore</strong></td><td>84.0 years</td><td>81.9 years</td><td>86.1 years</td><td>73.6 years</td><td>4.2 years</td></tr>
+            <tr><td><strong>Australia</strong></td><td>83.5 years</td><td>81.6 years</td><td>85.4 years</td><td>71.7 years</td><td>3.8 years</td></tr>
+            <tr><td><strong>Spain</strong></td><td>83.3 years</td><td>80.6 years</td><td>85.9 years</td><td>72.1 years</td><td>5.3 years</td></tr>
+            <tr><td><strong>Italy</strong></td><td>83.1 years</td><td>80.7 years</td><td>85.4 years</td><td>71.9 years</td><td>4.7 years</td></tr>
+            <tr><td><strong>South Korea</strong></td><td>83.6 years</td><td>80.5 years</td><td>86.5 years</td><td>73.1 years</td><td>6.0 years</td></tr>
+            <tr><td><strong>Canada</strong></td><td>82.3 years</td><td>80.0 years</td><td>84.4 years</td><td>71.3 years</td><td>4.4 years</td></tr>
+            <tr><td><strong>Germany</strong></td><td>81.3 years</td><td>78.7 years</td><td>83.6 years</td><td>70.9 years</td><td>4.9 years</td></tr>
+            <tr><td><strong>United Kingdom</strong></td><td>81.3 years</td><td>79.4 years</td><td>83.1 years</td><td>70.1 years</td><td>3.7 years</td></tr>
+            <tr><td><strong>China</strong></td><td>78.2 years</td><td>75.5 years</td><td>81.0 years</td><td>68.5 years</td><td>5.5 years</td></tr>
+            <tr><td><strong>United States</strong></td><td>77.5 years</td><td>74.8 years</td><td>80.2 years</td><td>66.1 years</td><td>5.4 years</td></tr>
+            <tr><td><strong>Brazil</strong></td><td>75.9 years</td><td>72.4 years</td><td>79.4 years</td><td>65.4 years</td><td>7.0 years</td></tr>
+            <tr><td><strong>Russia</strong></td><td>73.2 years</td><td>68.2 years</td><td>78.0 years</td><td>64.2 years</td><td>9.8 years</td></tr>
+            <tr><td><strong>India</strong></td><td>70.8 years</td><td>69.5 years</td><td>72.2 years</td><td>59.3 years</td><td>2.7 years</td></tr>
+            <tr><td><strong>Global Average</strong></td><td>73.4 years</td><td>71.0 years</td><td>76.0 years</td><td>63.7 years</td><td>5.0 years</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;"><strong>Note:</strong> Russia has the largest gender gap (9.8 years) due to high male mortality from alcohol, accidents, and cardiovascular disease. India has the smallest gap (2.7 years).</p>
+    </section>
+
+    <!-- Blue Zones Section -->
+    <section class="content-section">
+      <h2>Blue Zones: Where People Live Longest</h2>
+      <p>Researcher Dan Buettner identified five "Blue Zones" - regions with the highest concentrations of centenarians (people living to 100+). These areas offer lessons for longevity. Learn more at <a href="https://www.bluezones.com/" target="_blank" rel="noopener">Blue Zones</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Blue Zone</th><th>Location</th><th>Key Longevity Factors</th><th>Notable Stat</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Okinawa</strong></td><td>Japan</td><td>Plant-based diet, strong social ties (moai), purpose (ikigai)</td><td>World's longest-lived women</td></tr>
+            <tr><td><strong>Sardinia</strong></td><td>Italy</td><td>Mountain living, sheep herding, Cannonau wine, family-centered</td><td>10x more male centenarians than US</td></tr>
+            <tr><td><strong>Nicoya Peninsula</strong></td><td>Costa Rica</td><td>Calcium-rich water, "plan de vida" (life plan), physical work</td><td>Lowest middle-age mortality</td></tr>
+            <tr><td><strong>Ikaria</strong></td><td>Greece</td><td>Mediterranean diet, napping, herbal teas, no urgency</td><td>1 in 3 live to 90</td></tr>
+            <tr><td><strong>Loma Linda</strong></td><td>California, USA</td><td>Seventh-day Adventist faith, vegetarian diet, community</td><td>Live 10 years longer than avg American</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;"><strong>Common traits across all Blue Zones:</strong> Plant-based diet (95%), constant moderate physical activity, strong sense of purpose, stress-reduction rituals, moderate alcohol (except Loma Linda), family-first mentality, and belonging to a faith-based community.</p>
+    </section>
+
+    <!-- Historical Trends -->
+    <section class="content-section">
+      <h2>Historical Life Expectancy Trends</h2>
+      <p>Life expectancy has increased dramatically over human history. Data from <a href="https://ourworldindata.org/life-expectancy" target="_blank" rel="noopener">Our World in Data</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Era/Year</th><th>Global Life Expectancy</th><th>Key Factors</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Prehistoric</strong></td><td>~20-30 years</td><td>High infant mortality, predators, no medicine</td></tr>
+            <tr><td><strong>Ancient Rome</strong></td><td>~25-35 years</td><td>Disease, war, poor sanitation</td></tr>
+            <tr><td><strong>Medieval Europe</strong></td><td>~30-35 years</td><td>Plague, famine, limited healthcare</td></tr>
+            <tr><td><strong>1800</strong></td><td>~29 years</td><td>Pre-industrial, high child mortality</td></tr>
+            <tr><td><strong>1900</strong></td><td>~31 years</td><td>Industrialization begins</td></tr>
+            <tr><td><strong>1950</strong></td><td>~46 years</td><td>Antibiotics, vaccines, better sanitation</td></tr>
+            <tr><td><strong>1990</strong></td><td>~64 years</td><td>Medical advances, improved nutrition</td></tr>
+            <tr><td><strong>2000</strong></td><td>~66.8 years</td><td>HIV treatment, reduced infant mortality</td></tr>
+            <tr><td><strong>2019</strong></td><td>~72.8 years</td><td>Pre-COVID peak</td></tr>
+            <tr><td><strong>2021</strong></td><td>~71.4 years</td><td>COVID-19 pandemic impact (-1.8 years)</td></tr>
+            <tr><td><strong>2023</strong></td><td>~73.4 years</td><td>Recovery, continued medical advances</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;"><strong>Important:</strong> Low historical averages were primarily due to extremely high infant and child mortality. Adults who survived childhood in ancient times often lived into their 60s-70s.</p>
+    </section>
+
+    <!-- How Life Expectancy Is Calculated -->
+    <section class="content-section">
+      <h2>How Life Expectancy Is Calculated</h2>
+      <p>Life expectancy is a statistical measure that represents the average number of years a person is expected to live based on current mortality rates. Understanding the methodology helps interpret the numbers correctly.</p>
+      <p><strong>Life Expectancy at Birth:</strong> This is the most commonly cited figure. It represents how long a newborn baby is expected to live if current mortality patterns remain constant throughout their life. This measure is heavily influenced by infant mortality rates.</p>
+      <p><strong>Period vs. Cohort Life Expectancy:</strong> Period life expectancy uses current death rates across all ages. Cohort (or generation) life expectancy follows a specific birth year and adjusts for expected improvements over time - this typically yields higher estimates.</p>
+      <p><strong>Actuarial Life Tables:</strong> Insurance companies and pension funds use detailed life tables from organizations like the <a href="https://www.ssa.gov/oact/STATS/table4c6.html" target="_blank" rel="noopener">Social Security Administration</a> or <a href="https://www.cdc.gov/nchs/products/life_tables.htm" target="_blank" rel="noopener">CDC National Center for Health Statistics</a> to calculate precise remaining life expectancy at any given age.</p>
+      <p><strong>Our Calculator:</strong> We use simplified global averages (76 years for males, 81 years for females) to provide a general estimate. For personalized predictions, consult actuarial life tables from your country's statistics office or insurance provider.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How accurate is this life expectancy calculator?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>This calculator provides a <strong>general estimate</strong> based on global averages. Actual life expectancy depends on many factors including your country, lifestyle, genetics, and health conditions. For more precise estimates, consult actuarial life tables from the <a href="https://www.ssa.gov/oact/STATS/table4c6.html" target="_blank" rel="noopener">Social Security Administration</a> or your country's statistics office.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do women live longer than men?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Women outlive men by 4-5 years on average due to several factors per <a href="https://www.who.int/" target="_blank" rel="noopener">WHO research</a>: <strong>biological advantages</strong> (estrogen protects heart health, two X chromosomes provide backup genes), <strong>behavioral differences</strong> (men have higher rates of smoking, drinking, and risky behavior), and <strong>healthcare patterns</strong> (women seek medical care more frequently). Russia has the widest gap at 9.8 years.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Which country has the highest life expectancy?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Japan</strong> consistently ranks highest with a life expectancy of 84.3 years, followed by Switzerland (84.0), Singapore (84.0), and South Korea (83.6). The five <a href="https://www.bluezones.com/" target="_blank" rel="noopener">Blue Zones</a> (Okinawa, Sardinia, Nicoya, Ikaria, Loma Linda) have exceptionally high concentrations of centenarians.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I increase my life expectancy?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes! According to the <a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC</a>, you can add years to your life by: <strong>not smoking</strong> (adds 10+ years), <strong>regular exercise</strong> (adds 3-7 years), <strong>healthy diet</strong> (adds 2-4 years), <strong>moderate alcohol</strong> (vs heavy drinking), <strong>maintaining healthy weight</strong>, and <strong>strong social connections</strong> (adds 7+ years).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between life expectancy and lifespan?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Life expectancy</strong> is the average number of years people are expected to live based on current mortality rates. <strong>Maximum lifespan</strong> is the longest any individual can live - for humans, this is around 120-125 years. The oldest verified person was Jeanne Calment at 122 years and 164 days per <a href="https://www.guinnessworldrecords.com/" target="_blank" rel="noopener">Guinness World Records</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How has life expectancy changed over time?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Per <a href="https://ourworldindata.org/life-expectancy" target="_blank" rel="noopener">Our World in Data</a>, life expectancy has more than doubled since 1900. In 1900, global life expectancy was about 31 years. By 1950, it reached 46 years. Today, it's around 73 years. This increase is mainly due to reduced infant mortality, antibiotics, vaccines, better sanitation, and improved healthcare.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What are Blue Zones and why do people live longer there?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><a href="https://www.bluezones.com/" target="_blank" rel="noopener">Blue Zones</a> are five regions with the highest centenarian populations: Okinawa (Japan), Sardinia (Italy), Nicoya Peninsula (Costa Rica), Ikaria (Greece), and Loma Linda (California). Common factors include plant-based diets, daily physical activity, strong social ties, and sense of purpose.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why is US life expectancy lower than other developed countries?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The US ranks 46th globally at 77.5 years despite high healthcare spending. Contributing factors include: high obesity rates (42%), opioid epidemic deaths, gun violence, lack of universal healthcare, high uninsured rates, and car accident fatalities. COVID-19 reduced US life expectancy by 2.7 years (2019-2021), more than most developed nations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is Healthy Life Expectancy (HALE)?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><a href="https://www.who.int/data/gho/indicator-metadata-registry/imr-details/66" target="_blank" rel="noopener">Healthy Life Expectancy (HALE)</a> measures the number of years a person can expect to live in "full health" - without disability or disease. Global HALE is 63.7 years vs 73.4 years total life expectancy, meaning people spend about 10 years in poor health on average.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How did COVID-19 impact life expectancy?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>COVID-19 caused the largest single-year decline in global life expectancy since World War II. Global life expectancy dropped from 72.8 years (2019) to 71.4 years (2021) - a 1.8-year decline. The US experienced a 2.7-year drop, while some Asian countries (Japan, South Korea) saw minimal impact due to effective public health measures.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <p>Explore more age and life-related tools and guides:</p>
+      <div class="related-grid">
+        <a href="/blog/life-expectancy-calculator/" class="related-card"><div class="related-card-title">Life Expectancy Guide</div><p class="related-card-desc">In-depth article on life expectancy factors, Blue Zones, and longevity research.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your exact age in years, months, days, hours, and minutes.</p></a>
+        <a href="/days-old/" class="related-card"><div class="related-card-title">Days Old Calculator</div><p class="related-card-desc">Discover how many days you've been alive and your upcoming milestones.</p></a>
+        <a href="/blog/retirement-age-calculator/" class="related-card"><div class="related-card-title">Retirement Age Calculator</div><p class="related-card-desc">Find your full retirement age and Social Security eligibility.</p></a>
+        <a href="/blog/biological-age-vs-chronological/" class="related-card"><div class="related-card-title">Biological vs Chronological Age</div><p class="related-card-desc">Learn how your body may be older or younger than your calendar age.</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones Guide</div><p class="related-card-desc">Every major life milestone from birth to 100+, with cultural context.</p></a>
+        <a href="/korean-age/" class="related-card"><div class="related-card-title">Korean Age Calculator</div><p class="related-card-desc">Calculate your age using the traditional Korean age system.</p></a>
+        <a href="/chronological-age/" class="related-card"><div class="related-card-title">Chronological Age Calculator</div><p class="related-card-desc">Precise age calculation for educational assessments and evaluations.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Estimate Your Life Expectancy Now</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Enter your birthdate and sex above to see your estimated life expectancy, years remaining, and life progress visualization.</p>
+      <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Try Age Calculator</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/life-expectancy/">Life Expectancy</a></li><li><a href="/korean-age/">Korean Age</a></li><li><a href="/chronological-age/">Chronological Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

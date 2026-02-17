@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Difference Calculator - Calculate Age Gap Between Two People</title>
+  <meta name="description" content="Calculate the exact age difference between two people in years, months, and days. Find out the age gap for couples, siblings, or any two people. Free age gap calculator.">
+  <link rel="canonical" href="https://calcmyage.org/age-difference/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/age-difference/">
+  <meta property="og:title" content="Age Difference Calculator - Calculate Age Gap Between Two People">
+  <meta property="og:description" content="Calculate the exact age difference between two people in years, months, and days. Find out the age gap for couples, siblings, or any two people.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Age Difference Calculator",
+    "description": "Calculate the exact age gap between two people in years, months, and days",
+    "url": "https://calcmyage.org/age-difference/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Age gap calculator", "Couple age difference", "Sibling age gap", "Half your age plus 7 rule", "Celebrity age gap comparison"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the age difference between two people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter both birth dates in our calculator above. We calculate the exact difference in years, months, weeks, and days, accounting for leap years and varying month lengths. The calculation works regardless of which person is older."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the half-your-age-plus-7 rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This dating guideline suggests the youngest acceptable partner age is half your age plus 7. For a 30-year-old: 30/2 + 7 = 22. The rule dates back to 1901 France. It's a social convention, not a law - mutual respect and legal compliance matter most."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average age gap for married couples?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to U.S. Census Bureau data, the average gap is 2.3 years in America, with the husband typically older (64% of couples). Globally, gaps range from 1.7 years (Japan) to 6.5 years (Nigeria)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do large age gaps affect relationship success?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research shows divorce risk increases about 3% per year of age difference. However, many factors matter more: communication, shared values, and life goals. Couples with 10+ year gaps can thrive with strong foundations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ideal age gap for siblings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The WHO recommends at least 24 months between pregnancies for health reasons. Developmentally, 2-4 year gaps are most common and allow siblings to be playmates while having age-appropriate activities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do different cultures view age gaps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Western individualist cultures tend toward smaller gaps (2-3 years). Collectivist cultures in Asia, Africa, and the Middle East often accept larger gaps (5-10 years). Historical arranged marriages typically featured larger age differences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What defines a generation gap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Demographers define a generation as roughly 25-30 years - the average time between a parent's birth and their child's birth. Pew Research defines generations by birth year cohorts sharing formative experiences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there legal considerations for age-gap relationships?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Age of consent laws vary by jurisdiction (16-18 in most U.S. states). Marriage age requirements also differ. Always ensure both parties are of legal age. See our Legal Ages Guide for details by country."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are celebrity age gaps often larger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Celebrity couples tend to have larger age gaps than average (often 10+ years). This may reflect meeting later in life, different social circles, or simply greater visibility of such pairings in media coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How has the average age gap changed over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Age gaps have decreased significantly. In 1900, 5-10 year gaps were common (men married later, women earlier). Today's 2-3 year average reflects women's increased education and economic independence."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/" class="active">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub active">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Age Difference Calculator</h1>
+    <p class="intro-text">Calculate the exact age gap between two people in years, months, weeks, and days. According to <a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau</a> data, the average age gap for married couples is 2.3 years, though this varies significantly by culture and generation. Our calculator works for couples, siblings, friends, or any two individuals.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Average couple age gap:</strong> 2.3 years in the U.S., 4.5 years in some African countries (<a href="https://www.un.org/en/development/desa/population/" target="_blank" rel="noopener">UN Data</a>)</li>
+        <li><strong>Half-your-age-plus-7 rule:</strong> Popular dating guideline since the early 1900s</li>
+        <li><strong>Sibling spacing:</strong> 2-4 years is most common; impacts development and family dynamics</li>
+        <li><strong>Research finding:</strong> Age gaps under 10 years show similar relationship satisfaction rates</li>
+        <li><strong>Generational gap:</strong> Roughly 25-30 years defines a generation according to demographers</li>
+        <li><strong>Legal considerations:</strong> Age of consent laws vary; always ensure legal compliance</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="diff"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg><span>Age Difference</span></button>
+      </div>
+
+      <!-- AGE DIFFERENCE -->
+      <div id="panel-diff" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Person 1 - Date of Birth</label>
+              <input type="date" id="dob1" class="form-input dob-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Person 2 - Date of Birth</label>
+              <input type="date" id="dob2" class="form-input">
+            </div>
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-diff-btn">Calculate Age Difference</button>
+
+        <div class="results-section" id="diff-results">
+          <div class="age-result-card">
+            <div class="age-value" id="diff-years">--</div>
+            <div class="age-label">Years Difference</div>
+            <div class="age-sublabel" id="diff-full">--</div>
+          </div>
+          <div class="results-grid results-grid-3">
+            <div class="result-item"><div class="result-item-label">Total Months</div><div class="result-item-value" id="diff-months">--</div></div>
+            <div class="result-item"><div class="result-item-label">Total Weeks</div><div class="result-item-value" id="diff-weeks">--</div></div>
+            <div class="result-item"><div class="result-item-label">Total Days</div><div class="result-item-value highlight" id="diff-days">--</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our age difference calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Couple age gap</td><td>Person 1: Mar 15, 1988 | Person 2: Nov 22, 1992</td><td>4 years, 8 months, 7 days</td><td>Relationship age comparison</td></tr>
+            <tr><td>Sibling spacing</td><td>Person 1: Jun 1, 2018 | Person 2: Sep 15, 2021</td><td>3 years, 3 months, 14 days</td><td>Planning sibling age gap</td></tr>
+            <tr><td>Parent and child</td><td>Person 1: Feb 28, 1975 | Person 2: Jul 4, 2005</td><td>30 years, 4 months, 6 days</td><td>Generational gap calculation</td></tr>
+            <tr><td>Twin paradox</td><td>Person 1: Dec 31, 1999 11:58PM | Person 2: Jan 1, 2000 12:02AM</td><td>4 minutes (different birth years!)</td><td>Twins born in different years</td></tr>
+            <tr><td>Historical figures</td><td>Person 1: Apr 15, 1452 | Person 2: Mar 6, 1475</td><td>22 years, 10 months, 19 days</td><td>Da Vinci and Michelangelo gap</td></tr>
+            <tr><td>Same birthday</td><td>Person 1: Aug 4, 1961 | Person 2: Aug 4, 1981</td><td>20 years exactly</td><td>Same birthday, different years</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Half Your Age Plus 7 Rule -->
+    <section class="content-section">
+      <h2>The Half-Your-Age-Plus-7 Rule</h2>
+      <p>The "half your age plus 7" rule is a popular guideline for determining the socially acceptable minimum age of a romantic partner. Here's how it works:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Your Age</th><th>Minimum Partner Age</th><th>Maximum Partner Age</th></tr></thead>
+          <tbody>
+            <tr><td>20</td><td>17 (20/2 + 7)</td><td>26</td></tr>
+            <tr><td>25</td><td>19.5 (25/2 + 7)</td><td>36</td></tr>
+            <tr><td>30</td><td>22 (30/2 + 7)</td><td>46</td></tr>
+            <tr><td>40</td><td>27 (40/2 + 7)</td><td>66</td></tr>
+            <tr><td>50</td><td>32 (50/2 + 7)</td><td>86</td></tr>
+            <tr><td>60</td><td>37 (60/2 + 7)</td><td>106</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:1rem;font-size:0.875rem;color:var(--gray-600);"><strong>Note:</strong> This is just a social convention, not a rule. What matters most is mutual respect, consent, and compatibility in any relationship.</p>
+    </section>
+
+    <!-- Celebrity Age Gaps -->
+    <section class="content-section">
+      <h2>Famous Celebrity Age Gaps</h2>
+      <p>Celebrity couples often challenge conventional age gap norms. Here are notable examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Couple</th><th>Age Gap</th><th>Birth Years</th><th>Married Since</th></tr></thead>
+          <tbody>
+            <tr><td>Harrison Ford & Calista Flockhart</td><td>22 years</td><td>1942 & 1964</td><td>2010</td></tr>
+            <tr><td>George & Amal Clooney</td><td>17 years</td><td>1961 & 1978</td><td>2014</td></tr>
+            <tr><td>Hugh Jackman & Deborra-Lee Furness</td><td>13 years</td><td>1968 & 1955</td><td>1996</td></tr>
+            <tr><td>Beyoncé & Jay-Z</td><td>12 years</td><td>1981 & 1969</td><td>2008</td></tr>
+            <tr><td>Ryan Reynolds & Blake Lively</td><td>11 years</td><td>1976 & 1987</td><td>2012</td></tr>
+            <tr><td>Priyanka Chopra & Nick Jonas</td><td>10 years</td><td>1982 & 1992</td><td>2018</td></tr>
+            <tr><td>David & Victoria Beckham</td><td>1 year</td><td>1975 & 1974</td><td>1999</td></tr>
+            <tr><td>Barack & Michelle Obama</td><td>3 years</td><td>1961 & 1964</td><td>1992</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">Note: In several cases, the woman is older - Hugh Jackman's wife is 13 years his senior, challenging stereotypes about age-gap relationships.</p>
+    </section>
+
+    <!-- Age Gap Statistics -->
+    <section class="content-section">
+      <h2>Age Gap Statistics by Country</h2>
+      <p>Average spousal age gaps vary significantly around the world. Data from <a href="https://www.un.org/en/development/desa/population/" target="_blank" rel="noopener">UN Population Division</a> and national statistics offices:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country/Region</th><th>Average Gap (Years)</th><th>Man Older (%)</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>United States</td><td>2.3</td><td>64%</td><td>Gap decreasing over time</td></tr>
+            <tr><td>United Kingdom</td><td>2.5</td><td>62%</td><td>Similar to U.S. pattern</td></tr>
+            <tr><td>France</td><td>2.3</td><td>58%</td><td>More equal partnerships</td></tr>
+            <tr><td>Germany</td><td>2.9</td><td>66%</td><td>Traditional patterns persist</td></tr>
+            <tr><td>Japan</td><td>1.7</td><td>55%</td><td>Smallest gap in developed nations</td></tr>
+            <tr><td>India</td><td>4.8</td><td>94%</td><td>Traditional arrangements common</td></tr>
+            <tr><td>Nigeria</td><td>6.5</td><td>98%</td><td>Largest gaps in Africa</td></tr>
+            <tr><td>Brazil</td><td>3.5</td><td>75%</td><td>Latin American average</td></tr>
+            <tr><td>China</td><td>2.4</td><td>70%</td><td>Urban areas closer to 2.0</td></tr>
+            <tr><td>Sweden</td><td>2.1</td><td>54%</td><td>Most gender-equal gap</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Age Gap Distribution Chart -->
+    <section class="content-section">
+      <h2>Age Gap Distribution in U.S. Marriages</h2>
+      <p>How common is your age gap? Distribution of age differences in U.S. married couples (<a href="https://www.census.gov/" target="_blank" rel="noopener">Census Bureau</a>):</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Same age (±1 year)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 33%;"></div></div>
+          <div class="chart-bar-value">33%</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">2-3 years</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+          <div class="chart-bar-value">38%</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">4-5 years</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 37%;"></div></div>
+          <div class="chart-bar-value">14%</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">6-9 years</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 24%;"></div></div>
+          <div class="chart-bar-value">9%</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">10-14 years</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 11%;"></div></div>
+          <div class="chart-bar-value">4%</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">15+ years</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 5%;"></div></div>
+          <div class="chart-bar-value">2%</div>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;">71% of couples have an age gap of 3 years or less. Only 6% have gaps of 10+ years.</p>
+    </section>
+
+    <!-- Sibling Age Gap Analysis -->
+    <section class="content-section">
+      <h2>Sibling Age Gap: What Research Says</h2>
+      <p>The spacing between siblings affects child development, family dynamics, and relationships. Research from <a href="https://www.aap.org/" target="_blank" rel="noopener">American Academy of Pediatrics</a> and child development studies:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Gap</th><th>Pros</th><th>Cons</th><th>Parent Consideration</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Under 2 years</strong></td><td>Siblings bond closely; play together</td><td>Intense early years; double diapers</td><td>Physical recovery time for mother</td></tr>
+            <tr><td><strong>2-3 years</strong></td><td>Similar interests; good playmates</td><td>Rivalry common; competition</td><td>Most common choice; balanced</td></tr>
+            <tr><td><strong>3-4 years</strong></td><td>Older child more independent; helps</td><td>Different developmental stages</td><td>Easier pregnancy/newborn period</td></tr>
+            <tr><td><strong>5+ years</strong></td><td>One-on-one time with each; less rivalry</td><td>Different interests; less bonding</td><td>Like having two "only children"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;">The <a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception" target="_blank" rel="noopener">WHO recommends</a> at least 24 months between pregnancies for optimal maternal and child health outcomes.</p>
+    </section>
+
+    <!-- Understanding Age Differences -->
+    <section class="content-section">
+      <h2>The Psychology of Age Gaps</h2>
+      <p>Research on age-gap relationships reveals interesting patterns:</p>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">brain</div>
+          <div class="fun-fact-content">
+            <h4>Relationship Satisfaction</h4>
+            <p>Studies published in the <a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association</a> journals show couples with gaps under 10 years report similar satisfaction levels to same-age couples.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">chart</div>
+          <div class="fun-fact-content">
+            <h4>Divorce Rates</h4>
+            <p>Research indicates divorce risk increases by 3% per year of age difference. A 5-year gap shows 18% higher risk, while 10-year gaps show 39% higher risk compared to same-age couples.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">globe</div>
+          <div class="fun-fact-content">
+            <h4>Cultural Factors</h4>
+            <p>In collectivist cultures (Asia, Middle East), larger age gaps are more accepted. In individualist Western cultures, same-age partnerships are more common.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">time</div>
+          <div class="fun-fact-content">
+            <h4>Historical Trends</h4>
+            <p>Average age gaps have decreased over the past century. In 1900, 5-10 year gaps were common; today 2-3 years is typical in developed nations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generational Age Gaps -->
+    <section class="content-section">
+      <h2>Generational Age Gaps</h2>
+      <p>Understanding generational differences helps explain perspectives and experiences. Data from <a href="https://www.pewresearch.org/topic/generations-age/" target="_blank" rel="noopener">Pew Research Center</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Generation</th><th>Birth Years</th><th>Age in 2024</th><th>Gap to Next Gen</th></tr></thead>
+          <tbody>
+            <tr><td>Silent Generation</td><td>1928-1945</td><td>79-96</td><td>17 years to Boomers</td></tr>
+            <tr><td>Baby Boomers</td><td>1946-1964</td><td>60-78</td><td>18 years to Gen X</td></tr>
+            <tr><td>Generation X</td><td>1965-1980</td><td>44-59</td><td>15 years to Millennials</td></tr>
+            <tr><td>Millennials</td><td>1981-1996</td><td>28-43</td><td>15 years to Gen Z</td></tr>
+            <tr><td>Generation Z</td><td>1997-2012</td><td>12-27</td><td>15 years to Gen Alpha</td></tr>
+            <tr><td>Generation Alpha</td><td>2013-2025</td><td>0-11</td><td>TBD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;">Parents and children typically have a 25-30 year generational gap, making grandparents roughly 50-60 years older than grandchildren.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate the age difference between two people?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter both birth dates in our calculator above. We calculate the exact difference in years, months, weeks, and days, accounting for leap years and varying month lengths. The calculation works regardless of which person is older.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the half-your-age-plus-7 rule?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>This dating guideline suggests the youngest acceptable partner age is half your age plus 7. For a 30-year-old: 30/2 + 7 = 22. The rule dates back to 1901 France. It's a social convention, not a law - mutual respect and legal compliance matter most.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the average age gap for married couples?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>According to <a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau</a> data, the average gap is 2.3 years in America, with the husband typically older (64% of couples). Globally, gaps range from 1.7 years (Japan) to 6.5 years (Nigeria).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do large age gaps affect relationship success?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Research shows divorce risk increases about 3% per year of age difference. However, many factors matter more: communication, shared values, and life goals. Couples with 10+ year gaps can thrive with strong foundations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the ideal age gap for siblings?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> recommends at least 24 months between pregnancies for health reasons. Developmentally, 2-4 year gaps are most common and allow siblings to be playmates while having age-appropriate activities.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do different cultures view age gaps?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Western individualist cultures tend toward smaller gaps (2-3 years). Collectivist cultures in Asia, Africa, and the Middle East often accept larger gaps (5-10 years). Historical arranged marriages typically featured larger age differences.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What defines a generation gap?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Demographers define a generation as roughly 25-30 years - the average time between a parent's birth and their child's birth. <a href="https://www.pewresearch.org/" target="_blank" rel="noopener">Pew Research</a> defines generations by birth year cohorts sharing formative experiences.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are there legal considerations for age-gap relationships?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes. Age of consent laws vary by jurisdiction (16-18 in most U.S. states). Marriage age requirements also differ. Always ensure both parties are of legal age. See our <a href="/blog/legal-ages-guide/">Legal Ages Guide</a> for details by country.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why are celebrity age gaps often larger?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Celebrity couples tend to have larger age gaps than average (often 10+ years). This may reflect meeting later in life, different social circles, or simply greater visibility of such pairings in media coverage.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How has the average age gap changed over time?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Age gaps have decreased significantly. In 1900, 5-10 year gaps were common (men married later, women earlier). Today's 2-3 year average reflects women's increased education and economic independence.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <div class="related-grid">
+        <a href="/blog/age-difference-calculator/" class="related-card"><div class="related-card-title">Age Difference Guide</div><p class="related-card-desc">Complete guide to calculating age gaps with celebrity examples.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your current age in years, months, days, hours.</p></a>
+        <a href="/age-on-date/" class="related-card"><div class="related-card-title">Age on Date Calculator</div><p class="related-card-desc">Find your age on any past or future date.</p></a>
+        <a href="/days-old/" class="related-card"><div class="related-card-title">Days Old Calculator</div><p class="related-card-desc">How many days have you been alive since birth?</p></a>
+        <a href="/blog/generation-calculator/" class="related-card"><div class="related-card-title">Generation Calculator</div><p class="related-card-desc">Boomers, Gen X, Millennials, Gen Z - find your generation.</p></a>
+        <a href="/blog/legal-ages-guide/" class="related-card"><div class="related-card-title">Legal Ages Guide</div><p class="related-card-desc">Marriage, voting, and consent ages by country.</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones</div><p class="related-card-desc">Important milestones from birth to 100+.</p></a>
+        <a href="/life-expectancy/" class="related-card"><div class="related-card-title">Life Expectancy Calculator</div><p class="related-card-desc">Estimate life expectancy by country and gender.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="margin: 2.5rem 0; text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Your Age Difference</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Whether comparing couple ages, sibling gaps, or generational differences - get precise results in seconds.</p>
+      <a href="#panel-diff" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Use Calculator Above</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/age-on-date/">Age on Date</a></li><li><a href="/age-difference/">Age Difference</a></li><li><a href="/days-old/">Days Old</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

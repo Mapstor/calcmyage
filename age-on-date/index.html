@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age on Date Calculator - Find Your Age on Any Date</title>
+  <meta name="description" content="Calculate your exact age on any date - past or future. Find out how old you were at your wedding, graduation, or any historical event. Free age on date calculator.">
+  <link rel="canonical" href="https://calcmyage.org/age-on-date/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/age-on-date/">
+  <meta property="og:title" content="Age on Date Calculator - Find Your Age on Any Date">
+  <meta property="og:description" content="Calculate your exact age on any date - past or future. Find out how old you were at your wedding, graduation, or any historical event.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Age on Date Calculator",
+    "description": "Calculate your exact age on any specific date - past or future",
+    "url": "https://calcmyage.org/age-on-date/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Age on specific date", "Past date age calculation", "Future date age calculation", "Passport application age", "Wedding age calculator"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my age on a specific date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your date of birth and the target date in our calculator. We'll calculate the exact years, months, and days between your birthdate and the specified date. This works for both past and future dates, accounting for leap years and varying month lengths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my age for a future date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our calculator works for any date - past or future. Simply select your birth date and any future date to see exactly how old you'll be. This is useful for planning weddings, retirement, or milestone celebrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do passport applications need my age on a specific date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to the U.S. State Department, passport validity periods and fees depend on your age at application. Under 16: 5-year validity at $135. Age 16+: 10-year validity at $165. Both parents must consent for minors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How old was I when a historical event happened?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your birthdate and the event date to find your exact age. Popular queries include the Moon landing (July 20, 1969), 9/11 (September 11, 2001), and COVID-19 pandemic declaration (March 11, 2020)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the target date is before my birth date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator will indicate that you weren't born yet. This helps understand generational differences - for example, if you weren't alive during the Cold War or remember Y2K differently than older generations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our calculator accurately handles leap years (years divisible by 4, except century years not divisible by 400), varying month lengths (28-31 days), and all calendar complexities. See our Leap Year Birthday Guide for more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do school enrollment age cutoffs work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each state sets a cutoff date for kindergarten entry. Your child must turn 5 by that date to enroll. Cutoffs range from July 1 (Indiana) to December 1 (Michigan). Use our calculator with your state's cutoff date to check eligibility. See our Age for School Guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does insurance care about my age on a specific date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Insurance premiums are calculated based on your age when the policy takes effect. Life insurance uses 5-year age bands, and premiums can increase 8-10% per band. Some people time applications to fall before a birthday to lock in lower rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What age do I need for Social Security benefits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Full retirement age varies by birth year: 66 for those born 1943-1954, gradually increasing to 67 for those born 1960 or later. You can claim reduced benefits at 62 or increased benefits by delaying until 70. Use our Retirement Age Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do sports use age cutoff dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sports organizations use cutoff dates to determine competition categories. FIFA uses January 1 for U-17/U-20 teams. Little League Baseball uses August 31. USA Swimming uses December 1. Your age on the cutoff date determines your category for the entire season."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/" class="active">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub active">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Age on Date Calculator</h1>
+    <p class="intro-text">Find out your exact age on any specific date - past or future. Essential for <a href="https://travel.state.gov/content/travel/en/passports.html" target="_blank" rel="noopener">passport applications</a>, wedding planning, insurance policies, school enrollment, and understanding your age during historical events. Our calculator accounts for leap years and varying month lengths for precise results.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Calculate your age</strong> on any past or future date with precision to the day</li>
+        <li><strong>Passport applications</strong> require age on application date - fees and validity differ by age (<a href="https://travel.state.gov/content/travel/en/passports/how-apply/fees.html" target="_blank" rel="noopener">U.S. State Department</a>)</li>
+        <li><strong>School enrollment</strong> depends on age cutoff dates which vary by state and country</li>
+        <li><strong>Insurance premiums</strong> are calculated based on your age at policy inception</li>
+        <li><strong>Sports categories</strong> use age on specific dates for competition classification</li>
+        <li><strong>Historical events:</strong> Discover how old you were during major world moments</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="ondate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg><span>Age on Date</span></button>
+      </div>
+
+      <!-- AGE ON SPECIFIC DATE -->
+      <div id="panel-ondate" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" id="dob-ondate" class="form-input dob-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Calculate Age On</label>
+              <input type="date" id="target-date" class="form-input target-date-input">
+            </div>
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-ondate-btn">Calculate Age on Date</button>
+
+        <div class="results-section" id="ondate-results">
+          <div class="age-result-card">
+            <div class="age-value" id="ondate-age-years">--</div>
+            <div class="age-label">Years Old</div>
+            <div class="age-sublabel" id="ondate-age-full">--</div>
+          </div>
+          <div class="result-item" style="text-align:center;padding:1rem;background:var(--gray-50);border-radius:var(--radius-md);">
+            <div class="result-item-label">Total Days Lived</div>
+            <div class="result-item-value highlight" id="ondate-total-days">--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our age on date calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Passport application</td><td>Born: May 12, 1990 | Date: Jul 1, 2026</td><td>36 years, 1 month, 19 days</td><td>Determining passport fees/validity</td></tr>
+            <tr><td>Wedding anniversary</td><td>Born: Aug 3, 1985 | Date: Jun 15, 2020</td><td>34 years, 10 months, 12 days</td><td>Your age on your wedding day</td></tr>
+            <tr><td>School enrollment</td><td>Born: Oct 28, 2019 | Date: Sep 1, 2025</td><td>5 years, 10 months, 4 days</td><td>Kindergarten age cutoff check</td></tr>
+            <tr><td>Historical event</td><td>Born: Apr 15, 1975 | Date: Jul 20, 1969</td><td>Not yet born</td><td>Your age during the moon landing</td></tr>
+            <tr><td>Future milestone</td><td>Born: Dec 1, 2005 | Date: Dec 1, 2026</td><td>21 years exactly</td><td>Planning 21st birthday celebration</td></tr>
+            <tr><td>Insurance policy</td><td>Born: Feb 14, 1988 | Date: Jan 1, 2027</td><td>38 years, 10 months, 18 days</td><td>Age at policy start date</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="content-section">
+      <h2>When to Use an Age on Date Calculator</h2>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">passport</div>
+          <div class="fun-fact-content">
+            <h4>Passport Applications</h4>
+            <p>The <a href="https://travel.state.gov/content/travel/en/passports.html" target="_blank" rel="noopener">U.S. State Department</a> and passport agencies worldwide require your exact age to determine fees, validity periods, and application requirements. Child passports (under 16) have different rules than adult passports.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">ring</div>
+          <div class="fun-fact-content">
+            <h4>Wedding Planning</h4>
+            <p>Legal marriage age requirements vary by jurisdiction. In most U.S. states, 18 is the marriage age without parental consent (<a href="https://www.ncsl.org/human-services/marriage-age-requirements" target="_blank" rel="noopener">NCSL</a>). Knowing exact ages on your wedding date is essential for legal documentation.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">history</div>
+          <div class="fun-fact-content">
+            <h4>Historical Events</h4>
+            <p>Ever wondered how old you were during major events? Find out your age during the moon landing (1969), the fall of the Berlin Wall (1989), or the COVID-19 pandemic declaration (March 11, 2020).</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">school</div>
+          <div class="fun-fact-content">
+            <h4>School Enrollment</h4>
+            <p>Schools use age cutoff dates to determine grade placement. According to the <a href="https://nces.ed.gov/" target="_blank" rel="noopener">National Center for Education Statistics</a>, cutoff dates range from July 1 to January 1, depending on the state.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Passport Age Requirements -->
+    <section class="content-section">
+      <h2>Passport Age Requirements by Country</h2>
+      <p>Passport fees and validity periods depend on your age at the time of application. Here's a comparison of major countries (<a href="https://travel.state.gov/content/travel/en/passports/how-apply/fees.html" target="_blank" rel="noopener">source</a>):</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country</th><th>Child Age</th><th>Child Validity</th><th>Adult Validity</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>United States</td><td>Under 16</td><td>5 years</td><td>10 years</td><td>Both parents must consent for minors</td></tr>
+            <tr><td>United Kingdom</td><td>Under 16</td><td>5 years</td><td>10 years</td><td>Countersignature required for first passport</td></tr>
+            <tr><td>Canada</td><td>Under 16</td><td>5 years</td><td>5 or 10 years</td><td>Adults can choose validity period</td></tr>
+            <tr><td>Australia</td><td>Under 16</td><td>5 years</td><td>10 years</td><td>Priority processing available</td></tr>
+            <tr><td>Germany</td><td>Under 24</td><td>6 years</td><td>10 years</td><td>Extended child age category</td></tr>
+            <tr><td>Japan</td><td>Under 12</td><td>5 years</td><td>5 or 10 years</td><td>Biometric passports standard</td></tr>
+            <tr><td>India</td><td>Under 18</td><td>5 years</td><td>10 years</td><td>Tatkal (urgent) service available</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- U.S. Passport Fees Chart -->
+    <section class="content-section">
+      <h2>U.S. Passport Application Fees by Age</h2>
+      <p>Your age on the application date determines which fee structure applies. Data from <a href="https://travel.state.gov/content/travel/en/passports/how-apply/fees.html" target="_blank" rel="noopener">travel.state.gov</a> (2024):</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Adult Book (16+)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+          <div class="chart-bar-value">$165</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Adult Card (16+)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 42%;"></div></div>
+          <div class="chart-bar-value">$65</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Minor Book (Under 16)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 85%;"></div></div>
+          <div class="chart-bar-value">$135</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Minor Card (Under 16)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 42%;"></div></div>
+          <div class="chart-bar-value">$65</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Adult Renewal (16+)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 91%;"></div></div>
+          <div class="chart-bar-value">$145</div>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;">Note: Execution fees ($35) apply to first-time applicants and minors. Fees subject to change.</p>
+    </section>
+
+    <!-- School Enrollment Cutoffs -->
+    <section class="content-section">
+      <h2>School Enrollment Age Cutoffs by State</h2>
+      <p>Kindergarten entry age is determined by whether your child reaches age 5 by the state's cutoff date. Use our calculator to check eligibility. Data from <a href="https://nces.ed.gov/" target="_blank" rel="noopener">NCES</a>:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Cutoff Date</th><th>States</th><th>Child Must Be 5 By</th></tr></thead>
+          <tbody>
+            <tr><td>July 1</td><td>Indiana</td><td>July 1 of enrollment year</td></tr>
+            <tr><td>August 1</td><td>Hawaii, Missouri</td><td>August 1 of enrollment year</td></tr>
+            <tr><td>August 31</td><td>Alaska</td><td>August 31 of enrollment year</td></tr>
+            <tr><td>September 1</td><td>Texas, California, Illinois, New York, Florida</td><td>September 1 of enrollment year</td></tr>
+            <tr><td>September 30</td><td>Arizona, Colorado, Pennsylvania</td><td>September 30 of enrollment year</td></tr>
+            <tr><td>October 1</td><td>Massachusetts, Virginia, Washington</td><td>October 1 of enrollment year</td></tr>
+            <tr><td>December 1</td><td>Michigan, Connecticut</td><td>December 1 of enrollment year</td></tr>
+            <tr><td>January 1</td><td>Local district discretion in some states</td><td>January 1 of enrollment year</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;">Read our complete <a href="/blog/age-for-school/">Age for School Guide</a> for detailed state-by-state requirements.</p>
+    </section>
+
+    <!-- Practical Examples -->
+    <section class="content-section">
+      <h2>Practical Examples</h2>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Why Age Matters</th><th>Common Dates</th></tr></thead>
+          <tbody>
+            <tr><td>Passport Application</td><td>Determines validity period and fees</td><td>Application submission date</td></tr>
+            <tr><td>Wedding</td><td>Legal marriage age requirements</td><td>Ceremony date</td></tr>
+            <tr><td>Sports Competition</td><td>Age category placement</td><td>Competition start date</td></tr>
+            <tr><td>Insurance Policy</td><td>Premium calculation</td><td>Policy start date</td></tr>
+            <tr><td>Retirement</td><td>Benefit eligibility</td><td>Retirement effective date</td></tr>
+            <tr><td>School Enrollment</td><td>Grade level placement</td><td>School year cutoff date</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Insurance Age Categories -->
+    <section class="content-section">
+      <h2>Insurance Age Categories</h2>
+      <p>Insurance companies use your age on the policy effective date to calculate premiums. Understanding these age bands helps you plan policy timing:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Insurance Type</th><th>Age Bands</th><th>Impact</th><th>Timing Consideration</th></tr></thead>
+          <tbody>
+            <tr><td>Life Insurance</td><td>5-year bands (20-24, 25-29, etc.)</td><td>Premiums increase 8-10% per band</td><td>Apply before birthday if near band edge</td></tr>
+            <tr><td>Health Insurance (ACA)</td><td>Annual age rating</td><td>Premiums can be 3x higher for 64 vs 21</td><td>Age on plan effective date</td></tr>
+            <tr><td>Auto Insurance</td><td>Under 25, 25-65, 65+</td><td>Under 25 pays 50-100% more</td><td>Wait until 25th birthday if possible</td></tr>
+            <tr><td>Travel Insurance</td><td>Under 70, 70-79, 80+</td><td>Significant jumps at 70 and 80</td><td>Purchase before birthday milestone</td></tr>
+            <tr><td>Disability Insurance</td><td>5-year bands</td><td>Premiums rise with age</td><td>Lock in rates when younger</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sports Age Classifications -->
+    <section class="content-section">
+      <h2>Sports Age Classifications</h2>
+      <p>Athletic organizations use specific cutoff dates to determine competition categories. Your age on the cutoff date determines your eligibility:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Sport/Organization</th><th>Cutoff Date</th><th>Age Categories</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>FIFA (Soccer)</td><td>January 1</td><td>U-17, U-20, U-23</td><td><a href="https://www.fifa.com/" target="_blank" rel="noopener">FIFA</a></td></tr>
+            <tr><td>Little League Baseball</td><td>August 31</td><td>Ages 4-16 divisions</td><td><a href="https://www.littleleague.org/" target="_blank" rel="noopener">Little League</a></td></tr>
+            <tr><td>USA Swimming</td><td>December 1</td><td>10 & Under through Senior</td><td><a href="https://www.usaswimming.org/" target="_blank" rel="noopener">USA Swimming</a></td></tr>
+            <tr><td>Youth Olympics</td><td>December 31</td><td>15-18 years</td><td><a href="https://olympics.com/" target="_blank" rel="noopener">IOC</a></td></tr>
+            <tr><td>USA Gymnastics</td><td>Year of birth</td><td>Level-based + age</td><td><a href="https://usagym.org/" target="_blank" rel="noopener">USA Gymnastics</a></td></tr>
+            <tr><td>Pop Warner Football</td><td>August 1</td><td>Ages 5-16, weight limits</td><td><a href="https://www.popwarner.com/" target="_blank" rel="noopener">Pop Warner</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Historical Events Age -->
+    <section class="content-section">
+      <h2>How Old Were You During These Events?</h2>
+      <p>Use our calculator to find your age during major historical events. Enter your birthdate above and these dates to discover your personal timeline:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Event</th><th>Date</th><th>Significance</th><th>Calculate</th></tr></thead>
+          <tbody>
+            <tr><td>Moon Landing</td><td>July 20, 1969</td><td>Neil Armstrong's "giant leap for mankind"</td><td>1969-07-20</td></tr>
+            <tr><td>Fall of Berlin Wall</td><td>November 9, 1989</td><td>End of Cold War division</td><td>1989-11-09</td></tr>
+            <tr><td>World Wide Web Public</td><td>August 6, 1991</td><td>First website goes live</td><td>1991-08-06</td></tr>
+            <tr><td>Y2K Midnight</td><td>January 1, 2000</td><td>New millennium celebrations</td><td>2000-01-01</td></tr>
+            <tr><td>September 11 Attacks</td><td>September 11, 2001</td><td>Day that changed modern history</td><td>2001-09-11</td></tr>
+            <tr><td>iPhone Launch</td><td>June 29, 2007</td><td>Beginning of smartphone era</td><td>2007-06-29</td></tr>
+            <tr><td>Obama Inauguration</td><td>January 20, 2009</td><td>First African American U.S. President</td><td>2009-01-20</td></tr>
+            <tr><td>COVID-19 Pandemic Declared</td><td>March 11, 2020</td><td><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> pandemic declaration</td><td>2020-03-11</td></tr>
+            <tr><td>ChatGPT Release</td><td>November 30, 2022</td><td>AI becomes mainstream</td><td>2022-11-30</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Age on Date for Legal Purposes -->
+    <section class="content-section">
+      <h2>Age Verification for Legal Purposes</h2>
+      <p>Many legal documents and applications require your exact age on a specific date. Here's when precision matters:</p>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">legal</div>
+          <div class="fun-fact-content">
+            <h4>Court Proceedings</h4>
+            <p>Age at the time of an incident can determine jurisdiction (juvenile vs. adult court), sentencing guidelines, and statute of limitations considerations.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">work</div>
+          <div class="fun-fact-content">
+            <h4>Employment Eligibility</h4>
+            <p>Child labor laws restrict work hours and job types based on age. The <a href="https://www.dol.gov/agencies/whd/child-labor" target="_blank" rel="noopener">U.S. Department of Labor</a> sets federal minimums that states can exceed.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">money</div>
+          <div class="fun-fact-content">
+            <h4>Social Security Benefits</h4>
+            <p>Your <a href="/blog/retirement-age-calculator/">full retirement age</a> depends on your birth year. Benefits can start at 62 (reduced) or be delayed until 70 (increased).</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">health</div>
+          <div class="fun-fact-content">
+            <h4>Medicare Enrollment</h4>
+            <p>Medicare eligibility begins at age 65. Your initial enrollment period starts 3 months before your 65th birthday month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate my age on a specific date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter your date of birth and the target date in our calculator. We'll calculate the exact years, months, and days between your birthdate and the specified date. This works for both past and future dates, accounting for leap years and varying month lengths.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I calculate my age for a future date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes! Our calculator works for any date - past or future. Simply select your birth date and any future date to see exactly how old you'll be. This is useful for planning weddings, retirement, or milestone celebrations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do passport applications need my age on a specific date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>According to the <a href="https://travel.state.gov/content/travel/en/passports/how-apply/fees.html" target="_blank" rel="noopener">U.S. State Department</a>, passport validity periods and fees depend on your age at application. Under 16: 5-year validity at $135. Age 16+: 10-year validity at $165. Both parents must consent for minors.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How old was I when a historical event happened?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter your birthdate and the event date to find your exact age. Popular queries include the Moon landing (July 20, 1969), 9/11 (September 11, 2001), and COVID-19 pandemic declaration (March 11, 2020).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if the target date is before my birth date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The calculator will indicate that you weren't born yet. This helps understand generational differences - for example, if you weren't alive during the Cold War or remember Y2K differently than older generations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does the calculator account for leap years?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes! Our calculator accurately handles leap years (years divisible by 4, except century years not divisible by 400), varying month lengths (28-31 days), and all calendar complexities. See our <a href="/blog/leap-year-birthday/">Leap Year Birthday Guide</a> for more.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do school enrollment age cutoffs work?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Each state sets a cutoff date for kindergarten entry. Your child must turn 5 by that date to enroll. Cutoffs range from July 1 (Indiana) to December 1 (Michigan). Use our calculator with your state's cutoff date to check eligibility. See our <a href="/blog/age-for-school/">Age for School Guide</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why does insurance care about my age on a specific date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Insurance premiums are calculated based on your age when the policy takes effect. Life insurance uses 5-year age bands, and premiums can increase 8-10% per band. Some people time applications to fall before a birthday to lock in lower rates.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What age do I need for Social Security benefits?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Full retirement age varies by birth year: 66 for those born 1943-1954, gradually increasing to 67 for those born 1960 or later. You can claim reduced benefits at 62 or increased benefits by delaying until 70. Use our <a href="/blog/retirement-age-calculator/">Retirement Age Calculator</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do sports use age cutoff dates?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Sports organizations use cutoff dates to determine competition categories. FIFA uses January 1 for U-17/U-20 teams. Little League Baseball uses August 31. USA Swimming uses December 1. Your age on the cutoff date determines your category for the entire season.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <div class="related-grid">
+        <a href="/blog/age-on-date-calculator/" class="related-card"><div class="related-card-title">Age on Date Calculator Guide</div><p class="related-card-desc">Complete guide to calculating age on specific dates with examples.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your current age in years, months, days, hours, and minutes.</p></a>
+        <a href="/age-difference/" class="related-card"><div class="related-card-title">Age Difference Calculator</div><p class="related-card-desc">Calculate the exact age gap between two people.</p></a>
+        <a href="/days-old/" class="related-card"><div class="related-card-title">Days Old Calculator</div><p class="related-card-desc">Find out how many days you've been alive since birth.</p></a>
+        <a href="/blog/age-for-school/" class="related-card"><div class="related-card-title">Age for School Guide</div><p class="related-card-desc">Kindergarten cutoff dates by state and enrollment strategies.</p></a>
+        <a href="/blog/retirement-age-calculator/" class="related-card"><div class="related-card-title">Retirement Age Calculator</div><p class="related-card-desc">Social Security full retirement age by birth year.</p></a>
+        <a href="/blog/legal-ages-guide/" class="related-card"><div class="related-card-title">Legal Ages Guide</div><p class="related-card-desc">Driving, voting, drinking, and marriage ages by country.</p></a>
+        <a href="/blog/leap-year-birthday/" class="related-card"><div class="related-card-title">Leap Year Birthday</div><p class="related-card-desc">Born on February 29? Learn how leaplings celebrate.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="margin: 2.5rem 0; text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Your Age on Any Date</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Whether for passports, insurance, school enrollment, or curiosity about historical events, our free calculator gives you precise results.</p>
+      <a href="#panel-ondate" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Use Calculator Above</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/age-on-date/">Age on Date</a></li><li><a href="/age-difference/">Age Difference</a></li><li><a href="/days-old/">Days Old</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

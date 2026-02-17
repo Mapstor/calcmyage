@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Age Calculator - Full Retirement Age by Birth Year | CalcMyAge</title>
+  <meta name="description" content="Find your Social Security full retirement age by birth year. Compare early vs. full vs. delayed retirement benefits, and see retirement ages across 20+ countries.">
+  <link rel="canonical" href="https://calcmyage.org/blog/retirement-age-calculator/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/blog/retirement-age-calculator/">
+  <meta property="og:title" content="Retirement Age Calculator - Full Retirement Age by Birth Year | CalcMyAge">
+  <meta property="og:description" content="Find your Social Security full retirement age by birth year. Compare early vs. full vs. delayed retirement benefits, and see retirement ages across 20+ countries.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Retirement Age Calculator - Full Retirement Age by Birth Year",
+    "description": "Find your Social Security full retirement age by birth year. Compare early vs. full vs. delayed retirement benefits.",
+    "author": { "@type": "Organization", "name": "CalcMyAge" },
+    "publisher": { "@type": "Organization", "name": "CalcMyAge", "url": "https://calcmyage.org" },
+    "datePublished": "2026-01-28",
+    "dateModified": "2026-02-05",
+    "mainEntityOfPage": "https://calcmyage.org/blog/retirement-age-calculator/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the full retirement age for someone born in 1960?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For anyone born in 1960 or later, the full retirement age for Social Security is 67. This means you must wait until age 67 to receive 100% of your calculated benefit. You can still claim as early as 62 with reduced benefits or delay until 70 for increased benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I collect Social Security and still work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but if you claim before your FRA and continue to work, there is an earnings test. In 2026, if you are under FRA for the entire year, $1 in benefits is withheld for every $2 you earn above the annual limit (approximately $22,320). In the year you reach FRA, the threshold is higher and the reduction is smaller. Once you reach FRA, there is no earnings limit -- you can earn any amount without affecting your benefits. Additionally, working while collecting benefits may increase your future benefit amount if your current earnings are higher than the earnings used in the original calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to claim Social Security at 62 or wait until 70?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your individual circumstances. Claiming at 62 gives you money sooner but at a permanently reduced rate (70% of FRA benefit for those born 1960+). Waiting until 70 gives you 124% of your FRA benefit. The break-even point is typically around age 80-82. If you expect to live past your early 80s and can afford to wait, delaying generally yields more total lifetime income. If you need the income immediately, have health concerns suggesting a shorter life expectancy, or want to invest the early payments, claiming sooner may make sense. Consult a financial advisor for personalized guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the retirement age increase again?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is possible. The Social Security trustees have repeatedly warned that the trust fund faces depletion without legislative action. Raising the retirement age is one of several options being discussed, along with increasing payroll taxes and adjusting benefit formulas. Some proposals have suggested raising the FRA to 68, 69, or even 70. However, any change would require an act of Congress and would likely be phased in gradually over many years to avoid affecting people near retirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Social Security retirement age and Medicare eligibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Social Security full retirement age ranges from 66 to 67 depending on birth year, while Medicare eligibility begins at 65 for most people (regardless of birth year). These two systems are separate. You can sign up for Medicare at 65 even if you have not yet claimed Social Security benefits. It is important to enroll in Medicare during your initial enrollment period (the 7-month window around your 65th birthday) to avoid late enrollment penalties, even if you plan to delay Social Security."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do spousal benefits work with retirement age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A spouse can receive up to 50% of their partner's FRA benefit amount. However, if the spouse claims before their own FRA, the spousal benefit is reduced. The spouse must be at least 62 to claim spousal benefits. If both spouses worked, Social Security will pay the higher of either your own benefit or the spousal benefit, but not both. Survivor benefits (after a spouse dies) follow different rules and can be claimed as early as age 60."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do other countries have early retirement options like the US?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many countries allow early retirement with reduced benefits, similar to the US system. Canada allows CPP claims from age 60 (reduced) to 70 (enhanced). Norway allows early claims from 62. Sweden offers flexibility from age 63. The UK currently does not allow early state pension claims -- you must wait until the state pension age of 66 (rising to 67). The specific reduction formulas and eligibility criteria vary widely by country."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find out my exact Social Security benefit amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create an account at ssa.gov to access your Social Security Statement, which shows your estimated benefits at ages 62, FRA, and 70 based on your actual earnings history. You can also use the SSA's online calculators for more detailed estimates. For your exact current age, use our age calculator to see precisely how many years, months, and days remain until your FRA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum Social Security benefit in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The maximum Social Security benefit in 2026 for someone retiring at FRA (67) is approximately $3,900/month, or about $46,800/year. To qualify for the maximum, you must have earned at or above the Social Security taxable maximum (currently about $168,600) for at least 35 years. For those claiming at 62, the maximum is about $2,730/month; at 70, it is approximately $4,840/month. Only about 6% of Social Security recipients receive the maximum benefit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does divorce affect Social Security benefits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you were married for at least 10 years before divorcing, you may be eligible for benefits based on your ex-spouse's record. You must be unmarried, age 62 or older, and your ex-spouse must be entitled to Social Security. You can receive up to 50% of your ex-spouse's FRA benefit (if you claim at your FRA) without affecting their benefit or their current spouse's benefit. This is particularly valuable for people who left the workforce to raise children during a long marriage. If your ex-spouse has died, you may qualify for survivor benefits."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://calcmyage.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://calcmyage.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Retirement Age Calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+  <main><div class="container" style="max-width: 800px;">
+    <article>
+      <p style="font-size: 0.8125rem; color: var(--gray-500);">January 28, 2026 &bull; Updated February 5, 2026 &bull; 20 min read</p>
+      <h1>Retirement Age Calculator: Full Retirement Age by Birth Year</h1>
+      <p class="intro-text">When can you retire and claim your full Social Security benefits? The answer depends on when you were born. This comprehensive guide details the Social Security full retirement age for every birth year, compares the financial impact of retiring early versus waiting, and shows how retirement ages differ across more than 20 countries worldwide.</p>
+
+      <div class="key-takeaways">
+        <div class="key-takeaways-title">Key Takeaways</div>
+        <ul>
+          <li>Full retirement age (FRA) for Social Security ranges from 66 to 67 depending on birth year. For those born in 1960 or later, FRA is 67.</li>
+          <li>You can claim Social Security as early as age 62, but your benefits will be permanently reduced by up to 30%.</li>
+          <li>Delaying benefits past FRA increases your monthly payment by 8% per year, up to age 70.</li>
+          <li>The average actual retirement age in the US (~64) is lower than the full retirement age.</li>
+          <li>Globally, retirement ages range from 55 (some countries) to 67+ (Iceland, Norway).</li>
+          <li><a href="/">Calculate your exact age</a> to determine how far you are from your full retirement age.</li>
+        </ul>
+      </div>
+
+      <nav style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+        <strong>Table of Contents</strong>
+        <ol style="margin: 0.75rem 0 0 1.25rem; line-height: 2;">
+          <li><a href="#fra-table">Social Security Full Retirement Age by Birth Year</a></li>
+          <li><a href="#early-vs-full">Early vs. Full vs. Delayed Retirement</a></li>
+          <li><a href="#international">Retirement Ages Around the World</a></li>
+          <li><a href="#actual-vs-official">Average Actual Retirement Age vs. Official Age</a></li>
+          <li><a href="#history">How Retirement Age Has Changed Over Time</a></li>
+          <li><a href="#charts">Retirement Age Charts</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </nav>
+
+      <!-- SECTION 1: FRA Table -->
+      <h2 id="fra-table">Social Security Full Retirement Age by Birth Year</h2>
+      <p>The Social Security Administration defines your full retirement age (FRA) as the age at which you are entitled to receive 100% of your calculated benefit amount. The FRA has gradually increased from 65 (for those born in 1937 or earlier) to 67 (for those born in 1960 or later) as a result of the 1983 amendments to the Social Security Act signed by President Reagan.</p>
+
+      <p>Use the table below to find your specific FRA based on your birth year. For the most authoritative information, consult the <a href="https://www.ssa.gov/benefits/retirement/planner/ageincrease.html" target="_blank" rel="noopener noreferrer">SSA's official retirement planner</a>.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Birth Year</th><th>Full Retirement Age</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1937 or earlier</td><td>65</td></tr>
+          <tr><td>1938</td><td>65 and 2 months</td></tr>
+          <tr><td>1939</td><td>65 and 4 months</td></tr>
+          <tr><td>1940</td><td>65 and 6 months</td></tr>
+          <tr><td>1941</td><td>65 and 8 months</td></tr>
+          <tr><td>1942</td><td>65 and 10 months</td></tr>
+          <tr><td>1943-1954</td><td>66</td></tr>
+          <tr><td>1955</td><td>66 and 2 months</td></tr>
+          <tr><td>1956</td><td>66 and 4 months</td></tr>
+          <tr><td>1957</td><td>66 and 6 months</td></tr>
+          <tr><td>1958</td><td>66 and 8 months</td></tr>
+          <tr><td>1959</td><td>66 and 10 months</td></tr>
+          <tr><td>1960 or later</td><td>67</td></tr>
+        </tbody>
+      </table>
+
+      <p>A common misconception is that Social Security retirement age is 65. While 65 remains the age for Medicare eligibility, the full Social Security retirement age is now 66-67 for most current and future retirees. If you were born after 1954, your FRA is higher than 66.</p>
+
+      <p>Want to know exactly how old you are today? <a href="/">Use our age calculator</a> to determine your precise age and calculate the time remaining until your FRA.</p>
+
+      <!-- SECTION 2: Early vs Full vs Delayed -->
+      <h2 id="early-vs-full">Early vs. Full vs. Delayed Retirement: Understanding Your Options</h2>
+      <p>You have flexibility in when you start claiming Social Security benefits, but the timing significantly affects your monthly payment. Here is how each option works:</p>
+
+      <h3>Early Retirement (Age 62)</h3>
+      <p>You can begin receiving Social Security benefits as early as age 62, but there is a price: your monthly benefit is permanently reduced. For someone with an FRA of 67, claiming at 62 means a <strong>30% reduction</strong> in monthly benefits. For someone with an FRA of 66, the reduction at 62 is about <strong>25%</strong>. This reduction is permanent -- your benefits do not increase to the full amount when you reach FRA.</p>
+
+      <p>The reduction is calculated as follows: for the first 36 months before FRA, benefits are reduced by 5/9 of 1% per month (6.67% per year). For any additional months beyond 36, the reduction is 5/12 of 1% per month (5% per year).</p>
+
+      <h3>Full Retirement (FRA: Age 66-67)</h3>
+      <p>Claiming at your FRA gives you 100% of your calculated benefit amount. This is the baseline against which early and delayed retirement are measured. There are no reductions or bonuses.</p>
+
+      <h3>Delayed Retirement (Up to Age 70)</h3>
+      <p>For each year you delay claiming past your FRA (up to age 70), your benefit increases by <strong>8% per year</strong> (or 2/3 of 1% per month). This is known as the delayed retirement credit. For someone with an FRA of 67 who waits until 70, the benefit is 124% of the FRA amount. There is no additional benefit for delaying past age 70.</p>
+
+      <h3>Benefit Comparison Table</h3>
+      <p>The following table shows approximate benefit percentages relative to FRA for someone born in 1960 or later (FRA = 67):</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Claiming Age</th><th>% of FRA Benefit</th><th>Monthly Amount (if FRA benefit = $2,000)</th><th>Strategy</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>62</td><td>70%</td><td>$1,400</td><td>Early -- permanently reduced</td></tr>
+          <tr><td>63</td><td>75%</td><td>$1,500</td><td>Early -- permanently reduced</td></tr>
+          <tr><td>64</td><td>80%</td><td>$1,600</td><td>Early -- permanently reduced</td></tr>
+          <tr><td>65</td><td>86.7%</td><td>$1,734</td><td>Early -- permanently reduced</td></tr>
+          <tr><td>66</td><td>93.3%</td><td>$1,866</td><td>Early -- permanently reduced</td></tr>
+          <tr><td>67 (FRA)</td><td>100%</td><td>$2,000</td><td>Full retirement benefit</td></tr>
+          <tr><td>68</td><td>108%</td><td>$2,160</td><td>Delayed -- permanently increased</td></tr>
+          <tr><td>69</td><td>116%</td><td>$2,320</td><td>Delayed -- permanently increased</td></tr>
+          <tr><td>70</td><td>124%</td><td>$2,480</td><td>Delayed -- maximum benefit</td></tr>
+        </tbody>
+      </table>
+
+      <p>The "break-even" point -- where the total cumulative benefits of waiting exceed what you would have received by claiming early -- is typically around age 80-82. If you expect to live past your early 80s, waiting to claim benefits generally results in more total lifetime income. If you have health concerns or need the income immediately, claiming earlier may make more sense.</p>
+
+      <!-- SECTION 3: International -->
+      <h2 id="international">Retirement Ages Around the World</h2>
+      <p>Retirement ages vary significantly across countries, reflecting differences in life expectancy, economic conditions, pension system design, and cultural norms. Many countries have been gradually increasing their retirement ages in response to aging populations and pension funding challenges.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Country</th><th>Men</th><th>Women</th><th>Trend / Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>United States</td><td>67</td><td>67</td><td>Same for both; FRA ranges 66-67 by birth year</td></tr>
+          <tr><td>United Kingdom</td><td>66</td><td>66</td><td>Rising to 67 by 2028; eventually to 68</td></tr>
+          <tr><td>Canada</td><td>65</td><td>65</td><td>CPP available from 60 at reduced rate</td></tr>
+          <tr><td>Germany</td><td>65.9</td><td>65.9</td><td>Gradually rising to 67 by 2031</td></tr>
+          <tr><td>France</td><td>64</td><td>64</td><td>Raised from 62 in 2023 pension reform</td></tr>
+          <tr><td>Italy</td><td>67</td><td>67</td><td>Linked to life expectancy changes</td></tr>
+          <tr><td>Spain</td><td>66.5</td><td>66.5</td><td>Rising to 67 by 2027</td></tr>
+          <tr><td>Netherlands</td><td>66.8</td><td>66.8</td><td>Rising to 67 by 2028; linked to life expectancy</td></tr>
+          <tr><td>Sweden</td><td>65</td><td>65</td><td>Flexible; can claim from 63</td></tr>
+          <tr><td>Norway</td><td>67</td><td>67</td><td>Can start from 62 with reduced benefits</td></tr>
+          <tr><td>Denmark</td><td>67</td><td>67</td><td>Will rise with life expectancy</td></tr>
+          <tr><td>Iceland</td><td>67</td><td>67</td><td>Among the highest in the world</td></tr>
+          <tr><td>Australia</td><td>67</td><td>67</td><td>Raised from 65; phased in by 2023</td></tr>
+          <tr><td>New Zealand</td><td>65</td><td>65</td><td>Universal superannuation from 65</td></tr>
+          <tr><td>Japan</td><td>65</td><td>65</td><td>Basic pension from 65; discussions about 70</td></tr>
+          <tr><td>South Korea</td><td>63</td><td>63</td><td>Rising to 65 by 2033</td></tr>
+          <tr><td>China</td><td>60</td><td>55 (workers) / 50 (laborers)</td><td>Reforms under discussion to raise</td></tr>
+          <tr><td>India</td><td>60</td><td>60</td><td>Government employees; private sector varies</td></tr>
+          <tr><td>Russia</td><td>65</td><td>60</td><td>Raised in 2018 from 60/55; deeply unpopular</td></tr>
+          <tr><td>Brazil</td><td>65</td><td>62</td><td>2019 reform; previously 60/55 with years of contribution</td></tr>
+          <tr><td>Mexico</td><td>65</td><td>65</td><td>With at least 1,000 weeks of contributions</td></tr>
+          <tr><td>South Africa</td><td>60</td><td>60</td><td>State old age pension</td></tr>
+          <tr><td>Saudi Arabia</td><td>60</td><td>55</td><td>Government sector</td></tr>
+          <tr><td>Turkey</td><td>60</td><td>58</td><td>Gradually increasing</td></tr>
+        </tbody>
+      </table>
+
+      <p>The global trend is unmistakably toward higher retirement ages. As life expectancy increases and populations age, governments face mounting pressure to keep people in the workforce longer to sustain pension systems. France's 2023 decision to raise the retirement age from 62 to 64 sparked massive nationwide protests, illustrating how politically sensitive these changes are, even when they are economically necessary.</p>
+
+      <!-- SECTION 4: Actual vs Official -->
+      <h2 id="actual-vs-official">Average Actual Retirement Age vs. Official Age</h2>
+      <p>There is often a significant gap between the official retirement age and the age at which people actually stop working. Some people retire early due to savings, health issues, or layoffs; others work well past the official age out of financial necessity or personal choice.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Country</th><th>Official Retirement Age</th><th>Avg. Actual Retirement Age (Men)</th><th>Avg. Actual Retirement Age (Women)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>United States</td><td>67</td><td>~65</td><td>~63</td></tr>
+          <tr><td>United Kingdom</td><td>66</td><td>~64.7</td><td>~63.2</td></tr>
+          <tr><td>Germany</td><td>65.9</td><td>~63.1</td><td>~63.2</td></tr>
+          <tr><td>France</td><td>64</td><td>~61.9</td><td>~62.2</td></tr>
+          <tr><td>Japan</td><td>65</td><td>~68.5</td><td>~66.7</td></tr>
+          <tr><td>South Korea</td><td>63</td><td>~72.3</td><td>~72.2</td></tr>
+          <tr><td>Mexico</td><td>65</td><td>~72.0</td><td>~67.4</td></tr>
+          <tr><td>Sweden</td><td>65</td><td>~65.8</td><td>~64.9</td></tr>
+          <tr><td>Australia</td><td>67</td><td>~65.2</td><td>~63.3</td></tr>
+        </tbody>
+      </table>
+
+      <p>Notable outliers include Japan, South Korea, and Mexico, where many people continue working well past the official retirement age. In South Korea and Mexico, this is often due to inadequate pension coverage rather than personal choice, as many workers in these countries are in the informal sector and receive little or no government pension.</p>
+
+      <p>In contrast, many European countries see actual retirement ages below the official threshold, as generous early retirement provisions or disability pathways allow workers to leave the labor force before the standard age. France is a notable example where actual retirement has historically occurred well before the official age.</p>
+
+      <!-- SECTION 5: History -->
+      <h2 id="history">How Retirement Age Has Changed Over Time</h2>
+      <p>The concept of a government-mandated retirement age is relatively modern, dating back to the late 19th century.</p>
+
+      <h3>The Birth of Retirement (1880s-1930s)</h3>
+      <p>Germany's Chancellor Otto von Bismarck introduced the world's first government pension system in 1889, initially setting the retirement age at 70 (later lowered to 65 in 1916). When the US established Social Security in 1935, it adopted 65 as the retirement age, partly because that was the standard in many existing state and corporate pension plans and partly because life expectancy at the time was approximately 61 for men and 65 for women, meaning most people were not expected to collect benefits for very long.</p>
+
+      <h3>The Golden Age of Retirement (1950s-1980s)</h3>
+      <p>As life expectancy increased and economies grew, retirement became an increasingly common and extended phase of life. Many countries expanded their pension systems, and actual retirement ages declined as early retirement provisions became more generous. In the US, the option to claim Social Security at 62 was introduced for women in 1956 and for men in 1961.</p>
+
+      <h3>The Reform Era (1983-Present)</h3>
+      <p>Concern about the long-term solvency of pension systems led to a wave of reforms beginning in the 1980s. The 1983 US Social Security amendments gradually raised the full retirement age from 65 to 67. Similar increases have been enacted across Europe, often meeting strong public resistance. Key milestones include:</p>
+      <ul>
+        <li><strong>1983 (US):</strong> Social Security amendments raise FRA from 65 to 67, phased in over decades.</li>
+        <li><strong>2010 (UK):</strong> Equalizes women's retirement age with men's at 65, then raises both to 66, with further increases to 67 and 68 planned.</li>
+        <li><strong>2012 (Italy):</strong> Fornero reform raises retirement age and links it to life expectancy.</li>
+        <li><strong>2018 (Russia):</strong> Raises retirement age from 60 to 65 for men and 55 to 60 for women, triggering widespread protests.</li>
+        <li><strong>2023 (France):</strong> Raises retirement age from 62 to 64, sparking months of strikes and demonstrations.</li>
+      </ul>
+
+      <p>According to <a href="https://www.aarp.org/retirement/" target="_blank" rel="noopener noreferrer">AARP</a>, the trend toward higher retirement ages is likely to continue as populations age and life expectancies increase. Some economists have suggested linking retirement ages automatically to life expectancy, as Denmark and the Netherlands have done, to avoid the need for politically painful legislative changes.</p>
+
+      <!-- ===== SOCIAL SECURITY MATH ===== -->
+      <h2>The Mathematics of Social Security Timing</h2>
+      <p>One of the most important financial decisions you will make is when to start claiming Social Security. The math is more complex than it first appears, and understanding it can mean tens of thousands of dollars over your lifetime.</p>
+
+      <h3>Monthly Benefit Reduction for Early Claiming</h3>
+      <p>The <a href="https://www.ssa.gov/oact/quickcalc/early_late.html" target="_blank" rel="noopener">Social Security Administration</a> uses a precise formula for reducing benefits when you claim before your FRA:</p>
+      <table class="data-table">
+        <thead><tr><th>Months Before FRA</th><th>Reduction Rate</th><th>Cumulative Reduction</th></tr></thead>
+        <tbody>
+          <tr><td>1-36 months</td><td>5/9 of 1% per month</td><td>Up to 20%</td></tr>
+          <tr><td>37-60 months</td><td>5/12 of 1% per month</td><td>Additional 10%</td></tr>
+          <tr><td>Maximum (60 months early)</td><td>Combined effect</td><td>30% total reduction</td></tr>
+        </tbody>
+      </table>
+      <p>For example, if you claim at exactly 63 (48 months before FRA of 67), your benefit is reduced by 25%: the first 36 months reduce benefits by 20%, and the additional 12 months add another 5% reduction. This reduction is <strong>permanent</strong> and applies to all future payments, including cost-of-living adjustments (COLAs).</p>
+
+      <h3>Delayed Retirement Credits</h3>
+      <p>For each month you delay claiming past your FRA, you earn delayed retirement credits at 2/3 of 1% per month (8% per year). These credits max out at age 70:</p>
+      <table class="data-table">
+        <thead><tr><th>Months After FRA</th><th>Monthly Credit</th><th>Annual Credit</th><th>Cumulative Increase</th></tr></thead>
+        <tbody>
+          <tr><td>12 months (age 68)</td><td>0.667% per month</td><td>8%</td><td>8%</td></tr>
+          <tr><td>24 months (age 69)</td><td>0.667% per month</td><td>8%</td><td>16%</td></tr>
+          <tr><td>36 months (age 70)</td><td>0.667% per month</td><td>8%</td><td>24%</td></tr>
+        </tbody>
+      </table>
+      <p>These credits are also permanent and apply to all future benefits. If your FRA benefit is $2,000/month and you wait until 70, you will receive $2,480/month for life -- an extra $480/month, or $5,760/year. Over 20 years, that is $115,200 more than claiming at FRA (not accounting for the 3 years of missed payments).</p>
+
+      <!-- ===== BREAK-EVEN ANALYSIS ===== -->
+      <h2>Break-Even Analysis: When Does Waiting Pay Off?</h2>
+      <p>The "break-even point" is when total cumulative benefits from waiting equal what you would have received by claiming earlier. Here is a detailed analysis for someone with an FRA benefit of $2,000/month:</p>
+      <table class="data-table">
+        <thead><tr><th>Claiming Age</th><th>Monthly Benefit</th><th>Total by Age 70</th><th>Total by Age 80</th><th>Total by Age 90</th><th>Break-Even vs. 62</th></tr></thead>
+        <tbody>
+          <tr><td>62</td><td>$1,400</td><td>$134,400</td><td>$302,400</td><td>$470,400</td><td>--</td></tr>
+          <tr><td>64</td><td>$1,600</td><td>$115,200</td><td>$307,200</td><td>$499,200</td><td>Age 78</td></tr>
+          <tr><td>67 (FRA)</td><td>$2,000</td><td>$72,000</td><td>$312,000</td><td>$552,000</td><td>Age 80</td></tr>
+          <tr><td>70</td><td>$2,480</td><td>$0</td><td>$297,600</td><td>$595,200</td><td>Age 82</td></tr>
+        </tbody>
+      </table>
+      <p>Key insights from this analysis:</p>
+      <ul>
+        <li>By age 80, all strategies have roughly similar cumulative payouts -- the differences are within $10,000</li>
+        <li>By age 90, waiting until 70 yields $125,000 more than claiming at 62</li>
+        <li>The break-even point for waiting until 70 versus claiming at 62 is approximately age 82-83</li>
+        <li>About 50% of 65-year-olds today will live past age 82, according to <a href="https://www.ssa.gov/oact/STATS/table4c6.html" target="_blank" rel="noopener">SSA actuarial tables</a></li>
+      </ul>
+      <p>The decision is not purely mathematical -- it depends on your health, other income sources, spousal benefits, and whether you need the money now. Calculate your exact age to see how close you are to these decision points using our <a href="/">age calculator</a>.</p>
+
+      <!-- ===== FAMOUS PEOPLE RETIREMENT AGES ===== -->
+      <h2>When Famous People Retired (or Kept Working)</h2>
+      <p>Retirement is highly personal, and public figures show the full spectrum of choices. Here are notable examples of retirement decisions:</p>
+      <table class="data-table">
+        <thead><tr><th>Person</th><th>Profession</th><th>Retired At</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Warren Buffett</td><td>Investor/CEO</td><td>Still working at 95</td><td>Plans to work until he can not</td></tr>
+          <tr><td>Ruth Bader Ginsburg</td><td>Supreme Court Justice</td><td>Never retired</td><td>Served until death at 87</td></tr>
+          <tr><td>Tom Brady</td><td>NFL Quarterback</td><td>Age 45</td><td>Retired, unretired, then retired again</td></tr>
+          <tr><td>David Letterman</td><td>TV Host</td><td>Age 68</td><td>Retired from Late Show in 2015</td></tr>
+          <tr><td>Michael Jordan</td><td>NBA Player</td><td>Age 40</td><td>Had three retirements from basketball</td></tr>
+          <tr><td>Serena Williams</td><td>Tennis Player</td><td>Age 41</td><td>Announced "evolution" from tennis in 2022</td></tr>
+          <tr><td>Anthony Fauci</td><td>Physician/Public Health</td><td>Age 82</td><td>Left NIAID after 54 years in 2022</td></tr>
+          <tr><td>Queen Elizabeth II</td><td>British Monarch</td><td>Never retired</td><td>Reigned for 70 years until death at 96</td></tr>
+        </tbody>
+      </table>
+      <p>Research from the <a href="https://www.nia.nih.gov/" target="_blank" rel="noopener">National Institute on Aging</a> suggests that continued engagement in meaningful work or activities is associated with better cognitive function and longevity. However, the relationship is complex -- forced work due to financial necessity has different effects than voluntary work for fulfillment. See how your age compares to these figures using our <a href="/blog/how-old-am-i/">How Old Am I calculator</a>.</p>
+
+      <!-- ===== RETIREMENT READINESS ===== -->
+      <h2>Retirement Readiness by Age</h2>
+      <p>According to research from the <a href="https://www.federalreserve.gov/publications/report-economic-well-being-us-households.htm" target="_blank" rel="noopener">Federal Reserve</a> and <a href="https://www.pewresearch.org/social-trends/2019/06/25/the-american-family-today/" target="_blank" rel="noopener">Pew Research</a>, Americans' financial preparedness for retirement varies dramatically by age group:</p>
+      <table class="data-table">
+        <thead><tr><th>Age Group</th><th>Median Retirement Savings</th><th>% on Track for Retirement</th><th>% Who've Done Retirement Planning</th></tr></thead>
+        <tbody>
+          <tr><td>25-34</td><td>$13,000</td><td>~15%</td><td>42%</td></tr>
+          <tr><td>35-44</td><td>$45,000</td><td>~22%</td><td>54%</td></tr>
+          <tr><td>45-54</td><td>$115,000</td><td>~28%</td><td>63%</td></tr>
+          <tr><td>55-64</td><td>$185,000</td><td>~33%</td><td>71%</td></tr>
+          <tr><td>65-74</td><td>$200,000</td><td>~40%</td><td>78%</td></tr>
+        </tbody>
+      </table>
+      <p>The "% on track" figures are sobering. Financial planners generally recommend having 10-12 times your final annual salary saved by retirement. Someone earning $75,000 should have $750,000-$900,000 saved by age 67. The median American 55-64 year old has only $185,000 -- a significant shortfall that may require working longer, reducing expenses, or relying more heavily on Social Security.</p>
+
+      <h3>Retirement Savings Rate by Income</h3>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Bottom 20% income</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill error" style="width: 4%;">4%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">20-40% income</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill error" style="width: 8%;">8%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">40-60% income</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 12%;">12%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">60-80% income</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 16%;">16%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Top 20% income</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 24%;">24%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Recommended</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 15%;">15%</div></div>
+        </div>
+      </div>
+      <p>Financial planners generally recommend saving 15% of income for retirement, including any employer match. Only higher-income households typically achieve this rate. The <a href="https://www.bls.gov/cex/" target="_blank" rel="noopener">Bureau of Labor Statistics Consumer Expenditure Survey</a> shows that lower-income households often cannot save due to essential expenses consuming their entire income.</p>
+
+      <!-- ===== HEALTH AND RETIREMENT ===== -->
+      <h2>How Health Affects Retirement Timing</h2>
+      <p>According to the <a href="https://www.nia.nih.gov/health" target="_blank" rel="noopener">National Institute on Aging</a> and health research, physical and mental health play enormous roles in retirement decisions:</p>
+
+      <h3>Health-Forced Early Retirement</h3>
+      <p>Research indicates that approximately 40% of Americans retire earlier than planned, and health issues are the leading cause:</p>
+      <table class="data-table">
+        <thead><tr><th>Reason for Earlier-Than-Planned Retirement</th><th>Percentage</th></tr></thead>
+        <tbody>
+          <tr><td>Health problems (self)</td><td>35%</td></tr>
+          <tr><td>Changes at company (layoffs, buyouts)</td><td>23%</td></tr>
+          <tr><td>Caring for family member</td><td>12%</td></tr>
+          <tr><td>Could afford to retire early</td><td>11%</td></tr>
+          <tr><td>Other family reasons</td><td>10%</td></tr>
+          <tr><td>Changes in job requirements</td><td>9%</td></tr>
+        </tbody>
+      </table>
+      <p>Health problems that commonly force early retirement include heart disease, cancer, diabetes complications, arthritis, and cognitive decline. These health issues not only end careers early but also increase retirement expenses due to medical costs and long-term care needs.</p>
+
+      <h3>Life Expectancy at Retirement Age</h3>
+      <p>Understanding how long you might live after retirement is crucial for planning. According to <a href="https://www.ssa.gov/oact/STATS/table4c6.html" target="_blank" rel="noopener">Social Security actuarial tables</a>:</p>
+      <table class="data-table">
+        <thead><tr><th>Current Age</th><th>Life Expectancy (Men)</th><th>Life Expectancy (Women)</th><th>Expected Years in Retirement</th></tr></thead>
+        <tbody>
+          <tr><td>62</td><td>83.0</td><td>85.5</td><td>16-23 years</td></tr>
+          <tr><td>65</td><td>84.0</td><td>86.5</td><td>17-22 years</td></tr>
+          <tr><td>67</td><td>84.7</td><td>87.1</td><td>17-20 years</td></tr>
+          <tr><td>70</td><td>85.8</td><td>87.9</td><td>16-18 years</td></tr>
+        </tbody>
+      </table>
+      <p>Note that these are averages. If you reach 65, you have already survived many causes of early death and can expect to live longer than someone just being born today. About 25% of today's 65-year-olds will live past 90. For personalized estimates, see our <a href="/blog/life-expectancy-calculator/">life expectancy calculator</a>.</p>
+
+      <!-- ===== WORKING IN RETIREMENT ===== -->
+      <h2>Working in Retirement: The New Normal</h2>
+      <p>According to <a href="https://www.bls.gov/spotlight/2017/the-retirement-wage-and-salary-employment-of-older-workers/home.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a> data, an increasing number of Americans continue working past traditional retirement age:</p>
+
+      <h3>Labor Force Participation by Age</h3>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Ages 55-59</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 73%;">73%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Ages 60-64</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 57%;">57%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Ages 65-69</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 33%;">33%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Ages 70-74</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 19%;">19%</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Ages 75+</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill error" style="width: 8%;">8%</div></div>
+        </div>
+      </div>
+      <p>The trend toward working longer is accelerating. In 1985, only 10% of people 65+ were in the labor force. By 2024, that had risen to 23%, and projections suggest it will reach 30%+ by 2030. This shift reflects longer lifespans, inadequate savings, the physical demands of modern work being less taxing, and many people simply enjoying their work.</p>
+
+      <h3>Types of Work in Retirement</h3>
+      <table class="data-table">
+        <thead><tr><th>Work Type</th><th>Percentage of Working Retirees</th><th>Common Motivations</th></tr></thead>
+        <tbody>
+          <tr><td>Part-time (under 35 hrs/wk)</td><td>52%</td><td>Flexibility, supplemental income</td></tr>
+          <tr><td>Full-time career continuation</td><td>25%</td><td>Financial need, career identity</td></tr>
+          <tr><td>Self-employment/Consulting</td><td>15%</td><td>Flexibility, leveraging expertise</td></tr>
+          <tr><td>Gig economy work</td><td>8%</td><td>Easy entry, flexible schedule</td></tr>
+        </tbody>
+      </table>
+
+      <!-- ===== RETIREMENT AGE BY PROFESSION ===== -->
+      <h2>Retirement Ages Across Professions</h2>
+      <p>Not all careers allow for the same retirement timing. Physical demands, mandatory retirement ages, and pension structures create significant variation:</p>
+      <table class="data-table">
+        <thead><tr><th>Profession</th><th>Typical Retirement Age</th><th>Mandatory Maximum</th><th>Key Factor</th></tr></thead>
+        <tbody>
+          <tr><td>Airline pilots (US)</td><td>60-65</td><td>65 (FAA rule)</td><td>Safety regulations</td></tr>
+          <tr><td>Air traffic controllers</td><td>56</td><td>56 (FAA rule)</td><td>Cognitive demands</td></tr>
+          <tr><td>Federal law enforcement</td><td>50-57</td><td>57 (mandatory)</td><td>Physical demands</td></tr>
+          <tr><td>Military (enlisted)</td><td>38-42 (after 20 years)</td><td>62 (officers)</td><td>Pension vesting</td></tr>
+          <tr><td>Firefighters</td><td>55-58</td><td>Varies by dept</td><td>Physical demands</td></tr>
+          <tr><td>Professional athletes</td><td>32-40 (varies by sport)</td><td>None</td><td>Physical peak</td></tr>
+          <tr><td>Teachers (with pension)</td><td>55-62</td><td>None</td><td>Pension formula</td></tr>
+          <tr><td>Physicians</td><td>65-70</td><td>None</td><td>Long training, high earning years</td></tr>
+          <tr><td>Federal judges</td><td>70+</td><td>None (lifetime appointments)</td><td>Senior status option</td></tr>
+          <tr><td>University professors (tenured)</td><td>67-75</td><td>None since 1994</td><td>Academic freedom</td></tr>
+        </tbody>
+      </table>
+      <p>These variations mean that "retirement age" is a highly personal concept. A NFL running back might retire at 32 after a 10-year career, while a federal judge appointed at 50 might serve for 40+ years. Consider your profession's typical patterns when planning. For age-related career milestones, see our <a href="/blog/age-milestones/">comprehensive age milestones guide</a>.</p>
+
+      <!-- ===== RETIREMENT PLANNING BY DECADE ===== -->
+      <h2>Retirement Planning by Age Decade</h2>
+      <p>Retirement planning recommendations change significantly as you age. Here is what financial experts and <a href="https://www.aarp.org/retirement/planning-for-retirement/" target="_blank" rel="noopener">AARP</a> suggest at each stage:</p>
+      <table class="data-table">
+        <thead><tr><th>Age</th><th>Savings Target (x Annual Salary)</th><th>Priority Actions</th><th>Key Considerations</th></tr></thead>
+        <tbody>
+          <tr><td>20s</td><td>0.5-1x by 30</td><td>Start 401(k)/IRA; maximize employer match; build emergency fund</td><td>Time is your greatest asset; even small contributions compound</td></tr>
+          <tr><td>30s</td><td>1-3x by 40</td><td>Increase contributions; diversify investments; pay down debt</td><td>Balance retirement savings with other goals (house, kids)</td></tr>
+          <tr><td>40s</td><td>3-6x by 50</td><td>Maximize contributions; catch-up on any shortfall; reduce risk</td><td>Peak earning years; critical decade for building wealth</td></tr>
+          <tr><td>50s</td><td>6-8x by 60</td><td>Catch-up contributions allowed ($7,500 extra); plan healthcare bridge</td><td>Estimate Social Security; project retirement income needs</td></tr>
+          <tr><td>60s</td><td>8-10x by 65</td><td>Decide claiming strategy; enroll in Medicare; plan drawdown</td><td>Critical decisions on Social Security, pension, 401(k) distributions</td></tr>
+        </tbody>
+      </table>
+      <p>These targets are guidelines, not rigid rules. Someone with a pension, rental income, or plans to work part-time in retirement may need less in personal savings. Someone planning for extended healthcare needs or supporting family members may need more. Use our <a href="/">age calculator</a> to see exactly how many years you have until key retirement milestones.</p>
+
+      <!-- ===== SOCIAL SECURITY TRUST FUND ===== -->
+      <h2>The Social Security Trust Fund: What the Future Holds</h2>
+      <p>The Social Security Board of Trustees publishes annual reports on the program's financial health. According to the <a href="https://www.ssa.gov/oact/TR/" target="_blank" rel="noopener">2024 Trustees Report</a>:</p>
+      <table class="data-table">
+        <thead><tr><th>Metric</th><th>Current Status</th><th>Projected Future</th></tr></thead>
+        <tbody>
+          <tr><td>Trust fund status</td><td>Currently solvent</td><td>Depletion projected 2033-2035</td></tr>
+          <tr><td>Benefits after depletion</td><td>100% of scheduled</td><td>~77-80% of scheduled (from payroll taxes only)</td></tr>
+          <tr><td>Workers per beneficiary (2024)</td><td>2.7</td><td>2.1 by 2040</td></tr>
+          <tr><td>Current payroll tax rate</td><td>12.4% (split employer/employee)</td><td>Would need ~15.8% to maintain benefits</td></tr>
+        </tbody>
+      </table>
+      <p><strong>What this means for you:</strong> Social Security is not "going bankrupt." Even in the worst-case scenario with no legislative changes, beneficiaries would still receive 77-80% of scheduled benefits from ongoing payroll taxes. However, reduced benefits or higher taxes are possible. Congress has historically made changes well before trust fund depletion -- the 1983 reforms happened when the trust fund was months from exhaustion.</p>
+
+      <h3>Possible Reform Options Under Discussion</h3>
+      <table class="data-table">
+        <thead><tr><th>Reform Option</th><th>Impact on Benefits</th><th>Political Feasibility</th></tr></thead>
+        <tbody>
+          <tr><td>Raise payroll tax cap (currently $168,600)</td><td>No change to benefits</td><td>Moderate (supported by Democrats)</td></tr>
+          <tr><td>Increase payroll tax rate</td><td>No change to benefits</td><td>Low (unpopular with both parties)</td></tr>
+          <tr><td>Raise full retirement age to 68-70</td><td>Reduces lifetime benefits</td><td>Moderate (supported by some Republicans)</td></tr>
+          <tr><td>Change COLA calculation</td><td>Reduces future benefit growth</td><td>Low (unpopular with retirees)</td></tr>
+          <tr><td>Means-testing benefits</td><td>Reduces benefits for wealthy</td><td>Low (changes program's nature)</td></tr>
+          <tr><td>Combination of above</td><td>Varies</td><td>Highest (balanced approach)</td></tr>
+        </tbody>
+      </table>
+      <p>For those under 50, it is prudent to plan for the possibility of somewhat reduced Social Security benefits and to build additional savings. For those over 60, current benefits are very likely to remain largely intact. See our <a href="/blog/life-expectancy-calculator/">life expectancy calculator</a> to understand how long you might be drawing retirement benefits.</p>
+
+      <!-- ===== EARLY RETIREMENT MOVEMENTS ===== -->
+      <h2>The FIRE Movement: Early Retirement Trends</h2>
+      <p>The FIRE (Financial Independence, Retire Early) movement has gained significant traction, especially among Millennials. According to research and FIRE community data:</p>
+      <table class="data-table">
+        <thead><tr><th>FIRE Variant</th><th>Target Savings</th><th>Typical Retirement Age</th><th>Lifestyle</th></tr></thead>
+        <tbody>
+          <tr><td>Lean FIRE</td><td>25x minimal expenses ($400-600K)</td><td>35-45</td><td>Frugal, minimalist</td></tr>
+          <tr><td>Regular FIRE</td><td>25x moderate expenses ($1-1.5M)</td><td>40-50</td><td>Middle-class lifestyle</td></tr>
+          <tr><td>Fat FIRE</td><td>25x affluent expenses ($2.5M+)</td><td>45-55</td><td>Upper-middle-class lifestyle</td></tr>
+          <tr><td>Coast FIRE</td><td>Enough that compounding covers retirement</td><td>Work until traditional age</td><td>Lower-stress work optional</td></tr>
+          <tr><td>Barista FIRE</td><td>Partial FIRE + part-time work</td><td>35-50</td><td>Part-time work for healthcare/extras</td></tr>
+        </tbody>
+      </table>
+      <p>The FIRE approach is based on the "4% rule" -- the research-backed idea that withdrawing 4% of a diversified portfolio annually is sustainable for 30+ years. Thus, saving 25x your annual expenses provides financial independence. A person spending $40,000/year needs $1 million; someone spending $100,000/year needs $2.5 million.</p>
+      <p>FIRE has trade-offs. Early retirees face the "sequence of returns risk" (market downturns early in retirement), healthcare costs before Medicare eligibility (age 65), and the psychological challenges of decades without traditional work structure. Still, the movement has shown that traditional retirement age is a choice, not an inevitability. Calculate your exact age with our <a href="/#panel-basic">basic age calculator</a>.</p>
+
+      <!-- ===== GLOBAL RETIREMENT SPENDING ===== -->
+      <h2>How Retirees Spend Their Money by Country</h2>
+      <p>Retirement spending patterns vary significantly by country, reflecting different healthcare systems, social safety nets, and cultural norms. Data from <a href="https://data.oecd.org/" target="_blank" rel="noopener">OECD</a> and national statistics:</p>
+      <table class="data-table">
+        <thead><tr><th>Country</th><th>% on Housing</th><th>% on Healthcare</th><th>% on Food</th><th>% on Leisure</th><th>% on Transport</th></tr></thead>
+        <tbody>
+          <tr><td>United States</td><td>33%</td><td>15%</td><td>12%</td><td>11%</td><td>10%</td></tr>
+          <tr><td>United Kingdom</td><td>27%</td><td>4%</td><td>14%</td><td>14%</td><td>12%</td></tr>
+          <tr><td>France</td><td>24%</td><td>6%</td><td>16%</td><td>13%</td><td>11%</td></tr>
+          <tr><td>Germany</td><td>29%</td><td>5%</td><td>15%</td><td>12%</td><td>11%</td></tr>
+          <tr><td>Japan</td><td>22%</td><td>8%</td><td>18%</td><td>12%</td><td>9%</td></tr>
+          <tr><td>Australia</td><td>26%</td><td>8%</td><td>14%</td><td>15%</td><td>12%</td></tr>
+        </tbody>
+      </table>
+      <p>The most striking difference is healthcare spending. American retirees spend 15% of their budget on healthcare, while those in countries with universal healthcare systems (UK, France, Germany) spend only 4-6%. This difference adds up to hundreds of thousands of dollars over a multi-decade retirement. For Americans, healthcare cost planning is critical to retirement security. Learn more about age-related financial planning in our <a href="/blog/legal-ages-guide/">legal ages guide</a>.</p>
+
+      <!-- ===== COGNITIVE ASPECTS ===== -->
+      <h2>Retirement and Cognitive Health</h2>
+      <p>The relationship between retirement and cognitive function is complex. Research from the <a href="https://www.nia.nih.gov/" target="_blank" rel="noopener">National Institute on Aging</a> and longitudinal studies reveals important findings:</p>
+      <table class="data-table">
+        <thead><tr><th>Factor</th><th>Effect on Cognitive Health</th><th>Research Finding</th></tr></thead>
+        <tbody>
+          <tr><td>Early retirement</td><td>Potentially negative</td><td>Studies show faster cognitive decline in those who retire earlier</td></tr>
+          <tr><td>Working longer</td><td>Generally positive</td><td>Cognitively demanding work may build "cognitive reserve"</td></tr>
+          <tr><td>Voluntary vs. forced retirement</td><td>Major difference</td><td>Forced retirement associated with depression and faster decline</td></tr>
+          <tr><td>Active retirement</td><td>Highly positive</td><td>Social engagement, learning, exercise maintain cognition</td></tr>
+          <tr><td>Passive retirement</td><td>Potentially negative</td><td>Lack of stimulation associated with decline</td></tr>
+        </tbody>
+      </table>
+      <p>The key finding is that retirement itself is not the issue -- it is how retirement is spent. Retirees who maintain social connections, continue learning, exercise regularly, and pursue meaningful activities often show maintained or even improved cognitive function. Those who become isolated and sedentary tend to decline faster. The best retirement planning includes not just financial preparation but also planning for an engaged, active lifestyle.</p>
+
+      <!-- ===== SOCIAL SECURITY BENEFITS VISUALIZATION ===== -->
+      <h2>Social Security Benefits: A Visual Guide</h2>
+      <p>Understanding how your benefit changes based on claiming age is critical. Here is a visual representation of monthly benefit percentages for someone born in 1960 or later (FRA = 67):</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 62 (30% reduction)</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill error" style="width: 56.5%;">70% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 63</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill error" style="width: 60.5%;">75% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 64</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 64.5%;">80% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 65</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 70%;">86.7% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 66</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 75.3%;">93.3% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 67 (FRA)</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 80.6%;">100% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 68</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 87.1%;">108% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 69</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 93.5%;">116% of FRA</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 70 (max)</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 100%;">124% of FRA</div></div>
+        </div>
+      </div>
+      <p>The difference between claiming at 62 (70% of FRA) and 70 (124% of FRA) is 77% more monthly income for life. For someone with a $2,000 FRA benefit, that is the difference between $1,400/month and $2,480/month -- an extra $1,080/month or $12,960/year. Over a 20-year retirement, this difference totals over $250,000.</p>
+
+      <!-- ===== GLOBAL PENSION SYSTEMS ===== -->
+      <h2>Global Pension Systems: How Countries Fund Retirement</h2>
+      <p>Different countries have vastly different approaches to funding retirement. According to <a href="https://data.oecd.org/pension/gross-pension-replacement-rates.htm" target="_blank" rel="noopener">OECD pension data</a>:</p>
+      <table class="data-table">
+        <thead><tr><th>Country</th><th>System Type</th><th>Replacement Rate (% of earnings)</th><th>Funding</th></tr></thead>
+        <tbody>
+          <tr><td>Netherlands</td><td>Defined Benefit + DC</td><td>~90%</td><td>Mandatory employer pensions + state</td></tr>
+          <tr><td>Denmark</td><td>Multi-pillar</td><td>~84%</td><td>Public + mandatory occupational + private</td></tr>
+          <tr><td>France</td><td>Pay-as-you-go</td><td>~74%</td><td>Current workers pay for retirees</td></tr>
+          <tr><td>Germany</td><td>Points-based public</td><td>~52%</td><td>Payroll taxes + supplements</td></tr>
+          <tr><td>United States</td><td>Social Security + 401(k)</td><td>~49%</td><td>Payroll taxes + voluntary savings</td></tr>
+          <tr><td>United Kingdom</td><td>Multi-tier</td><td>~49%</td><td>State pension + auto-enrollment</td></tr>
+          <tr><td>Australia</td><td>Superannuation</td><td>~42%</td><td>Mandatory employer contributions (11.5%)</td></tr>
+          <tr><td>Japan</td><td>Multi-tier</td><td>~40%</td><td>National pension + employee pension</td></tr>
+        </tbody>
+      </table>
+      <p>"Replacement rate" refers to the percentage of pre-retirement earnings that pension income replaces. The Netherlands and Denmark lead with 84-90% replacement rates, while the US and UK are around 49%. This explains why American retirees depend more heavily on personal savings than their European counterparts. Learn more about how these rates affect your planning in our <a href="/blog/life-expectancy-calculator/">life expectancy calculator</a>.</p>
+
+      <!-- ===== RETIREMENT LIFESTYLE CHOICES ===== -->
+      <h2>Retirement Lifestyle Choices and Costs</h2>
+      <p>Retirement can take many forms, each with different cost implications. According to retirement planning research:</p>
+      <table class="data-table">
+        <thead><tr><th>Retirement Style</th><th>Annual Cost (US)</th><th>Key Characteristics</th><th>Required Savings (25x)</th></tr></thead>
+        <tbody>
+          <tr><td>Bare-bones</td><td>$25,000-35,000</td><td>Budget living, paid-off home, minimal travel</td><td>$625K-$875K</td></tr>
+          <tr><td>Modest</td><td>$40,000-55,000</td><td>Comfortable but frugal, occasional travel</td><td>$1M-$1.4M</td></tr>
+          <tr><td>Comfortable</td><td>$60,000-80,000</td><td>Dining out, regular travel, hobbies</td><td>$1.5M-$2M</td></tr>
+          <tr><td>Affluent</td><td>$100,000-150,000</td><td>Luxury travel, clubs, premium healthcare</td><td>$2.5M-$3.75M</td></tr>
+          <tr><td>Wealthy</td><td>$200,000+</td><td>No financial constraints</td><td>$5M+</td></tr>
+        </tbody>
+      </table>
+      <p>The "required savings" column uses the 4% rule (multiply annual expenses by 25 to get the portfolio size needed for a sustainable 30-year retirement). Note that Social Security reduces the amount needed from personal savings. For someone expecting $24,000/year from Social Security, the gap to fill is smaller.</p>
+
+      <!-- ===== RETIREMENT LOCATIONS ===== -->
+      <h2>Popular Retirement Destinations and Costs</h2>
+      <p>Many retirees relocate for better weather, lower costs, or lifestyle preferences. According to retirement surveys and cost-of-living data:</p>
+      <table class="data-table">
+        <thead><tr><th>Location</th><th>Cost of Living Index</th><th>Climate</th><th>Healthcare Access</th><th>Pros/Cons</th></tr></thead>
+        <tbody>
+          <tr><td>Florida (US)</td><td>100</td><td>Warm, humid</td><td>Excellent</td><td>No state income tax; hurricanes</td></tr>
+          <tr><td>Arizona (US)</td><td>97</td><td>Hot, dry</td><td>Good</td><td>Low humidity; extreme summer heat</td></tr>
+          <tr><td>Portugal</td><td>65</td><td>Mild Mediterranean</td><td>Good</td><td>Low cost; visa required for non-EU</td></tr>
+          <tr><td>Mexico</td><td>50</td><td>Varies by region</td><td>Variable</td><td>Very low cost; safety concerns in some areas</td></tr>
+          <tr><td>Costa Rica</td><td>70</td><td>Tropical</td><td>Good</td><td>Stable; universal healthcare</td></tr>
+          <tr><td>Thailand</td><td>45</td><td>Tropical</td><td>Variable</td><td>Very low cost; visa complexities</td></tr>
+          <tr><td>Spain</td><td>75</td><td>Mediterranean</td><td>Excellent</td><td>High quality of life; visa required</td></tr>
+        </tbody>
+      </table>
+      <p>Retiring abroad can dramatically extend savings. A $50,000/year retirement budget in the US might support a $80,000/year lifestyle in Portugal or a $100,000/year lifestyle in Thailand. However, considerations include healthcare access, visa requirements, distance from family, and currency risk. Calculate when you might reach these retirement milestones with our <a href="/">age calculator</a>.</p>
+
+      <!-- ===== RETIREMENT ACTIVITIES ===== -->
+      <h2>How Retirees Spend Their Time</h2>
+      <p>According to the <a href="https://www.bls.gov/tus/" target="_blank" rel="noopener">Bureau of Labor Statistics American Time Use Survey</a>, here is how Americans 65+ allocate their day:</p>
+      <div class="chart-stacked">
+        <p style="font-weight: 600; margin-bottom: 1rem; text-align: center;">Average Day for Americans 65+ (24 hours)</p>
+        <div class="chart-stacked-bar">
+          <div class="chart-stacked-segment" style="width: 35.4%; background: #4A5568;" title="Sleep: 8.5 hrs">Sleep 35%</div>
+          <div class="chart-stacked-segment" style="width: 30.8%; background: #38A169;" title="Leisure: 7.4 hrs">Leisure 31%</div>
+          <div class="chart-stacked-segment" style="width: 10%; background: #D69E2E;" title="Household: 2.4 hrs">House 10%</div>
+          <div class="chart-stacked-segment" style="width: 6.7%; background: #3182CE;" title="Eating: 1.6 hrs">Eating 7%</div>
+          <div class="chart-stacked-segment" style="width: 5%; background: #E53E3E;" title="Work (some retirees): 1.2 hrs">Work 5%</div>
+          <div class="chart-stacked-segment" style="width: 12.1%; background: #805AD5;" title="Other: 2.9 hrs">Other 12%</div>
+        </div>
+      </div>
+      <p>Leisure dominates retirement at 7.4 hours per day on average -- nearly half of waking hours. Television accounts for about 4.5 of those 7.4 leisure hours. Research suggests that retirees who fill leisure time with active pursuits (exercise, socializing, learning, volunteering) report higher life satisfaction than those who spend most leisure time watching TV.</p>
+
+      <!-- ===== WOMEN AND RETIREMENT ===== -->
+      <h2>Retirement Considerations for Women</h2>
+      <p>Women face unique retirement planning challenges. According to <a href="https://www.dol.gov/agencies/wb/data/retirement" target="_blank" rel="noopener">Department of Labor</a> data:</p>
+      <table class="data-table">
+        <thead><tr><th>Factor</th><th>Impact on Women</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Longer life expectancy</td><td>Women live ~5 years longer than men</td><td>Need to fund ~5 more years of retirement</td></tr>
+          <tr><td>Pay gap</td><td>Women earn ~82 cents per male dollar</td><td>Lower lifetime earnings = lower SS benefits</td></tr>
+          <tr><td>Career interruptions</td><td>Women more likely to leave workforce for caregiving</td><td>Fewer years contributing to Social Security</td></tr>
+          <tr><td>Part-time work</td><td>Women more likely to work part-time</td><td>Less access to employer retirement plans</td></tr>
+          <tr><td>Widowhood</td><td>Women more likely to outlive spouse</td><td>May rely on survivor benefits</td></tr>
+          <tr><td>Median retirement savings (women 55-64)</td><td>$120,000 vs. $170,000 for men</td><td>30% less saved despite longer life expectancy</td></tr>
+        </tbody>
+      </table>
+      <p>The combination of longer life, lower earnings, and more career interruptions means women need to save a higher percentage of income and may need to work longer to achieve comparable retirement security. Spousal and survivor Social Security benefits become particularly important planning tools for married women.</p>
+
+      <!-- ===== VISUALIZING RETIREMENT TIMELINE ===== -->
+      <h2>Your Retirement Timeline Visualization</h2>
+      <p>Here is how key retirement milestones typically unfold for Americans born 1960 or later:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 50: Catch-up contributions begin</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 71%;">50</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 55: Early 401(k) withdrawal (if separated)</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 79%;">55</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 59.5: Penalty-free 401(k)/IRA withdrawal</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 85%;">59.5</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 62: Early Social Security available</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 89%;">62</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 65: Medicare eligibility</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 93%;">65</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 67: Full retirement age (SS)</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 96%;">67</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">Age 70: Maximum SS benefit</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 100%;">70</div></div>
+        </div>
+      </div>
+      <p>Understanding this timeline helps with strategic planning. For example, if you retire at 62 but do not claim Social Security until 67, you need to fund 5 years of expenses from savings or other sources. The gap between retirement from work and Medicare eligibility at 65 is particularly important -- private health insurance for early retirees can cost $1,000+ per month. Use our <a href="/">age calculator</a> to see exactly where you stand on this timeline.</p>
+
+      <!-- SECTION 6: Charts -->
+      <h2 id="charts">Retirement Age Charts</h2>
+
+      <h3>Retirement Ages by Country</h3>
+      <div style="margin: 2rem 0; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+        <div style="font-weight: 600; margin-bottom: 1rem; text-align: center;">Official Retirement Age by Country</div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">China (women)</span>
+          <div style="background: linear-gradient(90deg, #00b894, #55efc4); height: 22px; border-radius: 4px; width: calc(50 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">50-55</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">China (men)</span>
+          <div style="background: linear-gradient(90deg, #6c5ce7, #a29bfe); height: 22px; border-radius: 4px; width: calc(60 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">60</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">South Korea</span>
+          <div style="background: linear-gradient(90deg, #0984e3, #74b9ff); height: 22px; border-radius: 4px; width: calc(63 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">63</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">France</span>
+          <div style="background: linear-gradient(90deg, #0984e3, #74b9ff); height: 22px; border-radius: 4px; width: calc(64 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">64</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">Canada / Japan</span>
+          <div style="background: linear-gradient(90deg, #fdcb6e, #ffeaa7); height: 22px; border-radius: 4px; width: calc(65 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: #333; font-size: 0.75rem; font-weight: 600;">65</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">UK</span>
+          <div style="background: linear-gradient(90deg, #e17055, #fab1a0); height: 22px; border-radius: 4px; width: calc(66 / 67 * 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">66</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 120px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">US / Iceland</span>
+          <div style="background: linear-gradient(90deg, #d63031, #ff7675); height: 22px; border-radius: 4px; width: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">67</div>
+        </div>
+      </div>
+
+      <h3>Social Security Benefit by Claiming Age</h3>
+      <p>This chart shows the percentage of your full benefit you receive based on when you start claiming (for those born 1960+, FRA = 67):</p>
+      <div style="margin: 2rem 0; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+        <div style="font-weight: 600; margin-bottom: 1rem; text-align: center;">% of Full Benefit by Claiming Age</div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 80px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">Age 62</span>
+          <div style="background: linear-gradient(90deg, #d63031, #ff7675); height: 22px; border-radius: 4px; width: 70%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">70%</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 80px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">Age 64</span>
+          <div style="background: linear-gradient(90deg, #e17055, #fab1a0); height: 22px; border-radius: 4px; width: 80%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">80%</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 80px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">Age 67</span>
+          <div style="background: linear-gradient(90deg, #0984e3, #74b9ff); height: 22px; border-radius: 4px; width: 80.6%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">100%</div>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+          <span style="width: 80px; font-size: 0.85rem; text-align: right; padding-right: 0.75rem;">Age 70</span>
+          <div style="background: linear-gradient(90deg, #00b894, #55efc4); height: 22px; border-radius: 4px; width: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; color: white; font-size: 0.75rem; font-weight: 600;">124%</div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: FAQ -->
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What is the full retirement age for someone born in 1960?</button>
+          <div class="faq-answer"><p>For anyone born in 1960 or later, the full retirement age for Social Security is 67. This means you must wait until age 67 to receive 100% of your calculated benefit. You can still claim as early as 62 with reduced benefits or delay until 70 for increased benefits.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I collect Social Security and still work?</button>
+          <div class="faq-answer"><p>Yes, but if you claim before your FRA and continue to work, there is an earnings test. In 2026, if you are under FRA for the entire year, $1 in benefits is withheld for every $2 you earn above the annual limit (approximately $22,320). In the year you reach FRA, the threshold is higher and the reduction is smaller. Once you reach FRA, there is no earnings limit -- you can earn any amount without affecting your benefits. Additionally, working while collecting benefits may increase your future benefit amount if your current earnings are higher than the earnings used in the original calculation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is it better to claim Social Security at 62 or wait until 70?</button>
+          <div class="faq-answer"><p>It depends on your individual circumstances. Claiming at 62 gives you money sooner but at a permanently reduced rate (70% of FRA benefit for those born 1960+). Waiting until 70 gives you 124% of your FRA benefit. The break-even point is typically around age 80-82. If you expect to live past your early 80s and can afford to wait, delaying generally yields more total lifetime income. If you need the income immediately, have health concerns suggesting a shorter life expectancy, or want to invest the early payments, claiming sooner may make sense. Consult a financial advisor for personalized guidance.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will the retirement age increase again?</button>
+          <div class="faq-answer"><p>It is possible. The Social Security trustees have repeatedly warned that the trust fund faces depletion without legislative action. Raising the retirement age is one of several options being discussed, along with increasing payroll taxes and adjusting benefit formulas. Some proposals have suggested raising the FRA to 68, 69, or even 70. However, any change would require an act of Congress and would likely be phased in gradually over many years to avoid affecting people near retirement.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between Social Security retirement age and Medicare eligibility?</button>
+          <div class="faq-answer"><p>Social Security full retirement age ranges from 66 to 67 depending on birth year, while Medicare eligibility begins at 65 for most people (regardless of birth year). These two systems are separate. You can sign up for Medicare at 65 even if you have not yet claimed Social Security benefits. It is important to enroll in Medicare during your initial enrollment period (the 7-month window around your 65th birthday) to avoid late enrollment penalties, even if you plan to delay Social Security.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do spousal benefits work with retirement age?</button>
+          <div class="faq-answer"><p>A spouse can receive up to 50% of their partner's FRA benefit amount. However, if the spouse claims before their own FRA, the spousal benefit is reduced. The spouse must be at least 62 to claim spousal benefits. If both spouses worked, Social Security will pay the higher of either your own benefit or the spousal benefit, but not both. Survivor benefits (after a spouse dies) follow different rules and can be claimed as early as age 60.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do other countries have early retirement options like the US?</button>
+          <div class="faq-answer"><p>Yes, many countries allow early retirement with reduced benefits, similar to the US system. Canada allows CPP claims from age 60 (reduced) to 70 (enhanced). Norway allows early claims from 62. Sweden offers flexibility from age 63. The UK currently does not allow early state pension claims -- you must wait until the state pension age of 66 (rising to 67). The specific reduction formulas and eligibility criteria vary widely by country.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I find out my exact Social Security benefit amount?</button>
+          <div class="faq-answer"><p>Create an account at ssa.gov to access your Social Security Statement, which shows your estimated benefits at ages 62, FRA, and 70 based on your actual earnings history. You can also use the SSA's online calculators for more detailed estimates. For your exact current age, use our <a href="/">age calculator</a> to see precisely how many years, months, and days remain until your FRA.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the maximum Social Security benefit in 2026?</button>
+          <div class="faq-answer"><p>The maximum Social Security benefit in 2026 for someone retiring at FRA (67) is approximately $3,900/month, or about $46,800/year. To qualify for the maximum, you must have earned at or above the Social Security taxable maximum (currently about $168,600) for at least 35 years. For those claiming at 62, the maximum is about $2,730/month; at 70, it is approximately $4,840/month. Only about 6% of Social Security recipients receive the maximum benefit.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How does divorce affect Social Security benefits?</button>
+          <div class="faq-answer"><p>If you were married for at least 10 years before divorcing, you may be eligible for benefits based on your ex-spouse's record. You must be unmarried, age 62 or older, and your ex-spouse must be entitled to Social Security. You can receive up to 50% of your ex-spouse's FRA benefit (if you claim at your FRA) without affecting their benefit or their current spouse's benefit. This is particularly valuable for people who left the workforce to raise children during a long marriage. If your ex-spouse has died, you may qualify for survivor benefits.</p></div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin: 2rem 0;"><a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Calculate Your Exact Age Now</a></p>
+
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/blog/legal-ages-guide/" class="related-card"><div class="related-card-title">Legal Ages Guide</div><p class="related-card-desc">Complete guide to legal age thresholds worldwide</p></a>
+        <a href="/blog/life-expectancy-calculator/" class="related-card"><div class="related-card-title">Life Expectancy Calculator</div><p class="related-card-desc">Estimate your life expectancy based on key factors</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones</div><p class="related-card-desc">Every major milestone from birth to 100</p></a>
+        <a href="/blog/age-calculator-guide/" class="related-card"><div class="related-card-title">Age Calculator Guide</div><p class="related-card-desc">How to calculate age accurately for any purpose</p></a>
+      </div>
+    </article>
+  </div></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/#panel-diff">Age Difference</a></li><li><a href="/#panel-days">Days Old</a></li><li><a href="/#panel-korean">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const mobileNav = document.querySelector('.nav-mobile');
+      if (toggle && mobileNav) { toggle.addEventListener('click', function() { mobileNav.classList.toggle('active'); }); }
+      document.querySelectorAll('.faq-question').forEach(function(btn) { btn.addEventListener('click', function() { this.closest('.faq-item').classList.toggle('open'); }); });
+    });
+  </script>
+</body>
+</html>

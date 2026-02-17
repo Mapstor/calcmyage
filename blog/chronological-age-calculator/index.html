@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronological Age Calculator - Calculate Your Exact Age in Years:Months | CalcMyAge</title>
+  <meta name="description" content="Calculate your exact chronological age in the Y:M format used by educators, psychologists, and speech therapists. Step-by-step worked examples and rounding rules included.">
+  <link rel="canonical" href="https://calcmyage.org/blog/chronological-age-calculator/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/blog/chronological-age-calculator/">
+  <meta property="og:title" content="Chronological Age Calculator - Calculate Your Exact Age in Years:Months | CalcMyAge">
+  <meta property="og:description" content="Calculate your exact chronological age in the Y:M format used by educators, psychologists, and speech therapists. Step-by-step worked examples and rounding rules included.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Chronological Age Calculator - Calculate Your Exact Age in Years:Months", "description": "Calculate your exact chronological age in the Y:M format used by educators, psychologists, and speech therapists. Step-by-step worked examples and rounding rules included.", "author": { "@type": "Organization", "name": "CalcMyAge" }, "publisher": { "@type": "Organization", "name": "CalcMyAge", "url": "https://calcmyage.org" }, "datePublished": "2026-01-28", "dateModified": "2026-02-07", "mainEntityOfPage": "https://calcmyage.org/blog/chronological-age-calculator/" }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does 7:4 mean in chronological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The notation 7:4 means 7 years and 4 months. The number before the colon is the years, and the number after the colon is the months (0-11). This format is standard in educational and psychological testing where precise age measurement is required. Some systems use a hyphen (7-4) instead of a colon, but the meaning is identical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is chronological age important for standardized tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standardized tests use norm tables that are organized by age groups, often in 1-4 month bands. The raw score a child earns is compared to the scores of children in the same age band. If the chronological age is calculated incorrectly, the wrong norm table is used, producing an inaccurate standard score and percentile rank. A one-month error can change a score by 2-5 points, potentially affecting diagnoses and service eligibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 16-day rounding rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 16-day rule is used by Wechsler intelligence scales (WISC-V, WAIS-IV, WPPSI-IV) and many other tests. When converting from years:months:days to years:months, if the days are 0-15, you drop them (round down). If the days are 16 or more, you add 1 to the months (round up). For example, 7:4:15 becomes 7:4, but 7:4:16 becomes 7:5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I borrow when the test date day is smaller than the birth date day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract 1 from the test date's month column and add the number of days in the month before the test month. For example, if the test date is March 5, borrow 1 from March (making it February) and add 28 or 29 days (depending on leap year) to the 5, giving you 33 or 34. Then subtract the birth date's day from this new number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is adjusted age for premature babies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adjusted age (also called corrected age) accounts for premature birth by subtracting the weeks of prematurity from the chronological age. A baby born at 32 weeks (8 weeks early) who is chronologically 6 months old has an adjusted age of approximately 4 months. Most assessment tools recommend using adjusted age for developmental evaluations until the child is 2-3 years old. The WHO and CDC provide guidance on adjusted age calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is chronological age the same as biological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Chronological age is the exact time elapsed since birth, measured in calendar units. Biological age reflects how old your body actually is based on biomarkers, and it can be higher or lower than chronological age depending on genetics, lifestyle, and health. See our biological vs. chronological age guide for a detailed comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the 15-day and 16-day rounding rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The key difference is what happens when the remainder is exactly 15 days. Under the 15-day rule, 15 days rounds UP to the next month. Under the 16-day rule, 15 days rounds DOWN (is dropped). So an age of 7:4:15 becomes 7:5 with the 15-day rule but stays 7:4 with the 16-day rule. Always check your specific test manual to determine which rule applies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do school enrollment cutoff dates use chronological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "School districts require children to reach a specific age (usually 5 for kindergarten) by a cutoff date (often September 1) to enroll that year. A child who turns 5 on September 2 would have to wait until the following year. This makes precise chronological age calculation important for educational planning. Parents of children with late summer or fall birthdays often consider \"redshirting\" (delaying enrollment) based on these cutoffs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a calculator or app instead of calculating manually?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our free age calculator computes chronological age automatically. Many psychological testing software programs also include built-in age calculators. However, professionals should understand the manual calculation process to verify computer results and catch errors. Some testing situations may not have access to technology, making manual calculation skills essential."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do different tests use different rounding rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different test publishers developed their own conventions over time. The 16-day rule (used by Wechsler tests) was established by David Wechsler and has been maintained for consistency across editions. Other publishers chose different thresholds based on their own research or practical considerations. The lack of a universal standard is unfortunate, but professionals must adapt to the specific requirements of each instrument they use."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://calcmyage.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://calcmyage.org/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chronological Age Calculator"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/" class="active">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container" style="max-width: 800px;">
+    <article>
+      <p style="font-size: 0.8125rem; color: var(--gray-500);">February 2026 &bull; 20 min read</p>
+      <h1>Chronological Age Calculator: Calculate Your Exact Age in Years:Months</h1>
+      <p class="intro-text">Chronological age is the precise measurement of time elapsed since birth, expressed in a specific format like years:months (Y:M) or years:months:days (Y:M:D). It is used daily by professionals in education, psychology, speech-language pathology, and occupational therapy to determine eligibility for services, score standardized tests, and track developmental progress. This comprehensive guide shows you how to calculate chronological age step by step, explains the Y:M format, covers rounding rules used by major psychological tests, provides celebrity examples, and highlights the most common errors to avoid. For a deeper dive into the theory behind chronological age, see our <a href="/blog/chronological-age-explained/">chronological age explained</a> article. You can also explore the differences between <a href="/blog/biological-age-vs-chronological/">biological age and chronological age</a>.</p>
+
+      <div class="key-takeaways">
+        <div class="key-takeaways-title">Key Takeaways</div>
+        <ul>
+          <li><strong>Chronological age</strong> is expressed in the Y:M format (e.g., 7:4 means 7 years, 4 months) for professional use</li>
+          <li><strong>Accuracy matters</strong> because a single month can change standardized test scores and service eligibility</li>
+          <li><strong>The calculation</strong> subtracts the birth date from the test date, borrowing from months and years when needed</li>
+          <li><strong>Rounding rules</strong> vary by test: some round at 16 days, others at 15 days</li>
+          <li><strong>Common errors</strong> include forgetting to borrow, using the wrong rounding threshold, and confusing month lengths</li>
+          <li><strong>School cutoff dates</strong> vary by state and determine kindergarten eligibility based on chronological age</li>
+          <li>Use our <a href="/#panel-basic">chronological age calculator</a> to compute your exact age instantly</li>
+        </ul>
+      </div>
+
+      <nav style="background: var(--gray-50); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+        <strong>Table of Contents</strong>
+        <ol style="margin: 0.75rem 0 0 1.25rem; line-height: 2;">
+          <li><a href="#what-is">What Is a Chronological Age Calculator?</a></li>
+          <li><a href="#step-by-step">Step-by-Step Calculation</a></li>
+          <li><a href="#when-needed">When You Need a Chronological Age Calculator</a></li>
+          <li><a href="#ym-format">Understanding the Y:M Format</a></li>
+          <li><a href="#rounding">Rounding Rules by Test</a></li>
+          <li><a href="#celebrities">Celebrity Age Examples</a></li>
+          <li><a href="#school-cutoffs">School Enrollment Cutoff Dates</a></li>
+          <li><a href="#errors">Common Calculation Errors</a></li>
+          <li><a href="#vs-other">Chronological vs. Other Age Types</a></li>
+          <li><a href="#history">History of Chronological Age in Testing</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-is">What Is a Chronological Age Calculator?</h2>
+      <p>A chronological age calculator computes the exact elapsed time between a person's date of birth and a reference date (usually the date of a test, evaluation, or appointment). The result is expressed in years, months, and days, or rounded to years and months using professional rounding conventions.</p>
+      <p>Unlike casual age statements like "I am 35 years old," chronological age provides the precision needed for professional contexts. Saying a child is "7 years old" does not distinguish between a child who just turned 7 and one who is about to turn 8. In educational and psychological testing, that 11-month difference can shift test scores by a full standard deviation. This is why professionals rely on the Y:M format.</p>
+      <p>Our <a href="/">free age calculator</a> handles this computation automatically, but understanding the manual process is important for professionals who need to verify results or perform calculations without access to a tool. You can also use our <a href="/#panel-days">age in days calculator</a> for even more precise measurements.</p>
+
+      <h3>Origins of Chronological Age Measurement</h3>
+      <p>The concept of precise chronological age measurement emerged in the early 20th century alongside the development of standardized intelligence testing. French psychologist Alfred Binet, working with Theodore Simon, created the first practical intelligence test in 1905. They introduced the concept of "mental age" and compared it to chronological age to identify children who needed educational support. This comparison required precise chronological age calculation.</p>
+      <p>The practice was refined by Lewis Terman at Stanford University, who developed the Stanford-Binet test and popularized the Intelligence Quotient (IQ) formula: Mental Age divided by Chronological Age, multiplied by 100. This formula made accurate chronological age calculation essential to psychological assessment.</p>
+
+      <h2 id="step-by-step">Step-by-Step Calculation</h2>
+      <p>Chronological age is calculated by subtracting the birth date from the test date (or any reference date). The subtraction works from right to left: first days, then months, then years. When the top number is smaller than the bottom number, you "borrow" from the next column, just like in regular subtraction.</p>
+
+      <h3>Example 1: Simple Case (No Borrowing)</h3>
+      <p><strong>Test date:</strong> October 25, 2025 &nbsp;|&nbsp; <strong>Birth date:</strong> March 10, 2018</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th></th><th>Year</th><th>Month</th><th>Day</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Test date</strong></td><td>2025</td><td>10</td><td>25</td></tr>
+            <tr><td><strong>Birth date</strong></td><td>2018</td><td>3</td><td>10</td></tr>
+            <tr><td><strong>Difference</strong></td><td>7</td><td>7</td><td>15</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Result:</strong> 7 years, 7 months, 15 days. In Y:M format: <strong>7:7</strong> (since 15 days rounds down in most systems using a 16-day threshold).</p>
+
+      <h3>Example 2: Borrowing from Months</h3>
+      <p><strong>Test date:</strong> February 8, 2026 &nbsp;|&nbsp; <strong>Birth date:</strong> July 22, 2019</p>
+      <p>The day column requires borrowing because 8 is less than 22.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th></th><th>Year</th><th>Month</th><th>Day</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Test date</strong></td><td>2026</td><td>2</td><td>8</td></tr>
+            <tr><td><strong>Borrow</strong></td><td>2026</td><td>1</td><td>8 + 31 = 39</td></tr>
+            <tr><td><strong>Birth date</strong></td><td>2019</td><td>7</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Now we need to borrow for the month column too, because 1 is less than 7:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th></th><th>Year</th><th>Month</th><th>Day</th></tr></thead>
+          <tbody>
+            <tr><td><strong>After borrowing</strong></td><td>2025</td><td>13</td><td>39</td></tr>
+            <tr><td><strong>Birth date</strong></td><td>2019</td><td>7</td><td>22</td></tr>
+            <tr><td><strong>Difference</strong></td><td>6</td><td>6</td><td>17</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Result:</strong> 6 years, 6 months, 17 days. In Y:M format: <strong>6:7</strong> (17 days rounds up to the next month using the 16-day rule).</p>
+
+      <h3>Example 3: Year-End to Year-Start</h3>
+      <p><strong>Test date:</strong> January 15, 2026 &nbsp;|&nbsp; <strong>Birth date:</strong> November 28, 2020</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th></th><th>Year</th><th>Month</th><th>Day</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Test date</strong></td><td>2026</td><td>1</td><td>15</td></tr>
+            <tr><td><strong>Borrow days</strong></td><td>2026</td><td>0</td><td>15 + 31 = 46</td></tr>
+            <tr><td><strong>Borrow months</strong></td><td>2025</td><td>12</td><td>46</td></tr>
+            <tr><td><strong>Birth date</strong></td><td>2020</td><td>11</td><td>28</td></tr>
+            <tr><td><strong>Difference</strong></td><td>5</td><td>1</td><td>18</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Result:</strong> 5 years, 1 month, 18 days. In Y:M format: <strong>5:2</strong> (18 days rounds up).</p>
+
+      <h3>Days in Each Month Reference</h3>
+      <p>When borrowing, you need to know how many days are in the previous month. Here is a quick reference:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Month</th><th>Days</th><th>Month</th><th>Days</th></tr></thead>
+          <tbody>
+            <tr><td>January</td><td>31</td><td>July</td><td>31</td></tr>
+            <tr><td>February</td><td>28/29*</td><td>August</td><td>31</td></tr>
+            <tr><td>March</td><td>31</td><td>September</td><td>30</td></tr>
+            <tr><td>April</td><td>30</td><td>October</td><td>31</td></tr>
+            <tr><td>May</td><td>31</td><td>November</td><td>30</td></tr>
+            <tr><td>June</td><td>30</td><td>December</td><td>31</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>*February has 29 days in leap years (divisible by 4, except century years not divisible by 400). For more on leap year considerations, see our <a href="/blog/leap-year-birthday/">leap year birthday guide</a>.</p>
+
+      <h2 id="when-needed">When You Need a Chronological Age Calculator</h2>
+      <p>Chronological age calculations are required in a wide range of professional fields. According to the <a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association (APA)</a> and educational standards, the following table shows the most common contexts and why precision matters in each one.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Field</th><th>Context</th><th>Why Y:M Precision Matters</th></tr></thead>
+          <tbody>
+            <tr><td>Education</td><td>School enrollment cutoff dates</td><td>Children must be a specific age by a cutoff date (e.g., 5 by September 1) to enroll in kindergarten</td></tr>
+            <tr><td>Education</td><td>Gifted program eligibility</td><td>IQ and achievement test norms are age-referenced; wrong age = wrong score interpretation</td></tr>
+            <tr><td>Psychology</td><td>Standardized testing (IQ, achievement)</td><td>Norm tables change every 1-4 months of age; an error of 1 month can shift a score by 2-5 points</td></tr>
+            <tr><td>Psychology</td><td>Developmental assessments</td><td>Milestones are tracked against age norms; even 2-week precision matters for young children</td></tr>
+            <tr><td>Speech Therapy</td><td>Language assessments</td><td>Expressive and receptive language norms are age-specific; eligibility for services depends on percentile rank</td></tr>
+            <tr><td>Speech Therapy</td><td>Articulation assessments</td><td>Sound acquisition norms specify the age by which a child should produce each sound</td></tr>
+            <tr><td>Occupational Therapy</td><td>Fine motor assessments</td><td>Motor development norms are age-referenced; service eligibility requires precise age at evaluation</td></tr>
+            <tr><td>Occupational Therapy</td><td>Sensory processing evaluations</td><td>Questionnaire norms are grouped by age bands as narrow as 3 months for young children</td></tr>
+            <tr><td>Pediatrics</td><td>Growth chart plotting</td><td>Height, weight, and head circumference percentiles are age-specific according to <a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC growth charts</a></td></tr>
+            <tr><td>Special Education</td><td>IEP (Individualized Education Program)</td><td>Evaluation dates and age at evaluation are documented; errors can affect legal compliance</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For broader information about what chronological age means and how it differs from biological age, see our detailed guide on <a href="/blog/chronological-age-explained/">chronological age explained</a>. You may also want to explore our <a href="/blog/age-milestones/">age milestones guide</a> for developmental benchmarks.</p>
+
+      <h2 id="ym-format">Understanding the Y:M Format</h2>
+      <p>The Y:M (years:months) format is the standard notation used in professional contexts. Here is how it works:</p>
+      <ul>
+        <li><strong>7:4</strong> means 7 years and 4 months</li>
+        <li><strong>12:0</strong> means exactly 12 years (and 0 months)</li>
+        <li><strong>5:11</strong> means 5 years and 11 months</li>
+        <li><strong>0:6</strong> means 6 months (used for infants)</li>
+      </ul>
+      <p>The colon separates years from months. Some tests and reports use a hyphen instead (7-4), but the meaning is the same. The months component always ranges from 0 to 11. You would never write 7:12 because that would be 8:0.</p>
+
+      <h3>Extended Format: Y:M:D</h3>
+      <p>Some contexts require the full Y:M:D notation, including days. For example, 7:4:15 means 7 years, 4 months, and 15 days. The days component ranges from 0 to 30 (or the number of days in the previous month). Most standardized tests ask you to convert from Y:M:D to Y:M by applying rounding rules.</p>
+
+      <h3>Visual Guide to Y:M Notation</h3>
+      <div class="chart-bar-group">
+        <p style="text-align: center; margin: 0 0 1rem 0; font-weight: 600;">Age Progression in Y:M Format</p>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">0:6</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 5%;">6 months</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">2:0</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 17%;">2 years</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">5:6</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 46%;">5.5 years</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">8:0</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill accent" style="width: 67%;">8 years</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">10:6</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill success" style="width: 88%;">10.5 years</div></div>
+        </div>
+        <div class="chart-bar-item">
+          <span class="chart-bar-label">12:0</span>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;">12 years</div></div>
+        </div>
+      </div>
+
+      <h2 id="rounding">Rounding Rules Quick Reference</h2>
+      <p>When converting from Y:M:D to Y:M, you need to decide whether to round the days up to the next month or discard them. Different standardized tests use different rounding thresholds. The table below summarizes the most common rules.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Rounding Rule</th><th>How It Works</th><th>Example (6 years, 7 months, 18 days)</th><th>Tests That Use It</th></tr></thead>
+          <tbody>
+            <tr><td><strong>16-day rule</strong></td><td>0-15 days: round down; 16+ days: round up</td><td>6:8 (18 days rounds up)</td><td>WISC-V, WAIS-IV, most Wechsler scales</td></tr>
+            <tr><td><strong>15-day rule</strong></td><td>0-14 days: round down; 15+ days: round up</td><td>6:8 (18 days rounds up)</td><td>Some achievement tests, Bayley-4</td></tr>
+            <tr><td><strong>No rounding</strong></td><td>Use the exact Y:M:D value</td><td>6:7:18</td><td>Vineland-3, some adaptive behavior scales</td></tr>
+            <tr><td><strong>Always round down</strong></td><td>Discard days regardless of value</td><td>6:7</td><td>Some school enrollment systems</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The 16-day rule (used by Wechsler intelligence scales) is the most common in psychological testing. Under this rule, 0-15 days in the remainder are dropped, and 16 or more days cause the months to increase by 1. Always check the specific test manual for the correct rounding procedure, as using the wrong rule can change the derived score.</p>
+
+      <h3>Rounding Rules by Major Test</h3>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Test Name</th><th>Publisher</th><th>Rounding Rule</th><th>Age Range</th></tr></thead>
+          <tbody>
+            <tr><td>WISC-V (Wechsler Intelligence Scale for Children)</td><td>Pearson</td><td>16-day rule</td><td>6:0 to 16:11</td></tr>
+            <tr><td>WAIS-IV (Wechsler Adult Intelligence Scale)</td><td>Pearson</td><td>16-day rule</td><td>16:0 to 90:11</td></tr>
+            <tr><td>WPPSI-IV (Wechsler Preschool and Primary Scale)</td><td>Pearson</td><td>16-day rule</td><td>2:6 to 7:7</td></tr>
+            <tr><td>Stanford-Binet 5</td><td>Riverside</td><td>16-day rule</td><td>2:0 to 85+</td></tr>
+            <tr><td>Woodcock-Johnson IV</td><td>Riverside</td><td>15-day rule</td><td>2:0 to 90+</td></tr>
+            <tr><td>Bayley-4</td><td>Pearson</td><td>15-day rule</td><td>0:16 days to 42 months</td></tr>
+            <tr><td>Vineland-3</td><td>Pearson</td><td>No rounding (exact)</td><td>Birth to 90+</td></tr>
+            <tr><td>CELF-5 (Clinical Evaluation of Language)</td><td>Pearson</td><td>16-day rule</td><td>5:0 to 21:11</td></tr>
+            <tr><td>PPVT-5 (Peabody Picture Vocabulary)</td><td>Pearson</td><td>16-day rule</td><td>2:6 to 90+</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="celebrities">Celebrity Age Examples</h2>
+      <p>To help illustrate chronological age calculations with real-world examples, here are the precise chronological ages of several well-known public figures as of February 7, 2026:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Celebrity</th><th>Birth Date</th><th>Chronological Age (Feb 7, 2026)</th><th>Y:M Format</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Taylor Swift</strong></td><td>December 13, 1989</td><td>36 years, 1 month, 25 days</td><td>36:2</td></tr>
+            <tr><td><strong>LeBron James</strong></td><td>December 30, 1984</td><td>41 years, 1 month, 8 days</td><td>41:1</td></tr>
+            <tr><td><strong>Billie Eilish</strong></td><td>December 18, 2001</td><td>24 years, 1 month, 20 days</td><td>24:2</td></tr>
+            <tr><td><strong>Zendaya</strong></td><td>September 1, 1996</td><td>29 years, 5 months, 6 days</td><td>29:5</td></tr>
+            <tr><td><strong>Simone Biles</strong></td><td>March 14, 1997</td><td>28 years, 10 months, 24 days</td><td>28:11</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Notice how Simone Biles at 28:11 is very close to turning 29, while LeBron James at 41:1 recently had a birthday. These differences matter significantly in contexts like sports eligibility where age cutoffs determine competition categories. Use our <a href="/#panel-diff">age difference calculator</a> to compare your age to any celebrity.</p>
+
+      <h2 id="school-cutoffs">School Enrollment Cutoff Dates by State</h2>
+      <p>One of the most common uses of chronological age is determining school enrollment eligibility. Each US state sets its own cutoff date for kindergarten enrollment. Children must reach a certain age (typically 5) by this date to start school that year. According to the <a href="https://nces.ed.gov/" target="_blank" rel="noopener">National Center for Education Statistics (NCES)</a>:</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Cutoff Date</th><th>States</th><th>Born Between (for Fall 2026)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>July 31</strong></td><td>Indiana</td><td>Aug 1, 2020 - Jul 31, 2021</td></tr>
+            <tr><td><strong>August 1</strong></td><td>Hawaii, Missouri</td><td>Aug 2, 2020 - Aug 1, 2021</td></tr>
+            <tr><td><strong>August 31</strong></td><td>Alaska</td><td>Sep 1, 2020 - Aug 31, 2021</td></tr>
+            <tr><td><strong>September 1</strong></td><td>Arizona, California, Colorado, Delaware, Florida, Georgia, Idaho, Illinois, Kansas, Kentucky, Louisiana, Maryland, Massachusetts, Minnesota, Mississippi, Nebraska, Nevada, New Hampshire, New Mexico, North Carolina, Ohio, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Utah, Virginia, Washington, West Virginia, Wisconsin, Wyoming, DC</td><td>Sep 2, 2020 - Sep 1, 2021</td></tr>
+            <tr><td><strong>September 15</strong></td><td>Michigan</td><td>Sep 16, 2020 - Sep 15, 2021</td></tr>
+            <tr><td><strong>September 30</strong></td><td>Iowa, New Jersey, Vermont</td><td>Oct 1, 2020 - Sep 30, 2021</td></tr>
+            <tr><td><strong>October 1</strong></td><td>Arkansas, Connecticut, Maine</td><td>Oct 2, 2020 - Oct 1, 2021</td></tr>
+            <tr><td><strong>October 15</strong></td><td>Montana, New York</td><td>Oct 16, 2020 - Oct 15, 2021</td></tr>
+            <tr><td><strong>December 1</strong></td><td>Oklahoma</td><td>Dec 2, 2020 - Dec 1, 2021</td></tr>
+            <tr><td><strong>December 31 / January 1</strong></td><td>Alabama (flexible)</td><td>Varies</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Children born near the cutoff date are often called "young kindergartners" or "late birthdays" and may benefit from academic redshirting (delaying enrollment by a year). For more on age-based educational considerations, see our <a href="/blog/age-milestones/">age milestones guide</a>.</p>
+
+      <h2 id="errors">Common Calculation Errors</h2>
+      <p>Even experienced professionals make chronological age calculation errors. Here are the most frequent mistakes and how to avoid them.</p>
+
+      <h3>Forgetting to Borrow</h3>
+      <p>The most common error is subtracting the larger day from the smaller day without borrowing. If the test date day is smaller than the birth date day, you must borrow 1 from the months column and add the appropriate number of days (28, 29, 30, or 31 depending on the previous month). Failing to borrow produces an incorrect and often negative number of days.</p>
+
+      <h3>Using 30 Days for Every Month</h3>
+      <p>When borrowing, the number of days you add depends on the month before the test month. February has 28 or 29 days, April has 30, March has 31, and so on. Using a flat 30 days for every month introduces errors of up to 3 days, which can change the rounding result.</p>
+
+      <h3>Applying the Wrong Rounding Threshold</h3>
+      <p>The difference between the 15-day and 16-day rules matters when the remainder is exactly 15 days. Under the 15-day rule, 15 days rounds up. Under the 16-day rule, 15 days rounds down. This single day can change the Y:M result by one month, which can change a percentile rank or standard score. Always verify which rule your test requires.</p>
+
+      <h3>Confusing Test Date and Birth Date</h3>
+      <p>The test date goes on top (the date you are subtracting FROM), and the birth date goes on the bottom (the date you are subtracting). Reversing them produces nonsensical results. This is a particular risk when dates are close together or when copying from forms where the order may not be obvious.</p>
+
+      <h3>Not Accounting for Premature Birth</h3>
+      <p>For children born prematurely, many assessment tools require "age correction" or "adjusted age" for the first 2-3 years of life. This means subtracting the number of weeks of prematurity from the chronological age. For example, a child born 8 weeks early who is chronologically 24 months old would be assessed as 22 months old. Failing to correct for prematurity can make a premature child appear delayed when they are actually developing normally for their adjusted age. The <a href="https://www.who.int/" target="_blank" rel="noopener">World Health Organization (WHO)</a> provides guidelines for adjusted age calculations.</p>
+
+      <h3>Error Prevention Checklist</h3>
+      <ul>
+        <li>Double-check that you have the correct birth date and test date</li>
+        <li>Verify you placed test date on top, birth date on bottom</li>
+        <li>When borrowing, use the correct number of days for the specific month</li>
+        <li>Check which rounding rule applies to your specific test</li>
+        <li>For children under 2-3, ask about prematurity and calculate adjusted age if needed</li>
+        <li>Use a calculator to verify your manual calculation</li>
+      </ul>
+
+      <h2 id="vs-other">Chronological Age vs. Other Age Measurements</h2>
+      <p>It is important to distinguish chronological age from other types of age measurements. Each serves a different purpose.</p>
+
+      <div class="chart-compare">
+        <div class="chart-compare-legend"><span class="legend-male">Objective Measure</span><span class="legend-female">Subjective/Variable</span></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Chronological Age</span><div class="chart-compare-bars"><div class="chart-compare-bar male" style="width:100%">Time since birth</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Biological Age</span><div class="chart-compare-bars"><div class="chart-compare-bar female" style="width:85%">Body's actual age</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Developmental Age</span><div class="chart-compare-bars"><div class="chart-compare-bar female" style="width:75%">Functional abilities</div></div></div>
+        <div class="chart-compare-row"><span class="chart-compare-label">Mental Age</span><div class="chart-compare-bars"><div class="chart-compare-bar female" style="width:70%">Intellectual level</div></div></div>
+      </div>
+
+      <ul>
+        <li><strong>Chronological age</strong> is the actual elapsed time since birth. It is objective and unchangeable. This is what a chronological age calculator computes.</li>
+        <li><strong>Biological age</strong> measures how old your body appears based on biomarkers like telomere length, DNA methylation, and organ function. It can be higher or lower than chronological age. Learn more in our <a href="/blog/biological-age-vs-chronological/">biological vs. chronological age</a> guide.</li>
+        <li><strong>Developmental age</strong> measures a child's functional abilities compared to age norms. A child with a chronological age of 5:0 might have a developmental age of 3:6 in language and 5:6 in motor skills.</li>
+        <li><strong>Mental age</strong> is an older concept from IQ testing that describes the age level at which a person performs intellectually. It has largely been replaced by standard scores and percentile ranks.</li>
+      </ul>
+      <p>For a comprehensive overview of all age calculation methods, see our <a href="/blog/age-calculator-guide/">age calculator guide</a>. You can also explore specific <a href="/blog/age-milestones/">age milestones</a> to see what developmental benchmarks correspond to each chronological age, or use our <a href="/blog/life-expectancy-calculator/">life expectancy calculator</a> to explore age and longevity.</p>
+
+      <h2 id="history">History of Chronological Age in Psychological Testing</h2>
+      <p>The precise measurement of chronological age has a fascinating history intertwined with the development of psychological testing itself.</p>
+
+      <h3>Early Days: Binet-Simon Scale (1905)</h3>
+      <p>Alfred Binet and Theodore Simon developed the first practical intelligence test in Paris in 1905 at the request of the French government, which wanted to identify children who needed educational support. Their test introduced the concept of "mental age" - the age at which a typical child could perform certain tasks. Comparing mental age to chronological age became the foundation of intelligence measurement.</p>
+
+      <h3>Stanford-Binet and the IQ Formula (1916)</h3>
+      <p>Lewis Terman at Stanford University adapted the Binet-Simon scale for American use and introduced the famous IQ formula: (Mental Age / Chronological Age) x 100. This made precise chronological age calculation essential. A child with a mental age of 10 and chronological age of 8 would have an IQ of 125.</p>
+
+      <h3>David Wechsler and Deviation IQ (1939)</h3>
+      <p>David Wechsler introduced a new approach with the Wechsler-Bellevue Intelligence Scale in 1939. Instead of the mental age/chronological age ratio, he used a "deviation IQ" based on how far a person's score deviated from the average for their age group. This approach still required precise chronological age to select the correct norm group, but eliminated some mathematical problems with the ratio approach.</p>
+
+      <h3>Modern Era: Fine-Grained Norms (1990s-Present)</h3>
+      <p>Modern psychological tests use increasingly fine-grained age norms. The WISC-V (2014) and WAIS-IV (2008) use 4-month age bands, meaning a child at 6:0 is compared to different norms than a child at 6:4. This precision makes accurate chronological age calculation more important than ever.</p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What does 7:4 mean in chronological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The notation 7:4 means 7 years and 4 months. The number before the colon is the years, and the number after the colon is the months (0-11). This format is standard in educational and psychological testing where precise age measurement is required. Some systems use a hyphen (7-4) instead of a colon, but the meaning is identical.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why is chronological age important for standardized tests?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Standardized tests use norm tables that are organized by age groups, often in 1-4 month bands. The raw score a child earns is compared to the scores of children in the same age band. If the chronological age is calculated incorrectly, the wrong norm table is used, producing an inaccurate standard score and percentile rank. A one-month error can change a score by 2-5 points, potentially affecting diagnoses and service eligibility.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the 16-day rounding rule?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The 16-day rule is used by Wechsler intelligence scales (WISC-V, WAIS-IV, WPPSI-IV) and many other tests. When converting from years:months:days to years:months, if the days are 0-15, you drop them (round down). If the days are 16 or more, you add 1 to the months (round up). For example, 7:4:15 becomes 7:4, but 7:4:16 becomes 7:5.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I borrow when the test date day is smaller than the birth date day?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Subtract 1 from the test date's month column and add the number of days in the month before the test month. For example, if the test date is March 5, borrow 1 from March (making it February) and add 28 or 29 days (depending on leap year) to the 5, giving you 33 or 34. Then subtract the birth date's day from this new number.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is adjusted age for premature babies?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Adjusted age (also called corrected age) accounts for premature birth by subtracting the weeks of prematurity from the chronological age. A baby born at 32 weeks (8 weeks early) who is chronologically 6 months old has an adjusted age of approximately 4 months. Most assessment tools recommend using adjusted age for developmental evaluations until the child is 2-3 years old. The <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> and <a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC</a> provide guidance on adjusted age calculations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is chronological age the same as biological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>No. Chronological age is the exact time elapsed since birth, measured in calendar units. Biological age reflects how old your body actually is based on biomarkers, and it can be higher or lower than chronological age depending on genetics, lifestyle, and health. See our <a href="/blog/biological-age-vs-chronological/">biological vs. chronological age</a> guide for a detailed comparison.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between the 15-day and 16-day rounding rules?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The key difference is what happens when the remainder is exactly 15 days. Under the 15-day rule, 15 days rounds UP to the next month. Under the 16-day rule, 15 days rounds DOWN (is dropped). So an age of 7:4:15 becomes 7:5 with the 15-day rule but stays 7:4 with the 16-day rule. Always check your specific test manual to determine which rule applies.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do school enrollment cutoff dates use chronological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>School districts require children to reach a specific age (usually 5 for kindergarten) by a cutoff date (often September 1) to enroll that year. A child who turns 5 on September 2 would have to wait until the following year. This makes precise chronological age calculation important for educational planning. Parents of children with late summer or fall birthdays often consider "redshirting" (delaying enrollment) based on these cutoffs.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I use a calculator or app instead of calculating manually?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes, our <a href="/">free age calculator</a> computes chronological age automatically. Many psychological testing software programs also include built-in age calculators. However, professionals should understand the manual calculation process to verify computer results and catch errors. Some testing situations may not have access to technology, making manual calculation skills essential.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do different tests use different rounding rules?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Different test publishers developed their own conventions over time. The 16-day rule (used by Wechsler tests) was established by David Wechsler and has been maintained for consistency across editions. Other publishers chose different thresholds based on their own research or practical considerations. The lack of a universal standard is unfortunate, but professionals must adapt to the specific requirements of each instrument they use.</p></div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin: 2rem 0;"><a href="/#panel-basic" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none; box-shadow: 0 4px 14px 0 rgba(168, 85, 247, 0.4);">Calculate My Chronological Age &rarr;</a></p>
+
+      <h2>Sources and Further Reading</h2>
+      <ul>
+        <li><a href="https://www.apa.org/science/programs/testing/standards" target="_blank" rel="noopener">American Psychological Association (APA) -- Standards for Educational and Psychological Testing</a></li>
+        <li><a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC Growth Charts</a></li>
+        <li><a href="https://nces.ed.gov/" target="_blank" rel="noopener">National Center for Education Statistics (NCES)</a></li>
+        <li><a href="https://www.who.int/standards/classifications" target="_blank" rel="noopener">World Health Organization (WHO) -- Health Standards</a></li>
+        <li>Wechsler, D. (2014). <em>WISC-V Administration and Scoring Manual</em>. NCS Pearson.</li>
+        <li>Sattler, J.M. (2018). <em>Assessment of Children: Cognitive Foundations and Applications</em>. Jerome M. Sattler, Publisher.</li>
+      </ul>
+
+      <div class="related-grid">
+        <a href="/blog/chronological-age-explained/" class="related-card"><div class="related-card-title">Chronological Age Explained</div><p class="related-card-desc">In-depth theory behind chronological age and how it is used</p></a>
+        <a href="/blog/biological-age-vs-chronological/" class="related-card"><div class="related-card-title">Biological vs. Chronological Age</div><p class="related-card-desc">How your body's age can differ from calendar age</p></a>
+        <a href="/blog/age-calculator-guide/" class="related-card"><div class="related-card-title">Age Calculator Guide</div><p class="related-card-desc">Complete guide to every type of age calculation</p></a>
+        <a href="/blog/how-old-am-i/" class="related-card"><div class="related-card-title">How Old Am I?</div><p class="related-card-desc">Find your exact age right now in years, months, and days</p></a>
+        <a href="/blog/age-in-days-calculator/" class="related-card"><div class="related-card-title">Age in Days Calculator</div><p class="related-card-desc">Calculate your exact age in days, hours, and minutes</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones Guide</div><p class="related-card-desc">Every major developmental and legal milestone by age</p></a>
+      </div>
+    </article>
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/#panel-diff">Age Difference</a></li><li><a href="/#panel-days">Days Old</a></li><li><a href="/#panel-korean">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const mobileNav = document.querySelector('.nav-mobile');
+      if (toggle && mobileNav) { toggle.addEventListener('click', function() { mobileNav.classList.toggle('active'); }); }
+      document.querySelectorAll('.faq-question').forEach(function(btn) { btn.addEventListener('click', function() { this.closest('.faq-item').classList.toggle('open'); }); });
+    });
+  </script>
+</body>
+</html>

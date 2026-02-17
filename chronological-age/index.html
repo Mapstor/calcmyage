@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronological Age Calculator - For Assessments & Education</title>
+  <meta name="description" content="Free chronological age calculator for educational assessments and evaluations. Calculate age in Years:Months format for Pearson tests, WISC, psychological evaluations, and special education.">
+  <link rel="canonical" href="https://calcmyage.org/chronological-age/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/chronological-age/">
+  <meta property="og:title" content="Chronological Age Calculator - For Assessments & Education">
+  <meta property="og:description" content="Free chronological age calculator for educational assessments. Calculate age in Years:Months format for Pearson tests, WISC, and psychological evaluations.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Chronological Age Calculator",
+    "description": "Calculate chronological age in Years:Months format for educational assessments, Pearson tests, psychological evaluations, and special education purposes.",
+    "url": "https://calcmyage.org/chronological-age/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Chronological Age Calculation", "Years:Months Format", "Decimal Age", "Total Months", "Assessment Date Support"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between chronological age and mental age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chronological age is your actual age in years and months since birth. Mental age (now largely outdated) refers to the age level at which a person performs cognitively. For example, a 10-year-old performing like an average 12-year-old was said to have a mental age of 12. The American Psychological Association discourages mental age terminology because it can be misinterpreted. Modern assessments use standard scores (mean=100, SD=15) instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do Pearson assessments need chronological age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pearson assessments (WISC, WAIS, etc.) use age-based norms to convert raw scores into standard scores. The norm tables are organized by chronological age, often in 2-4 month intervals. An accurate age ensures the correct norm group is used, which directly affects IQ and standard scores. Using the wrong norm group can result in scores that are 5-10 points off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How precise does chronological age need to be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most standardized assessments, chronological age should be calculated to the month. Some tests like the Bayley-4 require precision to the day for infants. Being off by even one month can shift which norm table is used, potentially affecting eligibility decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a child was born premature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For premature infants, the American Academy of Pediatrics recommends using corrected age (adjusted for prematurity) until age 2-3. For example, a baby born 8 weeks early at 12 months chronological age would use a corrected age of 10 months. After age 2-3, most assessments switch to chronological age. Always check the specific test manual for guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is decimal age calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decimal age = years + (months/12). For example, 7 years 4 months = 7 + (4/12) = 7.33 years. This format is used in research, statistical analysis, and regression models per CDC statistical guidelines. For more precision, some researchers use total days divided by 365.25 (accounting for leap years)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use today's date instead of the test date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No - you must use the actual date when the assessment was administered. Per APA testing standards, standardized test scores are only valid for the age at testing. If you're preparing for an upcoming test, you can estimate using the scheduled test date, but official scoring requires the actual administration date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the WISC-V and who needs it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Wechsler Intelligence Scale for Children (WISC-V) is the most widely used IQ test for children ages 6:0-16:11. It's used to identify intellectual disabilities, giftedness, learning disabilities, and ADHD. The test requires precise chronological age to select the correct norm table, with norms provided in 4-month intervals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does chronological age affect special education eligibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under IDEA, students ages 3-21 with qualifying disabilities are entitled to special education services. Eligibility requires documented assessments showing a discrepancy between ability and achievement, or significant developmental delays. Chronological age determines which tests can be used and which norm groups apply. Age also affects transition planning, which must begin by age 16."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between age equivalents and standard scores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Age equivalents describe the age at which a score is average (e.g., \"reading at age 9:6 level\"). Standard scores compare performance to same-age peers (e.g., SS=100 is average, SS=115 is one standard deviation above). The National Association of School Psychologists recommends using standard scores because age equivalents can be misleading and don't account for normal variation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate chronological age for a multi-day assessment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For assessments administered over multiple days, most test manuals specify using either the first day of testing or the date when the majority of subtests were given. The Pearson WISC-V manual states to use the first day of testing. If sessions span more than 30 days, some manuals require recalculating age for different sessions. Always consult the specific test manual for guidance."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Use the Chronological Age Calculator",
+  "description": "Step-by-step guide to using the Chronological Age Calculator",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Step 1",
+      "text": "If the test day is less than the birth day, borrow 30 days from the month"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Step 2",
+      "text": "If the test month is less than the birth month, borrow 12 months from the year"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Step 3",
+      "text": "Some assessments round to the nearest month; others use exact days"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Step 4",
+      "text": "For premature infants, subtract weeks of prematurity until age 2-3"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Step 5",
+      "text": "Always use the actual test administration date, not the report date"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/" class="active">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub active">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Chronological Age Calculator</h1>
+    <p class="intro-text">Calculate chronological age in Years:Months format for educational assessments, psychological evaluations, and standardized testing. Essential for <a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson assessments</a>, WISC, WAIS, and special education evaluations under <a href="https://sites.ed.gov/idea/" target="_blank" rel="noopener">IDEA</a>.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Chronological age format</strong> is expressed as Years:Months (e.g., 7:4 = 7 years, 4 months) per <a href="https://www.apa.org/ed/graduate/specialize/testing" target="_blank" rel="noopener">APA testing standards</a></li>
+        <li><strong>Used in standardized testing</strong> like <a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-%26-Neuro/Wechsler-Intelligence-Scale-for-Children-%7C-Fifth-Edition/p/100000771.html" target="_blank" rel="noopener">WISC-V</a>, WAIS-IV, Woodcock-Johnson, and IQ tests</li>
+        <li><strong>Calculated from birth date to test date</strong> - always use the actual assessment administration date, not today</li>
+        <li><strong>Essential for norm comparisons</strong> - test publishers provide age-based norms in 2-4 month intervals</li>
+        <li><strong>Decimal age</strong> (e.g., 7.33) is used in research and statistical analysis per <a href="https://www.cdc.gov/nchs/products/databriefs.htm" target="_blank" rel="noopener">CDC guidelines</a></li>
+        <li><strong>Special education eligibility</strong> under <a href="https://sites.ed.gov/idea/about-idea/" target="_blank" rel="noopener">IDEA</a> requires precise age calculation for services</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="chrono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span>Chronological Age</span></button>
+      </div>
+
+      <!-- CHRONOLOGICAL AGE -->
+      <div id="panel-chrono" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" id="dob-chrono" class="form-input dob-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Test/Assessment Date</label>
+              <input type="date" id="test-date" class="form-input target-date-input">
+            </div>
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-chrono-btn">Calculate Chronological Age</button>
+
+        <div class="results-section" id="chrono-results">
+          <div class="results-grid results-grid-3">
+            <div class="result-item"><div class="result-item-label">Years</div><div class="result-item-value highlight" id="chrono-years">--</div></div>
+            <div class="result-item"><div class="result-item-label">Months</div><div class="result-item-value" id="chrono-months">--</div></div>
+            <div class="result-item"><div class="result-item-label">Days</div><div class="result-item-value" id="chrono-days">--</div></div>
+          </div>
+          <div class="results-grid results-grid-3" style="margin-top:0.75rem;">
+            <div class="result-item"><div class="result-item-label">Total Months</div><div class="result-item-value" id="chrono-total-months">--</div></div>
+            <div class="result-item"><div class="result-item-label">Decimal Age</div><div class="result-item-value" id="chrono-decimal">--</div></div>
+            <div class="result-item"><div class="result-item-label">Format (Y:M)</div><div class="result-item-value highlight" id="chrono-format">--</div></div>
+          </div>
+          <p style="font-size:0.8125rem;color:var(--gray-500);margin-top:1rem;">Chronological age format (Years:Months) is used in Pearson assessments and educational evaluations.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our chronological age calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>WISC-V assessment</td><td>Born: May 15, 2017 | Test: Feb 17, 2026</td><td>8:9 (8 years, 9 months)</td><td>IQ test norm table lookup</td></tr>
+            <tr><td>Kindergarten screening</td><td>Born: Nov 3, 2020 | Test: Aug 15, 2026</td><td>5:9 (5 years, 9 months)</td><td>School readiness evaluation</td></tr>
+            <tr><td>Special education eval</td><td>Born: Feb 28, 2015 | Test: Mar 1, 2026</td><td>11:0 (11 years, 0 months)</td><td>IDEA eligibility determination</td></tr>
+            <tr><td>Gifted testing</td><td>Born: Jul 22, 2018 | Test: Dec 10, 2025</td><td>7:4 (decimal: 7.39)</td><td>Gifted program qualification</td></tr>
+            <tr><td>Infant assessment</td><td>Born: Sep 5, 2025 | Test: Feb 17, 2026</td><td>5 months, 12 days</td><td>Bayley-4 developmental screening</td></tr>
+            <tr><td>Preemie correction</td><td>Born: Jun 1, 2024 (8 weeks early) | Test: Feb 17, 2026</td><td>Actual: 1:8 | Corrected: 1:6</td><td>Adjusting for prematurity</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- What is Chronological Age -->
+    <section class="content-section">
+      <h2>What is Chronological Age?</h2>
+      <p>Chronological age refers to the actual amount of time that has passed since a person's birth. In educational and psychological assessments, it's typically expressed in a specific format:</p>
+
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="education">education</div>
+          <div class="fun-fact-content">
+            <h4>Years:Months Format (7:4)</h4>
+            <p>The standard notation used by <a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson</a> and most test publishers. 7:4 means 7 years, 4 months old.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="chart">chart</div>
+          <div class="fun-fact-content">
+            <h4>Decimal Age (7.33)</h4>
+            <p>Used in research and statistical analysis. Calculate as years + (months/12). Essential for regression models.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="calendar">calendar</div>
+          <div class="fun-fact-content">
+            <h4>Total Months (88)</h4>
+            <p>Some assessments like <a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Developmental-Early-Childhood/Bayley-Scales-of-Infant-and-Toddler-Development-%7C-Fourth-Edition/p/100001996.html" target="_blank" rel="noopener">Bayley-4</a> use total months for infants and toddlers.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="test">test</div>
+          <div class="fun-fact-content">
+            <h4>Test Date Matters</h4>
+            <p>Always use the actual test administration date. Using today's date will give incorrect norm tables.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="brain">brain</div>
+          <div class="fun-fact-content">
+            <h4>Norm Tables by Age</h4>
+            <p>IQ and achievement tests use age-based norms, typically in 2-4 month intervals for children.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon" data-icon="child">child</div>
+          <div class="fun-fact-content">
+            <h4>Corrected Age for Preemies</h4>
+            <p>Premature infants use corrected age (adjusted for prematurity) until age 2-3 per <a href="https://www.aap.org/" target="_blank" rel="noopener">AAP guidelines</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Chronological Age Matters -->
+    <section class="content-section">
+      <h2>Why Chronological Age Matters in Assessments</h2>
+      <p>Chronological age is crucial in educational and psychological testing for several key reasons:</p>
+      <p><strong>Norm-Referenced Comparisons:</strong> Standardized tests compare a child's performance to others of the same chronological age. A standard score of "100" on an IQ test means average for that specific age group. The <a href="https://www.apa.org/science/programs/testing/standards" target="_blank" rel="noopener">APA Standards for Educational and Psychological Testing</a> require precise age-based norms.</p>
+      <p><strong>Developmental Milestones:</strong> According to the <a href="https://www.cdc.gov/ncbddd/childdevelopment/facts.html" target="_blank" rel="noopener">CDC's developmental milestones</a>, skills develop at predictable rates. A 6-year-old reading at a "4th grade level" is advanced; a 10-year-old at the same level might need intervention.</p>
+      <p><strong>Eligibility Determination:</strong> Under <a href="https://sites.ed.gov/idea/" target="_blank" rel="noopener">IDEA (Individuals with Disabilities Education Act)</a>, special education eligibility requires documented assessments with accurate chronological age. Early intervention services under <a href="https://ectacenter.org/partc/partc.asp" target="_blank" rel="noopener">Part C</a> serve children birth to age 3.</p>
+      <p><strong>Research Accuracy:</strong> Studies on child development published in journals like <a href="https://www.apa.org/pubs/journals/dev" target="_blank" rel="noopener">Developmental Psychology</a> require precise age calculations to ensure valid comparisons.</p>
+    </section>
+
+    <!-- Assessment Age Ranges Chart -->
+    <section class="content-section">
+      <h2>Assessment Age Ranges Comparison</h2>
+      <p>Different standardized assessments cover different age ranges. This chart shows the typical age spans for common cognitive and developmental tests:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item"><span class="chart-bar-label">Bayley-4 (Infant)</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 5%;"></div></div><span class="chart-bar-value">0-3.5 yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">WPPSI-IV (Preschool)</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 8%;"></div></div><span class="chart-bar-value">2.5-7.5 yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">WISC-V (Children)</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 15%;"></div></div><span class="chart-bar-value">6-16 yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Stanford-Binet 5</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 95%;"></div></div><span class="chart-bar-value">2-85+ yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">WAIS-IV (Adult)</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 85%;"></div></div><span class="chart-bar-value">16-90 yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Woodcock-Johnson IV</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div><span class="chart-bar-value">2-90+ yrs</span></div>
+        <div class="chart-bar-item"><span class="chart-bar-label">Vineland-3</span><div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div><span class="chart-bar-value">0-90+ yrs</span></div>
+      </div>
+      <p style="font-size:0.875rem;color:var(--gray-600);margin-top:1rem;">Note: Age ranges shown are approximate. Always verify with the current test manual for exact age limits.</p>
+    </section>
+
+    <!-- Common Assessments -->
+    <section class="content-section">
+      <h2>Assessments Using Chronological Age</h2>
+      <p>The following standardized tests require precise chronological age calculation for scoring. All use age-based norm tables to convert raw scores into standard scores:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Assessment</th><th>Type</th><th>Age Range</th><th>Norm Intervals</th><th>Publisher</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-%26-Neuro/Wechsler-Intelligence-Scale-for-Children-%7C-Fifth-Edition/p/100000771.html" target="_blank" rel="noopener">WISC-V</a></td><td>IQ/Cognitive</td><td>6:0 - 16:11</td><td>4 months</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-%26-Neuro/Wechsler-Adult-Intelligence-Scale-%7C-Fourth-Edition/p/100000392.html" target="_blank" rel="noopener">WAIS-IV</a></td><td>IQ/Cognitive (Adult)</td><td>16:0 - 90:11</td><td>Varies by age</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-%26-Neuro/Wechsler-Preschool-and-Primary-Scale-of-Intelligence-%7C-Fourth-Edition/p/100000102.html" target="_blank" rel="noopener">WPPSI-IV</a></td><td>IQ/Cognitive (Preschool)</td><td>2:6 - 7:7</td><td>3 months</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.hmhco.com/programs/woodcock-johnson" target="_blank" rel="noopener">Woodcock-Johnson IV</a></td><td>Achievement/Cognitive</td><td>2:0 - 90+</td><td>1 year (varies)</td><td>Riverside/HMH</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Developmental-Early-Childhood/Bayley-Scales-of-Infant-and-Toddler-Development-%7C-Fourth-Edition/p/100001996.html" target="_blank" rel="noopener">Bayley-4</a></td><td>Developmental</td><td>1 - 42 months</td><td>1 month</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Behavior/Adaptive/Vineland-Adaptive-Behavior-Scales-%7C-Third-Edition/p/100001622.html" target="_blank" rel="noopener">Vineland-3</a></td><td>Adaptive Behavior</td><td>0:0 - 90+</td><td>Varies by age</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Behavior/Comprehensive/Behavior-Assessment-System-for-Children-%7C-Third-Edition-/p/100001402.html" target="_blank" rel="noopener">BASC-3</a></td><td>Behavioral/Emotional</td><td>2:0 - 21:11</td><td>1-2 years</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.hmhco.com/programs/stanford-binet-intelligence-scales" target="_blank" rel="noopener">Stanford-Binet 5</a></td><td>IQ/Cognitive</td><td>2:0 - 85+</td><td>Varies</td><td>Riverside/HMH</td></tr>
+            <tr><td><a href="https://www.wpspublish.com/conners-4-conners-fourth-edition" target="_blank" rel="noopener">Conners-4</a></td><td>ADHD/Attention</td><td>6:0 - 18:11</td><td>1 year</td><td>WPS</td></tr>
+            <tr><td><a href="https://www.proedinc.com/Products/14640/gort5-grayoral-reading-tests-fifth-edition.aspx" target="_blank" rel="noopener">GORT-5</a></td><td>Reading Fluency</td><td>6:0 - 23:11</td><td>6 months</td><td>PRO-ED</td></tr>
+            <tr><td><a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Academic-Learning/Brief/Kaufman-Brief-Intelligence-Test-%7C-Second-Edition/p/100000390.html" target="_blank" rel="noopener">KBIT-2</a></td><td>Brief IQ Screening</td><td>4:0 - 90+</td><td>Varies</td><td>Pearson</td></tr>
+            <tr><td><a href="https://www.wpspublish.com/beery-vmi-beery-buktenica-developmental-test-of-visual-motor-integration-sixth-edition" target="_blank" rel="noopener">Beery VMI-6</a></td><td>Visual-Motor</td><td>2:0 - 100</td><td>1 year</td><td>WPS</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.875rem;color:var(--gray-600);margin-top:1rem;">Sources: Publisher websites. Age ranges and norm intervals may vary by edition. Always consult the current test manual.</p>
+    </section>
+
+    <!-- Special Education & IDEA -->
+    <section class="content-section">
+      <h2>Chronological Age in Special Education</h2>
+      <p>Under the <a href="https://sites.ed.gov/idea/" target="_blank" rel="noopener">Individuals with Disabilities Education Act (IDEA)</a>, chronological age plays a critical role in determining eligibility for special education services:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>IDEA Part</th><th>Age Range</th><th>Services</th><th>Age Precision Needed</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://ectacenter.org/partc/partc.asp" target="_blank" rel="noopener">Part C</a></td><td>Birth - 3 years</td><td>Early Intervention</td><td>Months (corrected for prematurity)</td></tr>
+            <tr><td><a href="https://sites.ed.gov/idea/statute-chapter-33/subchapter-ii" target="_blank" rel="noopener">Part B, Section 619</a></td><td>3 - 5 years</td><td>Preschool Special Ed</td><td>Years:Months</td></tr>
+            <tr><td><a href="https://sites.ed.gov/idea/statute-chapter-33/subchapter-ii" target="_blank" rel="noopener">Part B</a></td><td>3 - 21 years</td><td>K-12 Special Education</td><td>Years:Months</td></tr>
+            <tr><td>Transition Services</td><td>16+ years</td><td>Post-secondary planning</td><td>Years (for graduation)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:1rem;"><strong>Key Requirements:</strong> Initial evaluations must be completed within 60 days of consent. Reevaluations occur every 3 years or as needed. Each evaluation requires accurate chronological age for norm-referenced comparisons.</p>
+    </section>
+
+    <!-- School Entry Age Cutoffs -->
+    <section class="content-section">
+      <h2>School Entry Age Cutoffs by State</h2>
+      <p>Kindergarten entry age varies by state. Children must reach the cutoff age by the specified date to enroll:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Cutoff Date</th><th>Age Required</th><th>States</th></tr></thead>
+          <tbody>
+            <tr><td>August 1</td><td>5 years old</td><td>Hawaii, Missouri</td></tr>
+            <tr><td>September 1</td><td>5 years old</td><td>Arizona, Florida, Illinois, Maine, Michigan, Montana, New Hampshire, Texas, Vermont, Wisconsin</td></tr>
+            <tr><td>September 15</td><td>5 years old</td><td>Oklahoma</td></tr>
+            <tr><td>September 30</td><td>5 years old</td><td>Arkansas, Minnesota, North Carolina, South Carolina</td></tr>
+            <tr><td>October 1</td><td>5 years old</td><td>Georgia, Iowa, Nevada, Tennessee, Virginia, Washington</td></tr>
+            <tr><td>October 15</td><td>5 years old</td><td>New Jersey</td></tr>
+            <tr><td>December 1</td><td>5 years old</td><td>California (transitioning), Kentucky, Ohio</td></tr>
+            <tr><td>December 31</td><td>5 years old</td><td>Connecticut (local option)</td></tr>
+            <tr><td>Local District</td><td>Varies</td><td>Colorado, Massachusetts, New York, Pennsylvania</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.875rem;color:var(--gray-600);margin-top:1rem;">Source: <a href="https://www.ecs.org/50-state-comparison-state-kindergarten-through-third-grade-policies/" target="_blank" rel="noopener">Education Commission of the States</a>. Cutoff dates change periodically; verify with your local school district.</p>
+    </section>
+
+    <!-- How to Calculate -->
+    <section class="content-section">
+      <h2>How to Calculate Chronological Age</h2>
+      <p>The calculation involves subtracting the birth date from the test date, accounting for month and day differences. This method is standardized across most <a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson assessments</a>:</p>
+      <div style="background:var(--primary-bg);padding:1.5rem;border-radius:var(--radius-lg);margin:1rem 0;">
+        <p style="font-weight:600;margin-bottom:0.5rem;">Example Calculation:</p>
+        <p style="margin:0.25rem 0;">Birth Date: March 15, 2018</p>
+        <p style="margin:0.25rem 0;">Test Date: November 8, 2025</p>
+        <p style="margin:0.25rem 0;"><strong>Step 1:</strong> Calculate years: 2025 - 2018 = 7 years</p>
+        <p style="margin:0.25rem 0;"><strong>Step 2:</strong> Calculate months: November (11) - March (3) = 8 months</p>
+        <p style="margin:0.25rem 0;"><strong>Step 3:</strong> Adjust for days: 8 < 15, so borrow 1 month. Months = 8 - 1 = 7</p>
+        <p style="margin:0.25rem 0;"><strong>Step 4:</strong> Calculate days: (30 + 8) - 15 = 23 days (ignored in Y:M format)</p>
+        <p style="margin:0.5rem 0;font-size:1.125rem;font-weight:600;color:var(--primary);">Result: 7:7 (7 years, 7 months)</p>
+      </div>
+      <p><strong>Important Notes from <a href="https://www.apa.org/science/programs/testing/standards" target="_blank" rel="noopener">APA Testing Standards</a>:</strong></p>
+      <ul style="margin-left:1.5rem;">
+        <li>If the test day is less than the birth day, borrow 30 days from the month</li>
+        <li>If the test month is less than the birth month, borrow 12 months from the year</li>
+        <li>Some assessments round to the nearest month; others use exact days</li>
+        <li>For premature infants, subtract weeks of prematurity until age 2-3</li>
+        <li>Always use the actual test administration date, not the report date</li>
+      </ul>
+    </section>
+
+    <!-- Chronological vs Other Age Types -->
+    <section class="content-section">
+      <h2>Chronological Age vs. Other Age Types</h2>
+      <p>Understanding the difference between various age concepts used in assessments:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Age Type</th><th>Definition</th><th>Used For</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Chronological Age</strong></td><td>Time since birth</td><td>Norm table selection, eligibility</td><td>7:4 (7 years, 4 months)</td></tr>
+            <tr><td><strong>Corrected Age</strong></td><td>Adjusted for prematurity</td><td>Infant assessments (birth-3)</td><td>Born 8 weeks early: CA 12mo, Corrected 10mo</td></tr>
+            <tr><td><strong>Mental Age</strong></td><td>Cognitive performance level (outdated)</td><td>Historical IQ calculation</td><td>10-year-old performing like 12-year-old</td></tr>
+            <tr><td><strong>Developmental Age</strong></td><td>Functional skill level</td><td>Therapy planning</td><td>Motor skills at 3-year level</td></tr>
+            <tr><td><strong>Age Equivalent</strong></td><td>Score translation to age level</td><td>Achievement tests</td><td>Reading at 4th grade level (9:6)</td></tr>
+            <tr><td><strong>Test Age</strong></td><td>Lower bound of norm group</td><td>Some older assessments</td><td>Test age 7:0-7:3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.875rem;color:var(--gray-600);margin-top:1rem;">Note: The <a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association</a> discourages using "mental age" in modern practice due to misinterpretation concerns.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between chronological age and mental age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Chronological age</strong> is your actual age in years and months since birth. <strong>Mental age</strong> (now largely outdated) refers to the age level at which a person performs cognitively. For example, a 10-year-old performing like an average 12-year-old was said to have a mental age of 12. The <a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association</a> discourages mental age terminology because it can be misinterpreted. Modern assessments use standard scores (mean=100, SD=15) instead.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do Pearson assessments need chronological age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson assessments</a> (WISC, WAIS, etc.) use <strong>age-based norms</strong> to convert raw scores into standard scores. The norm tables are organized by chronological age, often in 2-4 month intervals. An accurate age ensures the correct norm group is used, which directly affects IQ and standard scores. Using the wrong norm group can result in scores that are 5-10 points off.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How precise does chronological age need to be?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>For most standardized assessments, chronological age should be calculated to the <strong>month</strong>. Some tests like the <a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Developmental-Early-Childhood/Bayley-Scales-of-Infant-and-Toddler-Development-%7C-Fourth-Edition/p/100001996.html" target="_blank" rel="noopener">Bayley-4</a> require precision to the day for infants. Being off by even one month can shift which norm table is used, potentially affecting eligibility decisions.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What if a child was born premature?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>For premature infants, the <a href="https://www.aap.org/" target="_blank" rel="noopener">American Academy of Pediatrics</a> recommends using <strong>corrected age</strong> (adjusted for prematurity) until age 2-3. For example, a baby born 8 weeks early at 12 months chronological age would use a corrected age of 10 months. After age 2-3, most assessments switch to chronological age. Always check the specific test manual for guidance.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is decimal age calculated?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Decimal age = years + (months/12). For example, 7 years 4 months = 7 + (4/12) = <strong>7.33 years</strong>. This format is used in research, statistical analysis, and regression models per <a href="https://www.cdc.gov/nchs/products/databriefs.htm" target="_blank" rel="noopener">CDC statistical guidelines</a>. For more precision, some researchers use total days divided by 365.25 (accounting for leap years).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I use today's date instead of the test date?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>No</strong> - you must use the actual date when the assessment was administered. Per <a href="https://www.apa.org/science/programs/testing/standards" target="_blank" rel="noopener">APA testing standards</a>, standardized test scores are only valid for the age at testing. If you're preparing for an upcoming test, you can estimate using the scheduled test date, but official scoring requires the actual administration date.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the WISC-V and who needs it?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The <a href="https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-%26-Neuro/Wechsler-Intelligence-Scale-for-Children-%7C-Fifth-Edition/p/100000771.html" target="_blank" rel="noopener">Wechsler Intelligence Scale for Children (WISC-V)</a> is the most widely used IQ test for children ages 6:0-16:11. It's used to identify intellectual disabilities, giftedness, learning disabilities, and ADHD. The test requires precise chronological age to select the correct norm table, with norms provided in 4-month intervals.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How does chronological age affect special education eligibility?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Under <a href="https://sites.ed.gov/idea/" target="_blank" rel="noopener">IDEA</a>, students ages 3-21 with qualifying disabilities are entitled to special education services. Eligibility requires documented assessments showing a discrepancy between ability and achievement, or significant developmental delays. Chronological age determines which tests can be used and which norm groups apply. Age also affects transition planning, which must begin by age 16.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between age equivalents and standard scores?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Age equivalents</strong> describe the age at which a score is average (e.g., "reading at age 9:6 level"). <strong>Standard scores</strong> compare performance to same-age peers (e.g., SS=100 is average, SS=115 is one standard deviation above). The <a href="https://www.nasponline.org/" target="_blank" rel="noopener">National Association of School Psychologists</a> recommends using standard scores because age equivalents can be misleading and don't account for normal variation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I calculate chronological age for a multi-day assessment?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>For assessments administered over multiple days, most test manuals specify using either the <strong>first day</strong> of testing or the date when the majority of subtests were given. The <a href="https://www.pearsonassessments.com/" target="_blank" rel="noopener">Pearson</a> WISC-V manual states to use the first day of testing. If sessions span more than 30 days, some manuals require recalculating age for different sessions. Always consult the specific test manual for guidance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <p>Explore more age-related tools and guides:</p>
+      <div class="related-grid">
+        <a href="/blog/chronological-age-explained/" class="related-card"><div class="related-card-title">Chronological Age Explained</div><p class="related-card-desc">Complete guide to chronological age in educational and psychological assessments.</p></a>
+        <a href="/blog/chronological-age-calculator/" class="related-card"><div class="related-card-title">Chronological Age Calculator Guide</div><p class="related-card-desc">Step-by-step chronological age calculation methods for clinical use.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your exact age in years, months, days, hours, and minutes.</p></a>
+        <a href="/age-on-date/" class="related-card"><div class="related-card-title">Age on Date</div><p class="related-card-desc">Find your age on any specific past or future date.</p></a>
+        <a href="/blog/age-for-school/" class="related-card"><div class="related-card-title">Age for School</div><p class="related-card-desc">Kindergarten cutoff dates by state, redshirting, and the relative age effect.</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones</div><p class="related-card-desc">Every major developmental milestone from birth to adulthood.</p></a>
+        <a href="/blog/age-in-months-calculator/" class="related-card"><div class="related-card-title">Age in Months</div><p class="related-card-desc">Precise age in months for pediatric assessments and development tracking.</p></a>
+        <a href="/blog/biological-age-vs-chronological/" class="related-card"><div class="related-card-title">Biological vs. Chronological Age</div><p class="related-card-desc">How your body ages differently than the calendar.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Chronological Age Now</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Enter your birthdate and test date above to get your precise chronological age in Years:Months format for assessments, evaluations, and eligibility determination.</p>
+      <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Try Age Calculator</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/life-expectancy/">Life Expectancy</a></li><li><a href="/korean-age/">Korean Age</a></li><li><a href="/chronological-age/">Chronological Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/chronological-age-explained/">Chronological Age</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

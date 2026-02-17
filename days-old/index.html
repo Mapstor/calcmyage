@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days Old Calculator - How Many Days Have You Been Alive?</title>
+  <meta name="description" content="Find out exactly how many days you've been alive. Calculate your age in days, hours, minutes, and seconds. Track milestones like 10,000 days old. Free days old calculator.">
+  <link rel="canonical" href="https://calcmyage.org/days-old/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/days-old/">
+  <meta property="og:title" content="Days Old Calculator - How Many Days Have You Been Alive?">
+  <meta property="og:description" content="Find out exactly how many days you've been alive. Calculate your age in days, hours, minutes, and seconds. Track milestones like 10,000 days old.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Days Old Calculator",
+    "description": "Calculate how many days you have been alive, including hours, minutes, and seconds",
+    "url": "https://calcmyage.org/days-old/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "featureList": ["Days old calculator", "Age in days", "10000 days milestone", "Hours alive", "Minutes alive", "Seconds alive"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many days old am I?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your date of birth in our calculator above. We instantly calculate your exact age in days, plus hours, minutes, and seconds. The calculation accounts for all leap years between your birthday and today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I turn 10,000 days old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10,000 days equals 27 years, 4 months, and 24 days. Add this to your birthdate to find your exact 10,000th day. Example: If born January 1, 1997, your 10,000th day was May 25, 2024."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why celebrate 10,000 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 10,000-day milestone gained popularity from Tool's 2006 album of the same name and social media sharing. It's unique because it doesn't align with any birthday - it's a completely different kind of celebration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many days is the average human lifespan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to WHO, global average life expectancy is 73 years (about 26,663 days). In Japan, it's 84.3 years (30,790 days). See our Life Expectancy Calculator for country-specific data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I reach 1 billion seconds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One billion seconds equals exactly 31 years, 251 days, 13 hours, 34 minutes, and 54 seconds. It's becoming a popular celebration - many people throw \"Gigasecond\" parties!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the \"4,000 weeks\" concept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oliver Burkeman's book \"Four Thousand Weeks\" reframes an 80-year life as just 4,000 weeks. This perspective helps people prioritize what truly matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We accurately count all leap year days (Feb 29). Leap years occur every 4 years, except century years not divisible by 400. See our Leap Year Birthday Guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the first 1,000 days matter so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 1,000 Days Initiative highlights that 90% of brain development occurs from conception to age 2. Nutrition and care during this window have lifelong impacts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many heartbeats in a lifetime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At an average 72 BPM, the heart beats about 100,000 times per day. Over 80 years, that's approximately 3 billion heartbeats - without ever stopping to rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the longest verified human lifespan in days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jeanne Calment of France lived 122 years and 164 days (1875-1997), totaling approximately 44,724 days. This is the longest verified human lifespan according to Guinness World Records."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/" class="active">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub active">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Days Old Calculator</h1>
+    <p class="intro-text">Discover exactly how many days you've been alive since birth. According to <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank" rel="noopener">WHO life expectancy data</a>, the average human lives about 26,500 days (73 years globally). Track your progress, celebrate milestones like 10,000 days, and see your life in hours, minutes, and seconds.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>10,000 days:</strong> Approximately 27 years, 4 months, 24 days - the most celebrated day milestone</li>
+        <li><strong>1 billion seconds:</strong> Reached at 31 years, 251 days, 13 hours, 34 minutes, 54 seconds</li>
+        <li><strong>Global average lifespan:</strong> ~26,500 days (73 years) per <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a></li>
+        <li><strong>First 1,000 days:</strong> Critical period for brain development (<a href="https://thousanddays.org/" target="_blank" rel="noopener">1000 Days</a> initiative)</li>
+        <li><strong>Leap years:</strong> Add ~24 extra days per century; Feb 29 births are "leaplings"</li>
+        <li><strong>4,000 weeks:</strong> Oliver Burkeman's book concept - average life in weeks</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="days"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Days Old</span></button>
+      </div>
+
+      <!-- AGE IN DAYS -->
+      <div id="panel-days" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" id="dob-days" class="form-input dob-input">
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-days-btn">Calculate Days Alive</button>
+
+        <div class="results-section" id="days-results">
+          <div class="age-result-card">
+            <div class="age-value" id="days-total">--</div>
+            <div class="age-label">Days Old</div>
+          </div>
+          <div class="results-grid results-grid-4">
+            <div class="result-item"><div class="result-item-label">Hours</div><div class="result-item-value" id="days-hours">--</div></div>
+            <div class="result-item"><div class="result-item-label">Minutes</div><div class="result-item-value" id="days-minutes">--</div></div>
+            <div class="result-item"><div class="result-item-label">Seconds</div><div class="result-item-value" id="days-seconds">--</div></div>
+            <div class="result-item"><div class="result-item-label">Weeks</div><div class="result-item-value" id="days-weeks">--</div></div>
+          </div>
+          <div style="background:var(--primary-bg);padding:1rem;border-radius:var(--radius-lg);margin-top:1rem;text-align:center;">
+            <div style="font-size:0.875rem;color:var(--gray-600);">Next Milestone: <strong id="days-milestone">--</strong> days</div>
+            <div style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.25rem;">That's on <span id="days-milestone-date">--</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our days old calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>10,000 days milestone</td><td>Born: Sep 15, 1998</td><td>10,000 days on Jan 31, 2026</td><td>Planning 10K celebration party</td></tr>
+            <tr><td>Newborn tracking</td><td>Born: Feb 1, 2026</td><td>16 days old (384 hours)</td><td>First 1,000 days monitoring</td></tr>
+            <tr><td>Half-century mark</td><td>Born: Mar 8, 1976</td><td>18,243 days (50 years)</td><td>Golden jubilee calculation</td></tr>
+            <tr><td>One billion seconds</td><td>Born: Jan 1, 1994</td><td>1 billion seconds on Sep 9, 2025</td><td>Celebrating 1B seconds alive</td></tr>
+            <tr><td>Millennial birthday</td><td>Born: Jan 1, 2000</td><td>9,544 days since millennium</td><td>Y2K generation milestone</td></tr>
+            <tr><td>Centenarian</td><td>Born: Jun 15, 1925</td><td>36,777 days (100+ years)</td><td>Recording centenarian statistics</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- The 10,000 Days Milestone -->
+    <section class="content-section">
+      <h2>The 10,000 Days Milestone</h2>
+      <p>Turning 10,000 days old has become a popular celebration milestone. Here's why it's special:</p>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">celebration</div>
+          <div class="fun-fact-content">
+            <h4>A Unique Celebration</h4>
+            <p>10,000 days equals approximately 27 years, 4 months, and 24 days. It's a once-in-a-lifetime moment that many people now celebrate!</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">music</div>
+          <div class="fun-fact-content">
+            <h4>Cultural References</h4>
+            <p>The band Tool released an album called "10,000 Days" in 2006, popularizing the milestone. The title refers to the approximate time between diagnosis and death of the lead singer's mother.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">trend</div>
+          <div class="fun-fact-content">
+            <h4>Social Media Trend</h4>
+            <p>Many people now share their 10,000-day celebration on social media, making it a modern coming-of-age milestone.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">countdown</div>
+          <div class="fun-fact-content">
+            <h4>Plan Your Party</h4>
+            <p>Use our calculator to find your exact 10,000th day and plan a celebration. It's more unique than any birthday!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Milestones in Days -->
+    <section class="content-section">
+      <h2>Age Milestones in Days</h2>
+      <p>Track your journey through life with these significant day milestones:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Days</th><th>Exact Age</th><th>Significance</th><th>Fun Fact</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1,000</strong></td><td>2 years, 8 months, 26 days</td><td>Critical brain development period</td><td>90% of brain development occurs</td></tr>
+            <tr><td><strong>2,000</strong></td><td>5 years, 5 months, 22 days</td><td>Entering school age</td><td>Starting kindergarten for many</td></tr>
+            <tr><td><strong>5,000</strong></td><td>13 years, 8 months, 17 days</td><td>Teenager milestone</td><td>Most become teenagers around here</td></tr>
+            <tr><td><strong>6,574</strong></td><td>18 years exactly</td><td>Legal adulthood (US)</td><td>Can vote, join military</td></tr>
+            <tr><td><strong>7,670</strong></td><td>21 years exactly</td><td>Full adulthood milestone</td><td>Legal drinking age (US)</td></tr>
+            <tr><td><strong>10,000</strong></td><td>27 years, 4 months, 24 days</td><td>Most celebrated day milestone</td><td>Tool album reference; viral trend</td></tr>
+            <tr><td><strong>15,000</strong></td><td>41 years, 1 month, 6 days</td><td>Mid-life milestone</td><td>Around peak earning years</td></tr>
+            <tr><td><strong>18,262</strong></td><td>50 years exactly</td><td>Half-century</td><td>Golden jubilee age</td></tr>
+            <tr><td><strong>20,000</strong></td><td>54 years, 9 months, 14 days</td><td>20K club achievement</td><td>Rarer than 10K celebration</td></tr>
+            <tr><td><strong>25,000</strong></td><td>68 years, 5 months, 24 days</td><td>25K milestone</td><td>Near retirement age for many</td></tr>
+            <tr><td><strong>30,000</strong></td><td>82 years, 2 months, 2 days</td><td>30K achievement</td><td>Above global life expectancy</td></tr>
+            <tr><td><strong>36,525</strong></td><td>100 years exactly</td><td>Centenarian</td><td>About 573,000 people worldwide</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Life in Days Chart -->
+    <section class="content-section">
+      <h2>Life Expectancy in Days by Country</h2>
+      <p>How many days people live on average varies dramatically by country. Data from <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates" target="_blank" rel="noopener">WHO Global Health Observatory</a>:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Japan (84.3 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+          <div class="chart-bar-value">30,790 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Switzerland (83.4 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 98%;"></div></div>
+          <div class="chart-bar-value">30,461 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Australia (83.0 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 97%;"></div></div>
+          <div class="chart-bar-value">30,315 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">United Kingdom (81.0 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 94%;"></div></div>
+          <div class="chart-bar-value">29,585 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">United States (77.0 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 89%;"></div></div>
+          <div class="chart-bar-value">28,124 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">China (77.4 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 90%;"></div></div>
+          <div class="chart-bar-value">28,270 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Brazil (75.9 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 87%;"></div></div>
+          <div class="chart-bar-value">27,722 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">World Average (73.0 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 83%;"></div></div>
+          <div class="chart-bar-value">26,663 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">India (70.8 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 80%;"></div></div>
+          <div class="chart-bar-value">25,859 days</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Nigeria (54.7 years)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 60%;"></div></div>
+          <div class="chart-bar-value">19,976 days</div>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;">Japanese citizens live on average 10,814 more days than Nigerians - nearly 30 extra years.</p>
+    </section>
+
+    <!-- Famous Birthdays in Days -->
+    <section class="content-section">
+      <h2>Famous Birthdays in Days Context</h2>
+      <p>Here's how old some historical figures were in days during major achievements:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Person</th><th>Achievement</th><th>Approximate Age in Days</th></tr></thead>
+          <tbody>
+            <tr><td>Mozart</td><td>First composition at age 5</td><td>~1,825 days</td></tr>
+            <tr><td>Mark Zuckerberg</td><td>Launched Facebook at 19</td><td>~6,935 days</td></tr>
+            <tr><td>Neil Armstrong</td><td>Walked on moon at 38</td><td>~13,870 days</td></tr>
+            <tr><td>Albert Einstein</td><td>Published relativity at 26</td><td>~9,490 days</td></tr>
+            <tr><td>Malala Yousafzai</td><td>Nobel Prize at 17</td><td>~6,205 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- The 4,000 Weeks Concept -->
+    <section class="content-section">
+      <h2>The 4,000 Weeks Concept</h2>
+      <p>Oliver Burkeman's bestselling book "<a href="https://www.oliverburkeman.com/fourthousandweeks" target="_blank" rel="noopener">Four Thousand Weeks</a>" frames human life in weeks rather than years. This perspective shift has profound implications:</p>
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">book</div>
+          <div class="fun-fact-content">
+            <h4>The Core Insight</h4>
+            <p>If you live to 80, you have roughly 4,000 weeks. That's it. This finite number forces us to consider how we spend our limited time.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">clock</div>
+          <div class="fun-fact-content">
+            <h4>Time Already Used</h4>
+            <p>By age 30, you've used about 1,565 weeks. By 50, you've used 2,609 weeks - more than half your 4,000-week budget.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">chart</div>
+          <div class="fun-fact-content">
+            <h4>Visualization Tools</h4>
+            <p>Many people now use "life calendars" showing 4,000 boxes (weeks) to visualize remaining time. Each filled box represents a week lived.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">heart</div>
+          <div class="fun-fact-content">
+            <h4>Making It Count</h4>
+            <p>The concept isn't meant to depress but to inspire intentional living. Every week matters when you see how few you have.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Time Milestones -->
+    <section class="content-section">
+      <h2>Time Milestones: Seconds, Minutes, Hours, Weeks</h2>
+      <p>Beyond days, here are other fascinating time milestones to celebrate:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Milestone</th><th>Exact Value</th><th>Age Reached</th><th>Celebrate It?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 Million Seconds</strong></td><td>1,000,000 sec</td><td>11 days, 13 hours, 46 min</td><td>Your first major milestone!</td></tr>
+            <tr><td><strong>10 Million Seconds</strong></td><td>10,000,000 sec</td><td>3 months, 25 days</td><td>Still in infancy</td></tr>
+            <tr><td><strong>100 Million Seconds</strong></td><td>100,000,000 sec</td><td>3 years, 2 months</td><td>Early childhood celebration</td></tr>
+            <tr><td><strong>500 Million Seconds</strong></td><td>500,000,000 sec</td><td>15 years, 10 months</td><td>Teenage milestone</td></tr>
+            <tr><td><strong>1 Billion Seconds</strong></td><td>1,000,000,000 sec</td><td>31 years, 251 days</td><td>The big one! Highly celebrated</td></tr>
+            <tr><td><strong>1 Million Minutes</strong></td><td>1,000,000 min</td><td>1 year, 10 months, 26 days</td><td>Toddler milestone</td></tr>
+            <tr><td><strong>500 Weeks</strong></td><td>500 weeks</td><td>9 years, 7 months, 6 days</td><td>Pre-teen marker</td></tr>
+            <tr><td><strong>1,000 Weeks</strong></td><td>1,000 weeks</td><td>19 years, 2 months, 12 days</td><td>Young adult celebration</td></tr>
+            <tr><td><strong>2,000 Weeks</strong></td><td>2,000 weeks</td><td>38 years, 4 months, 24 days</td><td>Half of 4,000 weeks!</td></tr>
+            <tr><td><strong>100,000 Hours</strong></td><td>100,000 hours</td><td>11 years, 5 months</td><td>10x the "10,000 hour rule"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Heartbeats in a Lifetime -->
+    <section class="content-section">
+      <h2>Your Life in Heartbeats</h2>
+      <p>The human heart beats about 100,000 times per day. Here's your life measured in heartbeats (based on <a href="https://www.heart.org/" target="_blank" rel="noopener">American Heart Association</a> average of 72 BPM):</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Age</th><th>Days Lived</th><th>Approximate Heartbeats</th></tr></thead>
+          <tbody>
+            <tr><td>1 year</td><td>365 days</td><td>~38 million</td></tr>
+            <tr><td>10 years</td><td>3,650 days</td><td>~378 million</td></tr>
+            <tr><td>20 years</td><td>7,305 days</td><td>~756 million</td></tr>
+            <tr><td>30 years</td><td>10,957 days</td><td>~1.1 billion</td></tr>
+            <tr><td>50 years</td><td>18,262 days</td><td>~1.9 billion</td></tr>
+            <tr><td>70 years</td><td>25,567 days</td><td>~2.6 billion</td></tr>
+            <tr><td>80 years</td><td>29,220 days</td><td>~3.0 billion</td></tr>
+            <tr><td>100 years</td><td>36,525 days</td><td>~3.8 billion</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;">At 80 years old, your heart has beaten approximately <strong>3 billion times</strong> without stopping.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How many days old am I?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Enter your date of birth in our calculator above. We instantly calculate your exact age in days, plus hours, minutes, and seconds. The calculation accounts for all leap years between your birthday and today.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">When will I turn 10,000 days old?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>10,000 days equals 27 years, 4 months, and 24 days. Add this to your birthdate to find your exact 10,000th day. Example: If born January 1, 1997, your 10,000th day was May 25, 2024.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why celebrate 10,000 days?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The 10,000-day milestone gained popularity from Tool's 2006 album of the same name and social media sharing. It's unique because it doesn't align with any birthday - it's a completely different kind of celebration.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How many days is the average human lifespan?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>According to <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a>, global average life expectancy is 73 years (about 26,663 days). In Japan, it's 84.3 years (30,790 days). See our <a href="/life-expectancy/">Life Expectancy Calculator</a> for country-specific data.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">When will I reach 1 billion seconds?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>One billion seconds equals exactly 31 years, 251 days, 13 hours, 34 minutes, and 54 seconds. It's becoming a popular celebration - many people throw "Gigasecond" parties!</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is the "4,000 weeks" concept?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Oliver Burkeman's book "<a href="https://www.oliverburkeman.com/fourthousandweeks" target="_blank" rel="noopener">Four Thousand Weeks</a>" reframes an 80-year life as just 4,000 weeks. This perspective helps people prioritize what truly matters.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does the calculator account for leap years?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Yes! We accurately count all leap year days (Feb 29). Leap years occur every 4 years, except century years not divisible by 400. See our <a href="/blog/leap-year-birthday/">Leap Year Birthday Guide</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do the first 1,000 days matter so much?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The <a href="https://thousanddays.org/" target="_blank" rel="noopener">1,000 Days Initiative</a> highlights that 90% of brain development occurs from conception to age 2. Nutrition and care during this window have lifelong impacts.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How many heartbeats in a lifetime?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>At an average 72 BPM, the heart beats about 100,000 times per day. Over 80 years, that's approximately 3 billion heartbeats - without ever stopping to rest.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's the longest verified human lifespan in days?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Jeanne Calment of France lived 122 years and 164 days (1875-1997), totaling approximately 44,724 days. This is the longest verified human lifespan according to <a href="https://www.guinnessworldrecords.com/" target="_blank" rel="noopener">Guinness World Records</a>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <p>Explore more ways to understand your age and time milestones:</p>
+      <div class="related-grid">
+        <a href="/blog/age-in-days-calculator/" class="related-card"><div class="related-card-title">Age in Days Guide</div><p class="related-card-desc">Complete guide to calculating your exact age in days with historical context.</p></a>
+        <a href="/blog/age-in-weeks-calculator/" class="related-card"><div class="related-card-title">Age in Weeks</div><p class="related-card-desc">Your life in weeks, the 4,000 weeks concept, and pregnancy tracking.</p></a>
+        <a href="/blog/age-in-hours-calculator/" class="related-card"><div class="related-card-title">Age in Hours</div><p class="related-card-desc">Hours alive, the 10,000-hour rule, and how you spend your time.</p></a>
+        <a href="/blog/age-in-seconds-calculator/" class="related-card"><div class="related-card-title">Age in Seconds</div><p class="related-card-desc">Your billion-second birthday, heartbeat count, and second milestones.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your exact age in years, months, and days from any birthdate.</p></a>
+        <a href="/life-expectancy/" class="related-card"><div class="related-card-title">Life Expectancy Calculator</div><p class="related-card-desc">Estimate your lifespan in days based on country and lifestyle factors.</p></a>
+        <a href="/blog/age-milestones/" class="related-card"><div class="related-card-title">Age Milestones Guide</div><p class="related-card-desc">Every major life milestone from birth to 100+, with cultural ceremonies.</p></a>
+        <a href="/blog/leap-year-birthday/" class="related-card"><div class="related-card-title">Leap Year Birthday</div><p class="related-card-desc">Born on Feb 29? Learn how leap years affect your age calculation.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Your Days Alive Now</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Enter your birthdate above to discover exactly how many days you've been alive, your next milestone, and more fascinating time statistics.</p>
+      <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Try Age Calculator</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/age-on-date/">Age on Date</a></li><li><a href="/age-difference/">Age Difference</a></li><li><a href="/days-old/">Days Old</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/life-expectancy-calculator/">Life Expectancy</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korean Age Calculator - Calculate Your Korean Age (만 나이)</title>
+  <meta name="description" content="Free Korean age calculator. Calculate your Korean age (만 나이), understand the traditional age system, 2023 reform, and see how K-pop idols' ages differ internationally.">
+  <link rel="canonical" href="https://calcmyage.org/korean-age/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcmyage.org/korean-age/">
+  <meta property="og:title" content="Korean Age Calculator - Calculate Your Korean Age (만 나이)">
+  <meta property="og:description" content="Free Korean age calculator. Calculate your Korean age, understand the traditional system, and see how K-pop idol ages differ internationally.">
+  <meta property="og:image" content="https://calcmyage.org/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Korean Age Calculator",
+    "description": "Calculate your Korean age (만 나이) and understand the difference from international age. Learn about the 2023 Korean age reform.",
+    "url": "https://calcmyage.org/korean-age/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Korean Age Calculation", "International Age Comparison", "Lunar Age", "Age Difference Display"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does Korea use a different age system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Korean age system has roots in ancient East Asian culture, shared with China and other countries. It counts the time in the womb as the first year of life, reflecting the cultural importance of the prenatal period. The collective New Year aging emphasizes community over individual birthdays. Learn more at Wikipedia's East Asian age reckoning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Korean age still used after the 2023 reform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While legal and official documents now use international age (만 나이), traditional Korean age is still widely used in everyday conversations, social situations, and when determining hierarchy or using honorifics. The cultural practice hasn't disappeared - it's just no longer official."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is \"counting age\" (연 나이)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Counting age (연 나이) is another Korean system calculated as: Current Year - Birth Year. Unlike full Korean age, it doesn't add 1. It was used for some legal purposes (like school enrollment) before the 2023 reform. Now it's largely obsolete in official contexts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do K-pop idols seem older in Korean profiles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korean entertainment profiles traditionally used Korean age, making idols appear 1-2 years older than their international age. Since 2023, many agencies have switched to international age for consistency with global fans. Sites like Kprofiles now typically show international age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Korean age affect drinking age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since the 2023 reform, the legal drinking age in South Korea is 19 in international age. Previously, it was 19 in Korean age, meaning people could legally drink about 1-2 years earlier. The change caused some newly-legal drinkers to become underage again overnight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do other countries use Korean-style age counting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Similar systems existed historically in China (虚岁), Japan (数え年), Vietnam, and Mongolia. However, most switched to international age decades ago. Japan adopted international age in 1950. South Korea was one of the last countries to officially use this system before the 2023 reform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Korean age affect school enrollment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korean school years are based on birth year, not exact birthday. All children born in the same calendar year enter school together. This means a child born January 1 and December 31 of the same year are classmates, despite being nearly a year apart in actual age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 동갑 (donggap) and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "동갑 (donggap) means \"same age\" - people born in the same year. In Korean culture, only 동갑 can be true \"friends\" (친구) and use casual speech freely. Even one year difference requires the younger person to use formal speech and honorific titles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did South Korea reform the age system in 2023?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "President Yoon Suk Yeol pushed for reform to reduce confusion and legal disputes. Having three age systems caused problems in medical prescriptions (dosing), contracts, and international documents. The reform was part of broader efforts to modernize Korean administration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I ask someone's age in Korean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common way is \"몇 살이에요?\" (myeot sal-ieyo?) meaning \"How old are you?\" More formally: \"연세가 어떻게 되세요?\" (yeonsega eotteoke doeseyo?). When asked, Koreans typically respond with their year of birth (e.g., \"95년생\" - born in '95) rather than their age number."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a>
+    <nav class="nav-desktop">
+  <div class="nav-dropdown">
+    <button class="nav-dropdown-toggle">Calculators <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-menu">
+      <a href="/">Age Calculator</a>
+      <a href="/age-on-date/">Age on Date</a>
+      <a href="/age-difference/">Age Difference</a>
+      <a href="/days-old/">Days Old</a>
+      <a href="/life-expectancy/">Life Expectancy</a>
+      <a href="/korean-age/" class="active">Korean Age</a>
+      <a href="/chronological-age/">Chronological Age</a>
+    </div>
+  </div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+</nav>
+    <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div><nav class="nav-mobile">
+  <div class="nav-mobile-section">Calculators</div>
+  <a href="/" class="sub">Age Calculator</a>
+  <a href="/age-on-date/" class="sub">Age on Date</a>
+  <a href="/age-difference/" class="sub">Age Difference</a>
+  <a href="/days-old/" class="sub">Days Old</a>
+  <a href="/life-expectancy/" class="sub">Life Expectancy</a>
+  <a href="/korean-age/" class="sub active">Korean Age</a>
+  <a href="/chronological-age/" class="sub">Chronological Age</a>
+  <div class="nav-mobile-section">More</div>
+  <a href="/blog/">Guides</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</nav></div></header>
+
+  <main><div class="container">
+    <h1>Korean Age Calculator</h1>
+    <p class="intro-text">Calculate your Korean age (한국 나이) and see how it differs from your international age (만 나이). The traditional Korean age system counts 1 at birth and adds a year every New Year's Day. On <a href="https://en.wikipedia.org/wiki/East_Asian_age_reckoning#South_Korea" target="_blank" rel="noopener">June 28, 2023</a>, South Korea officially adopted international age for all legal and administrative purposes, ending centuries of tradition.</p>
+
+    <div class="key-takeaways">
+      <div class="key-takeaways-title">Key Takeaways</div>
+      <ul>
+        <li><strong>Korean age counts 1 at birth:</strong> Time in the womb counts as your first year of life</li>
+        <li><strong>Everyone ages on January 1st:</strong> Not on individual birthdays - a collective aging system</li>
+        <li><strong>1-2 years "older":</strong> Korean age is always 1-2 years higher than international age</li>
+        <li><strong>June 2023 reform:</strong> South Korea now uses international age (만 나이) for all legal matters</li>
+        <li><strong>Cultural persistence:</strong> Koreans still use traditional age in daily conversation and social hierarchy</li>
+        <li><strong>K-pop ages:</strong> Fan profiles often show both systems to avoid confusion</li>
+      </ul>
+    </div>
+
+    <div class="calculator-card">
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="korean"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><span>Korean Age</span></button>
+      </div>
+
+      <!-- KOREAN AGE -->
+      <div id="panel-korean" class="calc-panel active">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" id="dob-korean" class="form-input dob-input">
+          </div>
+        </div>
+
+        <button class="calculate-btn" id="calc-korean-btn">Calculate Korean Age</button>
+
+        <div class="results-section" id="korean-results">
+          <div class="age-result-card">
+            <div class="age-value" id="korean-age">--</div>
+            <div class="age-label">Korean Age (만 나이)</div>
+          </div>
+          <div class="results-grid results-grid-3">
+            <div class="result-item"><div class="result-item-label">International Age</div><div class="result-item-value" id="korean-intl-age">--</div></div>
+            <div class="result-item"><div class="result-item-label">Lunar Age</div><div class="result-item-value" id="korean-lunar-age">--</div></div>
+            <div class="result-item"><div class="result-item-label">Difference</div><div class="result-item-value highlight" id="korean-diff">--</div></div>
+          </div>
+          <p style="font-size:0.8125rem;color:var(--gray-500);margin-top:1rem;">Korean age counts 1 at birth and adds 1 every New Year's Day, not on your birthday. Note: South Korea officially switched to international age in June 2023.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator Examples -->
+    <section class="content-section">
+      <h2>Calculator Examples</h2>
+      <p>See how our Korean age calculator works with these real-world examples:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>Input</th><th>Result</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>K-pop idol fan</td><td>Born: Sep 1, 1997</td><td>Korean: 29 | International: 27</td><td>Understanding idol age profiles</td></tr>
+            <tr><td>December baby</td><td>Born: Dec 31, 2000</td><td>Korean: 26 | International: 24</td><td>Maximum age difference scenario</td></tr>
+            <tr><td>January baby</td><td>Born: Jan 1, 2000</td><td>Korean: 26 | International: 25</td><td>Minimum age difference scenario</td></tr>
+            <tr><td>Pre-2023 reform</td><td>Born: Mar 15, 1995 | Date: Jun 1, 2023</td><td>Korean: 29 | Legal docs used Korean age</td><td>Understanding pre-reform system</td></tr>
+            <tr><td>Post-2023 reform</td><td>Born: Mar 15, 1995 | Date: Jul 1, 2023</td><td>Korean: 29 | Legal docs use international age</td><td>New legal age after reform</td></tr>
+            <tr><td>Same school year</td><td>Born: Feb 1, 2000 vs Mar 1, 2000</td><td>Both Korean age 26 (same 동갑)</td><td>Determining social hierarchy</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Understanding Korean Age -->
+    <section class="content-section">
+      <h2>Understanding the Korean Age System</h2>
+      <p>The Korean age system (한국 나이) is a traditional East Asian method of calculating age that differs significantly from the international (Western) system:</p>
+
+      <div class="fun-facts">
+        <div class="fun-fact">
+          <div class="fun-fact-icon">1</div>
+          <div class="fun-fact-content">
+            <h4>Born as 1 Year Old</h4>
+            <p>In Korea, you're considered 1 year old at birth, counting the time spent in the womb.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">+1</div>
+          <div class="fun-fact-content">
+            <h4>Age on New Year's Day</h4>
+            <p>Everyone in Korea adds 1 year to their age on January 1st, not on their individual birthday.</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">?!</div>
+          <div class="fun-fact-content">
+            <h4>December Babies</h4>
+            <p>A baby born December 31st becomes "2 years old" on January 1st - just 2 days after birth!</p>
+          </div>
+        </div>
+        <div class="fun-fact">
+          <div class="fun-fact-icon">2023</div>
+          <div class="fun-fact-content">
+            <h4>The Reform</h4>
+            <p>South Korea officially adopted international age for legal and administrative purposes in June 2023.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2023 Korean Age Reform -->
+    <section class="content-section">
+      <h2>The 2023 Korean Age Reform</h2>
+      <p>On June 28, 2023, South Korea implemented a landmark change to its age-counting system. The reform was signed by President <a href="https://en.wikipedia.org/wiki/Yoon_Suk_Yeol" target="_blank" rel="noopener">Yoon Suk Yeol</a> as part of his campaign promise to simplify Korean society.</p>
+      <p><strong>Before the Reform:</strong> Korea used three different age systems simultaneously:</p>
+      <ul style="margin: 1rem 0 1rem 1.5rem;">
+        <li><strong>한국 나이 (Korean age):</strong> Birth year counts as 1, adds 1 every January 1st</li>
+        <li><strong>연 나이 (Counting age):</strong> Current year minus birth year (no +1)</li>
+        <li><strong>만 나이 (International age):</strong> Standard Western age calculation</li>
+      </ul>
+      <p><strong>After the Reform:</strong> All official, legal, and administrative matters now use international age (만 나이). This includes:</p>
+      <ul style="margin: 1rem 0 1rem 1.5rem;">
+        <li>Legal contracts and government documents</li>
+        <li>Medical records and prescriptions</li>
+        <li>Drinking age (19 international age)</li>
+        <li>Voting eligibility (18 international age)</li>
+        <li>Military conscription</li>
+        <li>School enrollment cutoffs</li>
+      </ul>
+      <p><strong>Cultural Impact:</strong> While the law changed, many Koreans still use traditional Korean age in everyday conversations, especially when determining social hierarchy (선배/후배) and using honorifics. The concept of being in the same "school year" (동갑) or "same age friends" (친구) remains culturally important.</p>
+    </section>
+
+    <!-- Age Comparison Chart -->
+    <section class="content-section">
+      <h2>Korean Age vs International Age: Visual Comparison</h2>
+      <p>This chart shows how Korean age compares to international age for different birth months in 2026:</p>
+      <div class="chart-bar-group">
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Born Jan 1990 (Birthday passed)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+          <div class="chart-bar-value">Korean: 37 | Intl: 36</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Born Jun 1995 (Birthday passed)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 86%;"></div></div>
+          <div class="chart-bar-value">Korean: 32 | Intl: 31</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Born Dec 2000 (Birthday not passed)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 72%;"></div></div>
+          <div class="chart-bar-value">Korean: 27 | Intl: 25</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Born Mar 2005 (Birthday passed)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 58%;"></div></div>
+          <div class="chart-bar-value">Korean: 22 | Intl: 21</div>
+        </div>
+        <div class="chart-bar-item">
+          <div class="chart-bar-label">Born Nov 2010 (Birthday not passed)</div>
+          <div class="chart-bar-track"><div class="chart-bar-fill" style="width: 44%;"></div></div>
+          <div class="chart-bar-value">Korean: 17 | Intl: 15</div>
+        </div>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;"><strong>Pattern:</strong> If your birthday has already occurred this year, Korean age is +1. If not, Korean age is +2.</p>
+    </section>
+
+    <!-- K-pop Idol Ages -->
+    <section class="content-section">
+      <h2>K-pop Idol Ages: Korean vs. International</h2>
+      <p>K-pop fans often encounter confusion when looking up idol ages. Here are examples of famous K-pop idols showing how their ages differ between systems (as of February 2026):</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Idol</th><th>Group</th><th>Birth Date</th><th>International Age</th><th>Korean Age</th><th>Diff</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Jungkook</strong></td><td>BTS</td><td>Sep 1, 1997</td><td>28</td><td>30</td><td>+2</td></tr>
+            <tr><td><strong>Jennie</strong></td><td>BLACKPINK</td><td>Jan 16, 1996</td><td>30</td><td>31</td><td>+1</td></tr>
+            <tr><td><strong>V (Taehyung)</strong></td><td>BTS</td><td>Dec 30, 1995</td><td>30</td><td>32</td><td>+2</td></tr>
+            <tr><td><strong>Lisa</strong></td><td>BLACKPINK</td><td>Mar 27, 1997</td><td>28</td><td>30</td><td>+2</td></tr>
+            <tr><td><strong>Karina</strong></td><td>aespa</td><td>Apr 11, 2000</td><td>25</td><td>27</td><td>+2</td></tr>
+            <tr><td><strong>Wonyoung</strong></td><td>IVE</td><td>Aug 31, 2004</td><td>21</td><td>23</td><td>+2</td></tr>
+            <tr><td><strong>Haerin</strong></td><td>NewJeans</td><td>May 15, 2006</td><td>19</td><td>21</td><td>+2</td></tr>
+            <tr><td><strong>Eunchae</strong></td><td>LE SSERAFIM</td><td>Nov 10, 2006</td><td>19</td><td>21</td><td>+2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:1rem;"><strong>Quick Rule:</strong> If your birthday has already passed this year, add 1 to your international age for Korean age. If it hasn't passed yet, add 2.</p>
+    </section>
+
+    <!-- Asian Age Systems Comparison -->
+    <section class="content-section">
+      <h2>East Asian Age Systems Comparison</h2>
+      <p>Korea isn't the only country that historically used an age-counting system starting at 1. Here's how different Asian cultures approached age:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Country</th><th>Traditional System</th><th>Current Status</th><th>Key Features</th></tr></thead>
+          <tbody>
+            <tr><td><strong>South Korea</strong></td><td>한국 나이 (Korean age)</td><td>International age since 2023</td><td>Last major country to officially switch</td></tr>
+            <tr><td><strong>North Korea</strong></td><td>Korean age</td><td>Still uses traditional system</td><td>Follows original Korean age counting</td></tr>
+            <tr><td><strong>China</strong></td><td>虚岁 (Xū suì)</td><td>International age (official)</td><td>Traditional still used in some contexts</td></tr>
+            <tr><td><strong>Japan</strong></td><td>数え年 (Kazoedoshi)</td><td>International age since 1950</td><td>Traditional system rarely used today</td></tr>
+            <tr><td><strong>Vietnam</strong></td><td>Tuổi mụ (Lunar age)</td><td>International age (official)</td><td>Traditional used for ceremonies</td></tr>
+            <tr><td><strong>Mongolia</strong></td><td>Traditional age</td><td>Mostly international age</td><td>Traditional system becoming rare</td></tr>
+            <tr><td><strong>Taiwan</strong></td><td>虚岁 (Xū suì)</td><td>International age (official)</td><td>Traditional used in fortune telling</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Korean Age Formula -->
+    <section class="content-section">
+      <h2>How to Calculate Korean Age</h2>
+      <p>The formula for Korean age is simple:</p>
+      <div style="background:var(--primary-bg);padding:1.5rem;border-radius:var(--radius-lg);margin:1rem 0;text-align:center;">
+        <p style="font-size:1.25rem;font-weight:600;color:var(--primary);margin:0;">Korean Age = Current Year - Birth Year + 1</p>
+      </div>
+      <p><strong>Example 1:</strong> Born in 1995, current year 2026: Korean age = 2026 - 1995 + 1 = <strong>32</strong></p>
+      <p><strong>Example 2:</strong> Born December 31, 2025: On January 1, 2026, Korean age = 2026 - 2025 + 1 = <strong>2</strong> (after just 1 day of life!)</p>
+      <p>Notice that your actual birthday doesn't matter in traditional Korean age - only the year you were born.</p>
+    </section>
+
+    <!-- Korean Age Vocabulary -->
+    <section class="content-section">
+      <h2>Essential Korean Age Vocabulary</h2>
+      <p>Understanding Korean age also means learning key vocabulary used in Korean culture. Here are essential terms:</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Korean</th><th>Romanization</th><th>English</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td><strong>만 나이</strong></td><td>man nai</td><td>International age</td><td>Official age since 2023 reform</td></tr>
+            <tr><td><strong>한국 나이</strong></td><td>hanguk nai</td><td>Korean age</td><td>Traditional age calculation</td></tr>
+            <tr><td><strong>연 나이</strong></td><td>yeon nai</td><td>Counting age</td><td>Birth year subtraction (now obsolete)</td></tr>
+            <tr><td><strong>동갑</strong></td><td>donggap</td><td>Same age</td><td>Born in same year (can be friends)</td></tr>
+            <tr><td><strong>친구</strong></td><td>chingu</td><td>Friend</td><td>Only applies to same-age peers</td></tr>
+            <tr><td><strong>언니</strong></td><td>eonni</td><td>Older sister</td><td>Female to older female</td></tr>
+            <tr><td><strong>오빠</strong></td><td>oppa</td><td>Older brother</td><td>Female to older male</td></tr>
+            <tr><td><strong>누나</strong></td><td>nuna</td><td>Older sister</td><td>Male to older female</td></tr>
+            <tr><td><strong>형</strong></td><td>hyeong</td><td>Older brother</td><td>Male to older male</td></tr>
+            <tr><td><strong>선배</strong></td><td>seonbae</td><td>Senior</td><td>School/work senior by year</td></tr>
+            <tr><td><strong>후배</strong></td><td>hubae</td><td>Junior</td><td>School/work junior by year</td></tr>
+            <tr><td><strong>반말</strong></td><td>banmal</td><td>Casual speech</td><td>Used with same age or younger</td></tr>
+            <tr><td><strong>존댓말</strong></td><td>jondaenmal</td><td>Formal speech</td><td>Required for elders/seniors</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem;"><strong>Cultural note:</strong> In Korean culture, you can only be "friends" (친구) with someone born in the same year. If they're older, even by one year, you must use honorific titles. This is why Korean age matters so much socially - it determines how you speak to each other.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Why does Korea use a different age system?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The Korean age system has roots in <strong>ancient East Asian culture</strong>, shared with China and other countries. It counts the time in the womb as the first year of life, reflecting the cultural importance of the prenatal period. The collective New Year aging emphasizes community over individual birthdays. Learn more at <a href="https://en.wikipedia.org/wiki/East_Asian_age_reckoning" target="_blank" rel="noopener">Wikipedia's East Asian age reckoning</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is Korean age still used after the 2023 reform?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>While <strong>legal and official documents</strong> now use international age (만 나이), traditional Korean age is still widely used in <strong>everyday conversations</strong>, social situations, and when determining hierarchy or using honorifics. The cultural practice hasn't disappeared - it's just no longer official.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is "counting age" (연 나이)?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>Counting age (연 나이)</strong> is another Korean system calculated as: Current Year - Birth Year. Unlike full Korean age, it doesn't add 1. It was used for some legal purposes (like school enrollment) before the 2023 reform. Now it's largely obsolete in official contexts.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why do K-pop idols seem older in Korean profiles?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Korean entertainment profiles traditionally used Korean age, making idols appear <strong>1-2 years older</strong> than their international age. Since 2023, many agencies have switched to international age for consistency with global fans. Sites like <a href="https://kprofiles.com/" target="_blank" rel="noopener">Kprofiles</a> now typically show international age.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How does Korean age affect drinking age?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Since the 2023 reform, the legal drinking age in South Korea is <strong>19 in international age</strong>. Previously, it was 19 in Korean age, meaning people could legally drink about 1-2 years earlier. The change caused some newly-legal drinkers to become underage again overnight.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do other countries use Korean-style age counting?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Similar systems existed historically in <strong>China (虚岁), Japan (数え年), Vietnam, and Mongolia</strong>. However, most switched to international age decades ago. Japan adopted international age in 1950. South Korea was one of the last countries to officially use this system before the 2023 reform.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How does Korean age affect school enrollment?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>Korean school years are based on birth year, not exact birthday. All children born in the same calendar year enter school together. This means a child born January 1 and December 31 of the same year are classmates, despite being nearly a year apart in actual age.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is 동갑 (donggap) and why does it matter?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p><strong>동갑 (donggap)</strong> means "same age" - people born in the same year. In Korean culture, only 동갑 can be true "friends" (친구) and use casual speech freely. Even one year difference requires the younger person to use formal speech and honorific titles.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why did South Korea reform the age system in 2023?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>President Yoon Suk Yeol pushed for reform to reduce confusion and legal disputes. Having three age systems caused problems in medical prescriptions (dosing), contracts, and international documents. The reform was part of broader efforts to modernize Korean administration.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I ask someone's age in Korean?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-answer"><p>The most common way is "몇 살이에요?" (myeot sal-ieyo?) meaning "How old are you?" More formally: "연세가 어떻게 되세요?" (yeonsega eotteoke doeseyo?). When asked, Koreans typically respond with their year of birth (e.g., "95년생" - born in '95) rather than their age number.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="content-section">
+      <h2>Related Calculators & Guides</h2>
+      <p>Explore more age-related tools and guides:</p>
+      <div class="related-grid">
+        <a href="/blog/korean-age-calculator/" class="related-card"><div class="related-card-title">Korean Age Guide</div><p class="related-card-desc">Complete guide to Korean age, the 2023 reform, and K-pop idol ages.</p></a>
+        <a href="/blog/chinese-age-calculator/" class="related-card"><div class="related-card-title">Chinese Age Calculator</div><p class="related-card-desc">Learn about the Chinese sui age system and how it differs from Korean age.</p></a>
+        <a href="/blog/lunar-age-calculator/" class="related-card"><div class="related-card-title">Lunar Age Calculator</div><p class="related-card-desc">Calculate your age using the traditional lunar calendar system.</p></a>
+        <a href="/" class="related-card"><div class="related-card-title">Age Calculator</div><p class="related-card-desc">Calculate your exact international age in years, months, and days.</p></a>
+        <a href="/age-difference/" class="related-card"><div class="related-card-title">Age Difference Calculator</div><p class="related-card-desc">Find the exact age gap between two people in years, months, and days.</p></a>
+        <a href="/blog/zodiac-sign-calculator/" class="related-card"><div class="related-card-title">Zodiac Sign Calculator</div><p class="related-card-desc">Find your Chinese zodiac animal and Western zodiac sign.</p></a>
+        <a href="/blog/generation-calculator/" class="related-card"><div class="related-card-title">Generation Calculator</div><p class="related-card-desc">Discover which generation you belong to: Gen Z, Millennial, Gen X, etc.</p></a>
+        <a href="/chronological-age/" class="related-card"><div class="related-card-title">Chronological Age Calculator</div><p class="related-card-desc">Precise age calculation for educational assessments and evaluations.</p></a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="text-align: center; padding: 2rem; background: var(--primary-bg); border-radius: var(--radius-lg);">
+      <h2>Calculate Your Korean Age Now</h2>
+      <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Enter your birthdate above to see your Korean age, international age, and the difference between them. Perfect for K-pop fans and anyone curious about Korean culture!</p>
+      <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Try Age Calculator</a>
+    </section>
+
+  </div></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Age Calculator</span></a><p>Free age calculator - find out exactly how old you are.</p></div>
+      <div class="footer-nav"><h4>Calculators</h4><ul><li><a href="/">Age Calculator</a></li><li><a href="/life-expectancy/">Life Expectancy</a></li><li><a href="/korean-age/">Korean Age</a></li><li><a href="/chronological-age/">Chronological Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Guides</h4><ul><li><a href="/blog/age-calculator-guide/">Age Guide</a></li><li><a href="/blog/how-old-am-i/">How Old Am I</a></li><li><a href="/blog/korean-age-calculator/">Korean Age</a></li></ul></div>
+      <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025-2026 Age Calculator. For informational purposes only.</p></div>
+  </div></footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>
